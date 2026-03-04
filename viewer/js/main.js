@@ -67,6 +67,8 @@ class ProjectionViewer3D {
             
             // Setup view controls
             this.ui.setupViewControls({
+                onTelescopeToggle: (enabled) => this.setTelescopeEnabled(enabled),
+                onTelescopeSensitivity: (scale) => this.setTelescopeSensitivity(scale),
                 onLODChange: (value) => this.setLabelLOD(value),
                 onNodeScaleChange: (scale) => this.setNodeScale(scale)
             });
@@ -88,6 +90,9 @@ class ProjectionViewer3D {
      * Animation loop update callback.
      */
     update() {
+        // Update telescope effect (node LOD based on zoom)
+        this.sceneBuilder.updateNodeLOD(this.renderer.getCamera());
+        
         // Update label positions every frame
         this.labelManager.updateLabelPositions();
     }
@@ -122,6 +127,22 @@ class ProjectionViewer3D {
      */
     getMetadata() {
         return this.snapshot?.metadata;
+    }
+
+    /**
+     * Enable/disable telescope effect.
+     */
+    setTelescopeEnabled(enabled) {
+        this.sceneBuilder.setNodeLODEnabled(enabled);
+        console.log(`Telescope effect ${enabled ? 'enabled' : 'disabled'}`);
+    }
+
+    /**
+     * Set telescope sensitivity (zoom response).
+     */
+    setTelescopeSensitivity(scale) {
+        this.sceneBuilder.setLODDistanceScale(scale);
+        console.log(`Telescope sensitivity set to ${scale.toFixed(1)}x`);
     }
 
     /**

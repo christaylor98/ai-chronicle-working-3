@@ -9,6 +9,8 @@ export class SceneBuilder {
         this.nodeMeshes = new Map();  // node_id -> mesh
         this.edgeLines = [];
         this.nodeData = new Map();    // node_id -> data
+        this.nodeLODEnabled = true;
+        this.lodDistanceScale = 1.0;  // Multiplier for LOD distance calculations
     }
 
     /**
@@ -103,7 +105,9 @@ export class SceneBuilder {
         const line = new THREE.Line(geometry, material);
         line.userData = {
             edgeType: type,
-            weight: weight
+            weight: weight,
+            sourceId: source,
+            targetId: target
         };
         
         this.scene.add(line);
@@ -181,6 +185,100 @@ export class SceneBuilder {
         for (const [nodeId, mesh] of this.nodeMeshes) {
             mesh.userData.baseScale = scaleFactor;
             mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
+        }
+    }
+
+    /**
+     * Update node visibility based on camera distance (telescope effect).
+     */
+    updateNodeLOD(camera) {
+        if (!this.nodeLODEnabled) {
+            // Ensure all nodes are visible if LOD disabled
+            for (const mesh of this.nodeMeshes.values()) {
+                mesh.visible = true;
+            }
+            return;
+        }
+
+        const cameraDistance = camera.position.length();
+        
+        // Calculate node degree statistics for dynamic thresholds
+        const degrees = Array.from(this.nodeData.values()).map(n => n.degree);
+        const maxDegree = Math.max(...degrees);
+        const minDegree = Math.min(...degrees);
+        const degreeRange = maxDegree - minDegree;
+        
+        // LOD levels based on camera distance
+        const baseLOD = this.lodDistanceScale;
+        let visibilityThreshold;
+        let visibleCount = 0;
+        
+        // Dynamic thresholds based on actual degree distribution
+        if (cameraDistance < 25 * baseLOD) {
+            // Close zoom: show all nodes
+            visibilityThreshold = minDegree;
+        } else if (cameraDistance < 50 * baseLOD) {
+            // Medium zoom: show top 75% by degree
+            visibilityThreshold = minDegree + degreeRange * 0.25;
+        } else if (cameraDistance < 100 * baseLOD) {
+            // Far zoom: show top 50% by degree
+            visibilityThreshold = minDegree + degreeRange * 0.5;
+        } else if (cameraDistance < 150 * baseLOD) {
+            // Very far: show top 25% by degree
+            visibilityThreshold = minDegree + degreeRange * 0.75;
+        } else {
+            // Extreme distance: only show highest degree nodes
+            visibilityThreshold = maxDegree - 0.5;
+        }
+        
+        // Apply visibility based on node degree (importance)
+        for (const [nodeId, mesh] of this.nodeMeshes) {
+            const nodeData = this.nodeData.get(nodeId);
+            if (nodeData) {
+                const isVisible = nodeData.degree >= visibilityThreshold;
+                mesh.visible = isVisible;
+                if (isVisible) visibleCount++;
+            }
+        }
+        
+        // Update edge visibility based on connected nodes
+        for (const edge of this.edgeLines) {
+            const sourceId = edge.userData.sourceId;
+            const targetId = edge.userData.targetId;
+            const sourceMesh = this.nodeMeshes.get(sourceId);
+            const targetMesh = this.nodeMeshes.get(targetId);
+            
+            // Edge visible only if both nodes are visible
+            edge.visible = (sourceMesh?.visible && targetMesh?.visible) || false;
+        }
+        
+        // Log for debugging (throttled)
+        if (!this._lastLogTime || Date.now() - this._lastLogTime > 1000) {
+            console.log(`Telescope: distance=${cameraDistance.toFixed(1)}, threshold=${visibilityThreshold.toFixed(1)}, visible=${visibleCount}/${this.nodeMeshes.size}`);
+            this._lastLogTime = Date.now();
+        }
+    }
+
+    /**
+     * Set LOD distance scale factor.
+     */
+    setLODDistanceScale(scale) {
+        this.lodDistanceScale = scale;
+    }
+
+    /**
+     * Enable or disable node LOD.
+     */
+    setNodeLODEnabled(enabled) {
+        this.nodeLODEnabled = enabled;
+        if (!enabled) {
+            // Make all nodes visible
+            for (const mesh of this.nodeMeshes.values()) {
+                mesh.visible = true;
+            }
+            for (const edge of this.edgeLines) {
+                edge.visible = true;
+            }
         }
     }
 }

@@ -20,6 +20,9 @@ export class UI {
         this.loadingPanel = document.getElementById('loading');
         
         // View controls
+        this.telescopeToggle = document.getElementById('telescope-toggle');
+        this.telescopeSlider = document.getElementById('telescope-slider');
+        this.telescopeValue = document.getElementById('telescope-value');
         this.lodSlider = document.getElementById('lod-slider');
         this.lodValue = document.getElementById('lod-value');
         this.nodeScaleSlider = document.getElementById('node-scale-slider');
@@ -143,6 +146,32 @@ export class UI {
      * Setup view control event listeners.
      */
     setupViewControls(callbacks) {
+        // Telescope toggle
+        if (this.telescopeToggle) {
+            this.telescopeToggle.addEventListener('change', (e) => {
+                const enabled = e.target.checked;
+                if (callbacks.onTelescopeToggle) {
+                    callbacks.onTelescopeToggle(enabled);
+                }
+                // Enable/disable telescope slider
+                if (this.telescopeSlider) {
+                    this.telescopeSlider.disabled = !enabled;
+                }
+            });
+        }
+
+        // Telescope sensitivity slider
+        if (this.telescopeSlider) {
+            this.telescopeSlider.addEventListener('input', (e) => {
+                const value = parseInt(e.target.value);
+                const scale = value / 10.0;
+                this.telescopeValue.textContent = `${scale.toFixed(1)}x`;
+                if (callbacks.onTelescopeSensitivity) {
+                    callbacks.onTelescopeSensitivity(scale);
+                }
+            });
+        }
+
         // LOD slider
         if (this.lodSlider) {
             this.lodSlider.addEventListener('input', (e) => {
