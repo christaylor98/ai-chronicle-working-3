@@ -4,9 +4,9 @@
 [![License](https://img.shields.io/badge/license-See%20LICENSE-green.svg)](LICENSE)
 [![Specification](https://img.shields.io/badge/spec-v1.0%20Full-brightgreen.svg)](SPECIFICATION.md)
 
-**Version**: 1.0.0 + CORRECTION_SPEC v1.0 + MEASUREMENT_SPEC v1.0  
-**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION + MEASUREMENT  
-**Status**: ✅ Production Ready - Hardened + Measurement-Complete
+**Version**: 1.0.0 + CORRECTION_SPEC v1.0 + MEASUREMENT_SPEC v1.0 + PROJECTION_SPEC v1.0  
+**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION + MEASUREMENT + PROJECTION  
+**Status**: ✅ Production Ready - Hardened + Measurement-Complete + Projection-Enabled
 
 ## Overview
 
@@ -53,6 +53,9 @@ python main.py validate graph.json
 
 # Analyze statistics
 python main.py stats graph.json
+
+# Generate projection perspectives
+python main.py project graph.json <focus_node_id>
 ```
 
 ### Python API
@@ -75,7 +78,7 @@ engine.export_truth_delta("output.json")
 ```
 
 ## Architecture
-
+, projection
 ```
 src/
 ├── core/           # Data models (nodes, edges, graph)
@@ -151,6 +154,7 @@ The system produces a truth delta containing:
 - **[CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md)**: Hardening corrections and verification
 - **[ENRICHMENT_SUMMARY.md](ENRICHMENT_SUMMARY.md)**: Relational enrichment implementation and analysis
 - **[MEASUREMENT_SUMMARY.md](MEASUREMENT_SUMMARY.md)**: Top-K measurement architecture (supersedes enrichment)
+- **[PROJECTION_SUMMARY.md](PROJECTION_SUMMARY.md)**: Projection system for cognitive navigation over truth layer
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)**: Technical implementation details
 
 ## Examples
@@ -179,7 +183,8 @@ pytest tests/test_nodes.py -v
 ✅ **Atomicity Validation** - Pronoun detection, single-claim enforcement  
 ✅ **Semantic Similarity** - Deduplication and related_to edges  
 ✅ **Evidence Tracking** - Full provenance chain for all assertions  
-✅ **Connectivity Enforcement** - No orphaned nodes  
+✅ **Projection System** - Reversible lenses for cognitive navigation (7 perspectives)  
+✅ **CLI Interface** - Ingest, validate, stats, projectnodes  
 ✅ **CLI Interface** - Ingest, validate, stats commands  
 ✅ **Python API** - Programmatic access to all features  
 ✅ **Fallback Mode** - Works with or without ML dependencies  
@@ -227,8 +232,19 @@ This implementation is **fully compliant** with:
 - ✓ Measurement completeness within bounded horizon
 - ✓ Linear growth (O(N×K))
 - ✓ Projection-agnostic (thresholds applied at query time)
-- ✓ Reversible zoom (adjust coherence threshold in projection layer)
+### PROJECTION_SYSTEM_SPEC.v1.0 (Cognitive Navigation)
+- ✓ Truth layer immutability (no mutations)
+- ✓ Reversible projections (parameter-reproducible)
+- ✓ No new relationship inference
+- ✓ Coherence threshold filtering (weighted edges only)
+- ✓ Directed edges always included
+- ✓ Seven perspective suite (varying threshold/depth)
+- ✓ JSON-only structured output
+- ✓ No clustering or derived ontology
 
+**See [CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md) for hardening verification.**  
+**See [MEASUREMENT_SUMMARY.md](MEASUREMENT_SUMMARY.md) for measurement architecture.**  
+**See [PROJECTION_SUMMARY.md](PROJECTION_SUMMARY.md) for projection system details
 **See [CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md) for hardening verification.**  
 **See [MEASUREMENT_SUMMARY.md](MEASUREMENT_SUMMARY.md) for measurement architecture.**
 

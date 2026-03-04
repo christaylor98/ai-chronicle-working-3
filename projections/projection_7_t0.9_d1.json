@@ -1,0 +1,61 @@
+{
+  "projection_parameters": {
+    "focus_node": "atomic_28cf70b6fc7a9bce",
+    "coherence_threshold": 0.9,
+    "max_depth": 1,
+    "max_nodes": 15
+  },
+  "nodes": [
+    {
+      "node_id": "atomic_28cf70b6fc7a9bce",
+      "statement": "Neural networks are computational models inspired by biological neural systems",
+      "canonical_terms": [
+        "Neural",
+        "networks",
+        "computational",
+        "inspired",
+        "biological"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            282,
+            360
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "context_e574ea8fbfe3f1ed",
+      "source_file": "examples/neural_networks.txt",
+      "content_hash": "e574ea8fbfe3f1ed",
+      "node_type": "context",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "context_e574ea8fbfe3f1ed",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            282,
+            360
+          ],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "node_count": 2,
+    "edge_count": 1,
+    "density": 1.0
+  }
+}
