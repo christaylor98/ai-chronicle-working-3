@@ -1,0 +1,658 @@
+{
+  "nodes_added": [
+    {
+      "node_id": "atomic_8be627fc39b63d8d",
+      "statement": "\"\"\"\nExample content for testing the ingestion system",
+      "canonical_terms": [
+        "Example",
+        "example",
+        "content",
+        "testing",
+        "ingestion"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            0,
+            52
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "8be627fc39b63d8d",
+      "created_at": "2026-03-04T06:28:45.404831",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_5daf3ee98e1b7e03",
+      "statement": "\"\"\"\n\n# Atomic claims work best:\n# - Self-contained statements\n# - Single semantic units\n# - Clear relationships\n\nNeural networks are computational models inspired by biological neural systems",
+      "canonical_terms": [
+        "Atomic",
+        "Self",
+        "Single",
+        "Clear",
+        "Neural"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            169,
+            360
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "5daf3ee98e1b7e03",
+      "created_at": "2026-03-04T06:28:45.404977",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_25df1b32ffca1ea5",
+      "statement": "Deep learning uses multiple layers of neural networks to learn hierarchical representations",
+      "canonical_terms": [
+        "Deep",
+        "learning",
+        "multiple",
+        "networks",
+        "hierarchical"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            363,
+            454
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "25df1b32ffca1ea5",
+      "created_at": "2026-03-04T06:28:45.405034",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_171083ebb62d5564",
+      "statement": "Backpropagation is an algorithm for training neural networks by computing gradients",
+      "canonical_terms": [
+        "Backpropagation",
+        "backpropagation",
+        "algorithm",
+        "training",
+        "networks"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            457,
+            540
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "171083ebb62d5564",
+      "created_at": "2026-03-04T06:28:45.405092",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_8581bf96832aba78",
+      "statement": "Gradient descent requires backpropagation to update network weights",
+      "canonical_terms": [
+        "Gradient",
+        "gradient",
+        "descent",
+        "requires",
+        "backpropagation"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "8581bf96832aba78",
+      "created_at": "2026-03-04T06:28:45.405151",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_748c257105ceca5a",
+      "statement": "Convolutional neural networks specialize in processing grid-like data such as images",
+      "canonical_terms": [
+        "Convolutional",
+        "convolutional",
+        "networks",
+        "specialize",
+        "processing"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            613,
+            697
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "748c257105ceca5a",
+      "created_at": "2026-03-04T06:28:45.405234",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d5c51560afc51829",
+      "statement": "Recurrent neural networks maintain internal state to process sequential data",
+      "canonical_terms": [
+        "Recurrent",
+        "recurrent",
+        "networks",
+        "maintain",
+        "internal"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            700,
+            776
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "d5c51560afc51829",
+      "created_at": "2026-03-04T06:28:45.405308",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_27268a560e2bdfed",
+      "statement": "Transformers replaced recurrent architectures in many natural language processing tasks",
+      "canonical_terms": [
+        "Transformers",
+        "transformers",
+        "replaced",
+        "recurrent",
+        "architectures"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            779,
+            866
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "27268a560e2bdfed",
+      "created_at": "2026-03-04T06:28:45.405382",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_40bd0d211dacf10d",
+      "statement": "Attention mechanisms allow models to focus on relevant parts of the input",
+      "canonical_terms": [
+        "Attention",
+        "attention",
+        "mechanisms",
+        "relevant"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            869,
+            942
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "40bd0d211dacf10d",
+      "created_at": "2026-03-04T06:28:45.405460",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_b9f48005a9afadb5",
+      "statement": "The transformer architecture depends on self-attention mechanisms",
+      "canonical_terms": [
+        "The",
+        "transformer",
+        "architecture",
+        "depends",
+        "attention"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            945,
+            1010
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "b9f48005a9afadb5",
+      "created_at": "2026-03-04T06:28:45.405541",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_053b638840c82cb8",
+      "statement": "Large language models are transformers trained on massive text corpora",
+      "canonical_terms": [
+        "Large",
+        "language",
+        "transformers",
+        "trained",
+        "massive"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1013,
+            1083
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "053b638840c82cb8",
+      "created_at": "2026-03-04T06:28:45.405629",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_ab1e16a498e79604",
+      "statement": "BERT introduced bidirectional training for language understanding tasks",
+      "canonical_terms": [
+        "introduced",
+        "bidirectional",
+        "training",
+        "language",
+        "understanding"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1086,
+            1157
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "ab1e16a498e79604",
+      "created_at": "2026-03-04T06:28:45.405719",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d463cde3e5e8114d",
+      "statement": "GPT models use autoregressive generation for text completion",
+      "canonical_terms": [
+        "autoregressive",
+        "generation",
+        "completion"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1160,
+            1220
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "d463cde3e5e8114d",
+      "created_at": "2026-03-04T06:28:45.405814",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_f31d8477ee3f5f05",
+      "statement": "Fine-tuning adapts pre-trained models to specific downstream tasks",
+      "canonical_terms": [
+        "Fine",
+        "trained",
+        "specific",
+        "downstream"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1223,
+            1289
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "f31d8477ee3f5f05",
+      "created_at": "2026-03-04T06:28:45.405915",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_f736a341d4e587e2",
+      "statement": "Transfer learning leverages knowledge from one domain to improve performance in another",
+      "canonical_terms": [
+        "Transfer",
+        "transfer",
+        "learning",
+        "leverages",
+        "knowledge"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1292,
+            1379
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "f736a341d4e587e2",
+      "created_at": "2026-03-04T06:28:45.406024",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "context_e574ea8fbfe3f1ed",
+      "source_file": "examples/neural_networks.txt",
+      "content_hash": "e574ea8fbfe3f1ed",
+      "metadata": {},
+      "created_at": "2026-03-04T06:28:45.404398",
+      "node_type": "context"
+    }
+  ],
+  "edges_added": [
+    {
+      "source": "atomic_8be627fc39b63d8d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            0,
+            52
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_5daf3ee98e1b7e03",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            169,
+            360
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            363,
+            454
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            457,
+            540
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            613,
+            697
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            700,
+            776
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            779,
+            866
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            869,
+            942
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            945,
+            1010
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1013,
+            1083
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1086,
+            1157
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d463cde3e5e8114d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1160,
+            1220
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_f31d8477ee3f5f05",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1223,
+            1289
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_f736a341d4e587e2",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1292,
+            1379
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_171083ebb62d5564",
+      "type": "depends_on",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": null,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_5daf3ee98e1b7e03",
+      "type": "depends_on",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": null,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "depends_on",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": null,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "weights_added": [],
+  "candidates": [
+    {
+      "statement": "This file demonstrates the types of content that work well with\nthe relational knowledge fabric ingestion system",
+      "reason": "Statement starts with dependency pronoun 'this'",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            55,
+            167
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "proposed_node_id": null
+    }
+  ],
+  "provenance": [
+    {
+      "record_id": "prov_000000",
+      "context_node_id": "context_e574ea8fbfe3f1ed",
+      "source_file": "examples/neural_networks.txt",
+      "ingestion_timestamp": "2026-03-04T06:28:45.404410",
+      "metadata": {}
+    }
+  ]
+}

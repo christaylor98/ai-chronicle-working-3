@@ -1,0 +1,90 @@
+{
+  "nodes_added": [
+    {
+      "node_id": "context_abc123",
+      "source_file": "examples/neural_networks.txt",
+      "content_hash": "abc123",
+      "metadata": {
+        "author": "Example Author"
+      },
+      "created_at": "2026-03-04T12:00:00",
+      "node_type": "context"
+    },
+    {
+      "node_id": "atomic_def456",
+      "statement": "Neural networks are computational models inspired by biological neural systems",
+      "canonical_terms": ["Neural", "networks", "computational", "biological"],
+      "evidence": [
+        {
+          "source": "context_abc123",
+          "span": [0, 78],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "def456",
+      "created_at": "2026-03-04T12:00:01",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_ghi789",
+      "statement": "Deep learning uses multiple layers of neural networks",
+      "canonical_terms": ["learning", "multiple", "layers", "networks"],
+      "evidence": [
+        {
+          "source": "context_abc123",
+          "span": [80, 133],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "ghi789",
+      "created_at": "2026-03-04T12:00:02",
+      "node_type": "atomic"
+    }
+  ],
+  "edges_added": [
+    {
+      "source": "atomic_def456",
+      "target": "context_abc123",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_abc123",
+          "span": [0, 78],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_ghi789",
+      "target": "context_abc123",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_abc123",
+          "span": [80, 133],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "weights_added": [
+    {
+      "source": "atomic_def456",
+      "target": "atomic_ghi789",
+      "type": "related_to",
+      "weight": 0.87
+    }
+  ],
+  "candidates": [],
+  "provenance": [
+    {
+      "record_id": "prov_000000",
+      "context_node_id": "context_abc123",
+      "source_file": "examples/neural_networks.txt",
+      "ingestion_timestamp": "2026-03-04T12:00:00",
+      "metadata": {
+        "author": "Example Author"
+      }
+    }
+  ]
+}

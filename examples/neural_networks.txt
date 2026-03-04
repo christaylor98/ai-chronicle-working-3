@@ -1,0 +1,39 @@
+"""
+Example content for testing the ingestion system.
+
+This file demonstrates the types of content that work well with
+the relational knowledge fabric ingestion system.
+"""
+
+# Atomic claims work best:
+# - Self-contained statements
+# - Single semantic units
+# - Clear relationships
+
+Neural networks are computational models inspired by biological neural systems.
+
+Deep learning uses multiple layers of neural networks to learn hierarchical representations.
+
+Backpropagation is an algorithm for training neural networks by computing gradients.
+
+Gradient descent requires backpropagation to update network weights.
+
+Convolutional neural networks specialize in processing grid-like data such as images.
+
+Recurrent neural networks maintain internal state to process sequential data.
+
+Transformers replaced recurrent architectures in many natural language processing tasks.
+
+Attention mechanisms allow models to focus on relevant parts of the input.
+
+The transformer architecture depends on self-attention mechanisms.
+
+Large language models are transformers trained on massive text corpora.
+
+BERT introduced bidirectional training for language understanding tasks.
+
+GPT models use autoregressive generation for text completion.
+
+Fine-tuning adapts pre-trained models to specific downstream tasks.
+
+Transfer learning leverages knowledge from one domain to improve performance in another.

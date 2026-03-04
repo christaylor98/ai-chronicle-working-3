@@ -1,0 +1,21 @@
+"""
+Bad example - statements that violate atomicity principles.
+
+This demonstrates what NOT to do.
+"""
+
+# Problems:
+# - Pronouns without clear referents
+# - Multiple claims in single statements
+# - Contextual dependencies
+# - Narrative flow
+
+It works by processing inputs through layers. This enables complex pattern recognition.
+
+They are useful for many tasks and can be trained efficiently.
+
+The main advantage is that it learns automatically, and this is important because manual feature engineering is expensive and time-consuming; furthermore, the learned representations often generalize better.
+
+That's why researchers prefer them.
+
+These architectures...
