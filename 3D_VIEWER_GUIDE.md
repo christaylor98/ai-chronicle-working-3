@@ -38,8 +38,10 @@ Then open your browser to: **http://127.0.0.1:8000**
 | **Pan camera** | Click & drag mouse |
 | **Zoom** | Scroll wheel |
 | **Select node** | Click on sphere |
-| **View details** | Details panel appears on right |
-
+| **View details** | Details panel appears on right || **Adjust label detail** | LOD slider (bottom right) |
+| **Scale nodes** | Node size slider |
+| **Refresh view** | Refresh button |
+| **Reset camera** | Reset button |
 ## Understanding the Visualization
 
 ### Info Panel (Top Left)
@@ -59,6 +61,14 @@ When you click a node:
 - Evidence count
 - 3D position coordinates
 - Network degree
+
+### View Controls Panel (Bottom Right)
+
+Dynamic visualization controls:
+- **Label Detail (LOD)**: Adjust number of visible labels (5-100)
+- **Node Size Scale**: Adjust global node size (50%-200%)
+- **Refresh View**: Reload snapshot from server
+- **Reset Camera**: Return camera to initial position
 
 ### 3D Layout Algorithm
 
@@ -158,11 +168,54 @@ This is useful for:
 ## Keyboard Shortcuts Reference
 
 ```
-↑ ↓ ← →     Rotate camera view
-Mouse Drag   Pan camera position
-Scroll       Zoom in/out
-Click        Select node and show details
+↑ ↓ ← →           Rotate camera view
+Mouse Drag        Pan camera position
+Scroll            Zoom in/out
+Click             Select node and show details
 ```
+
+## Dynamic View Controls
+
+### Adjusting Label Detail (LOD)
+
+1. Use the **Label Detail (LOD)** slider in bottom-right panel
+2. Range: 5 to 100 labels
+3. Lower values = better performance
+4. Higher values = more context visible
+
+**Tip**: Adjust based on graph size:
+- Small graphs (< 20 nodes): 50-100 labels
+- Medium graphs (20-50 nodes): 30-50 labels  
+- Large graphs (> 50 nodes): 5-30 labels
+
+### Scaling Nodes
+
+1. Use the **Node Size Scale** slider
+2. Range: 50% to 200%
+3. Useful for:
+   - Emphasizing/de-emphasizing node importance
+   - Reducing visual clutter (scale down)
+   - Highlighting structure (scale up)
+
+### Refreshing the View
+
+Click **🔄 Refresh View** to:
+- Reload projection from disk (if modified)
+- Regenerate 3D layout with same parameters
+- Update metadata display
+- Maintain current camera position and scale settings
+
+**Use cases**:
+- Projection file was updated externally
+- Server parameters changed
+- Reset after manual graph edits
+
+### Resetting the Camera
+
+Click **📷 Reset Camera** to:
+- Return camera to default position (15, 15, 15)
+- Reset orientation to look at origin
+- Useful after getting lost navigating
 
 ## API Access
 

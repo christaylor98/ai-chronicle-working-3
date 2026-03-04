@@ -19,6 +19,14 @@ export class UI {
         
         this.loadingPanel = document.getElementById('loading');
         
+        // View controls
+        this.lodSlider = document.getElementById('lod-slider');
+        this.lodValue = document.getElementById('lod-value');
+        this.nodeScaleSlider = document.getElementById('node-scale-slider');
+        this.nodeScaleValue = document.getElementById('node-scale-value');
+        this.refreshBtn = document.getElementById('refresh-btn');
+        this.resetCameraBtn = document.getElementById('reset-camera-btn');
+        
         // Make closeDetails available globally for HTML onclick
         window.UI = this;
     }
@@ -129,5 +137,41 @@ export class UI {
      */
     showError(message) {
         alert(`Error: ${message}`);
+    }
+
+    /**
+     * Setup view control event listeners.
+     */
+    setupViewControls(callbacks) {
+        // LOD slider
+        if (this.lodSlider) {
+            this.lodSlider.addEventListener('input', (e) => {
+                const value = parseInt(e.target.value);
+                this.lodValue.textContent = value;
+                if (callbacks.onLODChange) {
+                    callbacks.onLODChange(value);
+                }
+            });
+        }
+
+        // Node scale slider
+        if (this.nodeScaleSlider) {
+            this.nodeScaleSlider.addEventListener('input', (e) => {
+                const value = parseInt(e.target.value);
+                this.nodeScaleValue.textContent = `${value}%`;
+                if (callbacks.onNodeScaleChange) {
+                    callbacks.onNodeScaleChange(value / 100);
+                }
+            });
+        }
+    }
+
+    /**
+     * Disable/enable refresh button.
+     */
+    setRefreshEnabled(enabled) {
+        if (this.refreshBtn) {
+            this.refreshBtn.disabled = !enabled;
+        }
     }
 }

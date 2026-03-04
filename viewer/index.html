@@ -173,6 +173,101 @@
             display: inline-block;
         }
 
+        #view-controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+        }
+
+        #view-controls h3 {
+            font-size: 13px;
+            color: #4A90E2;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        #view-controls .control-group {
+            margin-bottom: 15px;
+        }
+
+        #view-controls .control-group:last-child {
+            margin-bottom: 0;
+        }
+
+        #view-controls label {
+            display: block;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        #view-controls input[type="range"] {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+            border-radius: 2px;
+        }
+
+        #view-controls input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: #4A90E2;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        #view-controls input[type="range"]::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: #4A90E2;
+            cursor: pointer;
+            border-radius: 50%;
+            border: none;
+        }
+
+        #view-controls .value-display {
+            display: inline-block;
+            color: #e0e0e0;
+            font-size: 11px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        #view-controls button {
+            width: 100%;
+            padding: 8px;
+            background: #4A90E2;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        #view-controls button:hover {
+            background: #357ABD;
+        }
+
+        #view-controls button:active {
+            background: #2c5f99;
+        }
+
+        #view-controls button:disabled {
+            background: rgba(74, 144, 226, 0.3);
+            cursor: not-allowed;
+        }
+
         #loading {
             position: absolute;
             top: 50%;
@@ -281,6 +376,32 @@
         </div>
         <div class="control-row">
             <kbd>Click Node</kbd> <span>Show details</span>
+        </div>
+    </div>
+
+    <div id="view-controls">
+        <h3>View Controls</h3>
+        
+        <div class="control-group">
+            <label>
+                Label Detail (LOD)
+                <span class="value-display" id="lod-value">30</span>
+            </label>
+            <input type="range" id="lod-slider" min="5" max="100" value="30" step="5">
+        </div>
+
+        <div class="control-group">
+            <label>Node Size Scale</label>
+            <input type="range" id="node-scale-slider" min="50" max="200" value="100" step="10">
+            <span class="value-display" id="node-scale-value">100%</span>
+        </div>
+
+        <div class="control-group">
+            <button id="refresh-btn" onclick="window.viewer.reload()">🔄 Refresh View</button>
+        </div>
+
+        <div class="control-group">
+            <button id="reset-camera-btn" onclick="window.viewer.resetCamera()">📷 Reset Camera</button>
         </div>
     </div>
 

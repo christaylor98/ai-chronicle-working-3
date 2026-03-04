@@ -162,12 +162,25 @@ export class SceneBuilder {
         
         if (highlight) {
             mesh.material.emissiveIntensity = 0.8;
-            mesh.scale.set(1.2, 1.2, 1.2);
+            // Get current base scale from userData if it exists
+            const baseScale = mesh.userData.baseScale || 1.0;
+            mesh.scale.set(baseScale * 1.2, baseScale * 1.2, baseScale * 1.2);
         } else {
             const nodeData = this.nodeData.get(nodeId);
             const degree = nodeData ? nodeData.degree : 0;
             mesh.material.emissiveIntensity = Math.min(degree / 20.0, 0.5);
-            mesh.scale.set(1, 1, 1);
+            const baseScale = mesh.userData.baseScale || 1.0;
+            mesh.scale.set(baseScale, baseScale, baseScale);
+        }
+    }
+
+    /**
+     * Update node scales globally.
+     */
+    updateNodeScales(scaleFactor) {
+        for (const [nodeId, mesh] of this.nodeMeshes) {
+            mesh.userData.baseScale = scaleFactor;
+            mesh.scale.set(scaleFactor, scaleFactor, scaleFactor);
         }
     }
 }

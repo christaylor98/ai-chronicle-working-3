@@ -30,6 +30,8 @@ class ProjectionViewer3D {
         // Application state
         this.snapshot = null;
         this.selectedNodeId = null;
+        this.nodeScaleFactor = 1.0;
+        this.initialCameraPosition = { x: 15, y: 15, z: 15 };
         
         // Initialize
         this.init();
@@ -62,6 +64,12 @@ class ProjectionViewer3D {
             
             // Update UI with metadata
             this.ui.updateInfoPanel(this.snapshot.metadata);
+            
+            // Setup view controls
+            this.ui.setupViewControls({
+                onLODChange: (value) => this.setLabelLOD(value),
+                onNodeScaleChange: (scale) => this.setNodeScale(scale)
+            });
             
             // Start render loop
             this.renderer.startAnimationLoop(() => this.update());
@@ -117,12 +125,56 @@ class ProjectionViewer3D {
     }
 
     /**
+     * Set label LOD (level of detail).
+     */
+    setLabelLOD(maxLabels) {
+        this.labelManager.setMaxLabels(maxLabels);
+        console.log(`Label LOD set to ${maxLabels}`);
+    }
+
+    /**
+     * Set node scale factor.
+     */
+    setNodeScale(scale) {
+        this.nodeScaleFactor = scale;
+        
+        // Update all node meshes
+        for (const [nodeId, mesh] of this.sceneBuilder.nodeMeshes) {
+            const nodeData = this.sceneBuilder.getNodeData(nodeId);
+            if (nodeData) {
+                const baseSize = nodeData.size;
+                const newScale = baseSize * scale;
+                mesh.scale.set(newScale, newScale, newScale);
+            }
+        }
+        
+        console.log(`Node scale set to ${(scale * 100).toFixed(0)}%`);
+    }
+
+    /**
+     * Reset camera to initial position.
+     */
+    resetCamera() {
+        this.renderer.getCamera().position.set(
+            this.initialCameraPosition.x,
+            this.initialCameraPosition.y,
+            this.initialCameraPosition.z
+        );
+        this.renderer.getCamera().lookAt(0, 0, 0);
+        console.log('✓ Camera reset');
+    }
+
+    /**
      * Reload snapshot from server.
      */
     async reload() {
         this.ui.showLoading();
+        this.ui.setRefreshEnabled(false);
         
         try {
+            // Request server to reload projection
+            await fetch('/api/snapshot/reload');
+            
             // Clear current scene
             this.sceneBuilder.clear();
             this.labelManager.clearLabels();
@@ -130,6 +182,12 @@ class ProjectionViewer3D {
             // Reload data
             this.snapshot = await this.api.fetchSnapshot();
             this.sceneBuilder.buildFromSnapshot(this.snapshot);
+            
+            // Apply current node scale
+            if (this.nodeScaleFactor !== 1.0) {
+                this.setNodeScale(this.nodeScaleFactor);
+            }
+            
             this.labelManager.createLabels(this.snapshot.nodes);
             this.inputController.setNodeMeshes(
                 this.sceneBuilder.getAllNodeMeshes()
@@ -137,11 +195,13 @@ class ProjectionViewer3D {
             this.ui.updateInfoPanel(this.snapshot.metadata);
             
             this.ui.hideLoading();
+            this.ui.setRefreshEnabled(true);
             console.log('✓ Snapshot reloaded');
             
         } catch (error) {
             console.error('Failed to reload:', error);
             this.ui.hideLoading();
+            this.ui.setRefreshEnabled(true);
             this.ui.showError(`Reload failed: ${error.message}`);
         }
     }

@@ -105,6 +105,15 @@ convert_projection_to_3d_snapshot(
 | Scroll Wheel        | Zoom in/out             |
 | Click Node          | Show details panel      |
 
+### Dynamic View Controls (Bottom Right Panel)
+
+| **Control**         | **Function**            | **Range/Action** |
+|---------------------|-------------------------|------------------|
+| Label Detail (LOD)  | Adjust visible labels   | 5-100 labels     |
+| Node Size Scale     | Scale all nodes         | 50%-200%         |
+| Refresh View        | Reload from server      | Button           |
+| Reset Camera        | Return to default view  | Button           |
+
 ## API Endpoints
 
 ### `GET /api/snapshot`
@@ -190,10 +199,12 @@ Open multiple projections to compare topology differences.
 
 ## Performance
 
-- **Label LOD**: Maximum 30 visible labels at once
+- **Label LOD**: Adjustable 5-100 labels (default 30)
+- **Node Scaling**: Dynamic 50%-200% scaling
 - **WebGL Rendering**: Hardware-accelerated
 - **Raycasting**: Efficient node picking
 - **Frustum Culling**: Labels only rendered when in view
+- **Refresh**: Hot-reload without page refresh
 
 ## Dependencies
 
