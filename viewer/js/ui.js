@@ -69,6 +69,11 @@ export class UI {
         // Degree
         html += this.createDetailRow('Degree', nodeData.degree);
         
+        // Importance score if available
+        if (nodeData.importance !== undefined) {
+            html += this.createDetailRow('Importance', nodeData.importance.toFixed(2));
+        }
+        
         // Statement or context
         if (nodeData.node_type === 'atomic') {
             html += this.createDetailRow('Statement', nodeData.full_statement || nodeData.label);

@@ -202,40 +202,42 @@ export class SceneBuilder {
 
         const cameraDistance = camera.position.length();
         
-        // Calculate node degree statistics for dynamic thresholds
-        const degrees = Array.from(this.nodeData.values()).map(n => n.degree);
-        const maxDegree = Math.max(...degrees);
-        const minDegree = Math.min(...degrees);
-        const degreeRange = maxDegree - minDegree;
+        // Calculate node importance statistics for dynamic thresholds
+        const importanceScores = Array.from(this.nodeData.values())
+            .map(n => n.importance || n.degree);
+        const maxImportance = Math.max(...importanceScores);
+        const minImportance = Math.min(...importanceScores);
+        const importanceRange = maxImportance - minImportance;
         
         // LOD levels based on camera distance
         const baseLOD = this.lodDistanceScale;
         let visibilityThreshold;
         let visibleCount = 0;
         
-        // Dynamic thresholds based on actual degree distribution
+        // Dynamic thresholds based on actual importance distribution
         if (cameraDistance < 25 * baseLOD) {
             // Close zoom: show all nodes
-            visibilityThreshold = minDegree;
+            visibilityThreshold = minImportance;
         } else if (cameraDistance < 50 * baseLOD) {
-            // Medium zoom: show top 75% by degree
-            visibilityThreshold = minDegree + degreeRange * 0.25;
+            // Medium zoom: show top 75% by importance
+            visibilityThreshold = minImportance + importanceRange * 0.25;
         } else if (cameraDistance < 100 * baseLOD) {
-            // Far zoom: show top 50% by degree
-            visibilityThreshold = minDegree + degreeRange * 0.5;
+            // Far zoom: show top 50% by importance
+            visibilityThreshold = minImportance + importanceRange * 0.5;
         } else if (cameraDistance < 150 * baseLOD) {
-            // Very far: show top 25% by degree
-            visibilityThreshold = minDegree + degreeRange * 0.75;
+            // Very far: show top 25% by importance
+            visibilityThreshold = minImportance + importanceRange * 0.75;
         } else {
-            // Extreme distance: only show highest degree nodes
-            visibilityThreshold = maxDegree - 0.5;
+            // Extreme distance: only show highest importance nodes
+            visibilityThreshold = maxImportance - 0.5;
         }
         
-        // Apply visibility based on node degree (importance)
+        // Apply visibility based on node importance
         for (const [nodeId, mesh] of this.nodeMeshes) {
             const nodeData = this.nodeData.get(nodeId);
             if (nodeData) {
-                const isVisible = nodeData.degree >= visibilityThreshold;
+                const importance = nodeData.importance || nodeData.degree;
+                const isVisible = importance >= visibilityThreshold;
                 mesh.visible = isVisible;
                 if (isVisible) visibleCount++;
             }
@@ -254,7 +256,7 @@ export class SceneBuilder {
         
         // Log for debugging (throttled)
         if (!this._lastLogTime || Date.now() - this._lastLogTime > 1000) {
-            console.log(`Telescope: distance=${cameraDistance.toFixed(1)}, threshold=${visibilityThreshold.toFixed(1)}, visible=${visibleCount}/${this.nodeMeshes.size}`);
+            console.log(`Telescope: distance=${cameraDistance.toFixed(1)}, threshold=${visibilityThreshold.toFixed(2)}, visible=${visibleCount}/${this.nodeMeshes.size}`);
             this._lastLogTime = Date.now();
         }
     }

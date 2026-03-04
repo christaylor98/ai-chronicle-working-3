@@ -54,9 +54,9 @@ class DeterministicForce3D:
     def __init__(self, seed: int, iterations: int = 200):
         self.seed = seed
         self.iterations = iterations
-        self.k = 1.5  # Optimal distance
-        self.c_rep = 1000  # Repulsion constant
-        self.c_spring = 0.01  # Spring constant
+        self.k = 2.0  # Optimal distance (increased for more spacing)
+        self.c_rep = 500  # Repulsion constant (reduced to let weights dominate)
+        self.c_spring = 0.05  # Spring constant (increased for stronger weight influence)
         self.damping = 0.85  # Velocity damping
     
     def compute_layout(self, nodes: List[str], edges: List[Tuple[str, str, float]]) -> Dict[str, Tuple[float, float, float]]:
@@ -128,8 +128,11 @@ class DeterministicForce3D:
                 
                 dist = math.sqrt(dx*dx + dy*dy + dz*dz + 0.01)
                 
-                # Hooke's law with weight scaling
-                f_spring = self.c_spring * (dist - self.k) * weight
+                # Hooke's law with STRONG weight scaling
+                # Higher weight = pull nodes MUCH closer together
+                # Optimal distance inversely proportional to weight
+                optimal_dist = self.k / (weight ** 1.5)  # Strong weight influence
+                f_spring = self.c_spring * (dist - optimal_dist) * (weight ** 2)
                 
                 fx = (dx / dist) * f_spring
                 fy = (dy / dist) * f_spring
@@ -202,6 +205,28 @@ class ProjectionSnapshot3DAdapter:
             degree[target] = degree.get(target, 0) + 1
         return degree
     
+    def _compute_weighted_degree_map(self, edges: List[dict]) -> Dict[str, float]:
+        """Compute weighted degree (importance score) from edge list."""
+        weighted_degree = {}
+        for edge in edges:
+            source = edge["source"]
+            target = edge["target"]
+            weight = edge.get("weight", 0.5)
+            edge_type = edge.get("edge_type", "related_to")
+            
+            # Weight multiplier based on edge type
+            type_multiplier = {
+                "depends_on": 2.0,      # Dependencies are very important
+                "related_to": 1.0,      # Standard relationship
+                "appears_in": 0.5       # Context links less important
+            }.get(edge_type, 1.0)
+            
+            importance = weight * type_multiplier
+            weighted_degree[source] = weighted_degree.get(source, 0) + importance
+            weighted_degree[target] = weighted_degree.get(target, 0) + importance
+        
+        return weighted_degree
+    
     def convert_to_snapshot(self) -> Snapshot3D:
         """
         Convert projection to 3D snapshot format.
@@ -215,8 +240,9 @@ class ProjectionSnapshot3DAdapter:
         nodes = self.projection_data.get("nodes", [])
         edges = self.projection_data.get("edges", [])
         
-        # Compute degree map
+        # Compute degree map and weighted degree (importance)
         degree_map = self._compute_degree_map(edges)
+        weighted_degree_map = self._compute_weighted_degree_map(edges)
         
         # Prepare edge list for layout algorithm
         edge_tuples = [
@@ -232,17 +258,28 @@ class ProjectionSnapshot3DAdapter:
         
         # Build 3D nodes with visual encodings
         nodes_3d = []
+        
+        # Get importance statistics for scaling
+        importance_scores = list(weighted_degree_map.values())
+        max_importance = max(importance_scores) if importance_scores else 1
+        min_importance = min(importance_scores) if importance_scores else 0
+        
         for node in nodes:
             node_id = node["node_id"]
             node_type = node.get("node_type", "atomic")
             degree = degree_map.get(node_id, 0)
+            importance = weighted_degree_map.get(node_id, 0)
             
             # Position from layout
             x, y, z = positions[node_id]
             
-            # Size proportional to degree (0.5 to 2.5)
-            size = 0.5 + (degree / 10.0) * 2.0
-            size = min(size, 2.5)
+            # Size based on IMPORTANCE (weighted degree), not just degree count
+            # Normalize importance to 0-1 range
+            norm_importance = (importance - min_importance) / (max_importance - min_importance + 0.01)
+            
+            # Size range: 0.3 (least important) to 3.0 (most important)
+            # Use power scaling to emphasize differences
+            size = 0.3 + (norm_importance ** 0.7) * 2.7
             
             # Color by type
             color = self.NODE_COLORS.get(node_type, "#999999")
@@ -263,6 +300,7 @@ class ProjectionSnapshot3DAdapter:
                 "label": label,
                 "node_type": node_type,
                 "degree": degree,
+                "importance": importance,
                 "full_statement": node.get("statement", "") if node_type == "atomic" else None
             })
         
@@ -281,11 +319,13 @@ class ProjectionSnapshot3DAdapter:
         # Metadata from projection
         metadata = {
             "projection_parameters": self.projection_data.get("projection_parameters", {}),
-            "layout_algorithm": "deterministic_force_3d",
+            "layout_algorithm": "deterministic_force_3d_weighted",
             "layout_seed": seed,
             "node_count": len(nodes_3d),
             "edge_count": len(edges_3d),
             "max_degree": max(degree_map.values()) if degree_map else 0,
+            "max_importance": max(importance_scores) if importance_scores else 0,
+            "min_importance": min(importance_scores) if importance_scores else 0,
             "source_file": str(self.projection_path)
         }
         
