@@ -223,6 +223,7 @@ def cmd_project(args):
             filename = (
                 f"projection_{i}_"
                 f"t{params.coherence_threshold:.1f}_"
+                f"k{params.top_k_per_node}_"
                 f"d{params.max_depth}.json"
             )
             output_path = output_dir / filename
@@ -232,19 +233,23 @@ def cmd_project(args):
             
             print(f"\n  [{i}/7] {filename}")
             print(f"       Threshold: {params.coherence_threshold:.1f}, "
+                  f"Top-K: {params.top_k_per_node}, "
                   f"Depth: {params.max_depth}, "
                   f"Max Nodes: {params.max_nodes}")
             print(f"       Result: {proj.metadata.node_count} nodes, "
                   f"{proj.metadata.edge_count} edges, "
+                  f"avg degree: {proj.metadata.average_degree:.2f}, "
                   f"density: {proj.metadata.density:.4f}")
         
         print(f"\n✓ All projections saved to: {output_dir}/")
-        print(f"\nProjection suite demonstrates:")
+        print(f"\nProjection suite demonstrates ADAPTIVE_PROJECTION_POLICY.v1.0:")
         print(f"  • Low threshold → broader conceptual field")
         print(f"  • High threshold → atomic precision")
+        print(f"  • Low top-k → sparse connectivity (prevents mesh explosion)")
+        print(f"  • High top-k → richer local structure")
         print(f"  • Shallow depth → local neighborhood")
         print(f"  • Deep depth → extended network")
-        print(f"\nAll projections are reversible lenses over the immutable truth layer.")
+        print(f"\nAll projections are deterministic, reversible lenses over the immutable truth layer.")
     
     except FileNotFoundError:
         print(f"Error: File not found: {args.graph}", file=sys.stderr)

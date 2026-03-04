@@ -1,0 +1,115 @@
+{
+  "projection_parameters": {
+    "focus_node": "atomic_171083ebb62d5564",
+    "coherence_threshold": 0.5,
+    "top_k_per_node": 5,
+    "max_depth": 1,
+    "max_nodes": 30
+  },
+  "nodes": [
+    {
+      "node_id": "atomic_171083ebb62d5564",
+      "statement": "Backpropagation is an algorithm for training neural networks by computing gradients",
+      "canonical_terms": [
+        "Backpropagation",
+        "backpropagation",
+        "algorithm",
+        "training",
+        "networks"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            457,
+            540
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "context_e574ea8fbfe3f1ed",
+      "source_file": "examples/neural_networks.txt",
+      "content_hash": "e574ea8fbfe3f1ed",
+      "node_type": "context",
+      "metadata": {}
+    },
+    {
+      "node_id": "atomic_8581bf96832aba78",
+      "statement": "Gradient descent requires backpropagation to update network weights",
+      "canonical_terms": [
+        "Gradient",
+        "gradient",
+        "descent",
+        "requires",
+        "backpropagation"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    }
+  ],
+  "edges": [
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "context_e574ea8fbfe3f1ed",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            457,
+            540
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "context_e574ea8fbfe3f1ed",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_171083ebb62d5564",
+      "edge_type": "depends_on",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "node_count": 3,
+    "edge_count": 3,
+    "average_degree": 2.0,
+    "density": 1.0
+  }
+}
