@@ -135,6 +135,9 @@ class SimilarityEngine:
         """
         Compute all pairwise similarities above threshold.
         
+        DEPRECATED: Use compute_topk_similarities for ingestion.
+        This method applies semantic cutoffs which violate MEASUREMENT_SPEC v1.0.
+        
         Returns:
             List of (idx1, idx2, similarity) tuples
         """
@@ -156,3 +159,75 @@ class SimilarityEngine:
                     pairs.append((i, j, similarity))
         
         return pairs
+    
+    def compute_topk_similarities(
+        self, statements: List[str], k: int = 10
+    ) -> List[Tuple[int, int, float]]:
+        """
+        Compute top-K most similar neighbors for each statement.
+        
+        Per INGESTION_SIMILARITY_MEASUREMENT_SPEC.v1.0:
+        - No global threshold filtering during ingestion
+        - Store bounded measurements (top-K per node)
+        - Preserve reversibility by not discarding similarity data
+        - Maintain symmetry: if A→B exists, ensure B→A exists
+        
+        This prevents n^2 explosion while preserving measurement semantics.
+        Projection layer applies thresholds, not ingestion layer.
+        
+        Args:
+            statements: List of statements to compare
+            k: Maximum number of neighbors to retain per statement
+        
+        Returns:
+            List of (idx1, idx2, similarity) tuples for symmetric top-K pairs
+        """
+        if len(statements) < 2:
+            return []
+        
+        # Encode all statements
+        embeddings = [self.encode(stmt) for stmt in statements]
+        n = len(statements)
+        
+        # Compute full similarity matrix (upper triangle only for efficiency)
+        similarity_matrix = {}
+        for i in range(n):
+            for j in range(i + 1, n):
+                similarity = np.dot(embeddings[i], embeddings[j]) / (
+                    np.linalg.norm(embeddings[i]) * np.linalg.norm(embeddings[j])
+                )
+                similarity = float(max(0.0, min(1.0, (similarity + 1) / 2)))
+                similarity_matrix[(i, j)] = similarity
+        
+        # For each node, find top-K neighbors
+        # Store as set to handle symmetry automatically
+        selected_pairs = set()
+        
+        for idx in range(n):
+            # Collect all similarities involving this node
+            neighbors = []
+            for i in range(n):
+                if i == idx:
+                    continue  # Skip self
+                
+                # Get similarity from matrix (handle both orderings)
+                if (idx, i) in similarity_matrix:
+                    sim = similarity_matrix[(idx, i)]
+                elif (i, idx) in similarity_matrix:
+                    sim = similarity_matrix[(i, idx)]
+                else:
+                    continue
+                
+                neighbors.append((i, sim))
+            
+            # Sort by similarity descending and take top-K
+            neighbors.sort(key=lambda x: x[1], reverse=True)
+            top_k_neighbors = neighbors[:k]
+            
+            # Add to selected pairs (ensure canonical ordering i < j)
+            for neighbor_idx, sim in top_k_neighbors:
+                pair = (min(idx, neighbor_idx), max(idx, neighbor_idx))
+                selected_pairs.add((pair[0], pair[1], sim))
+        
+        # Convert set to list and return
+        return sorted(list(selected_pairs))

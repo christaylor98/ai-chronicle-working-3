@@ -4,9 +4,9 @@
 [![License](https://img.shields.io/badge/license-See%20LICENSE-green.svg)](LICENSE)
 [![Specification](https://img.shields.io/badge/spec-v1.0%20Full-brightgreen.svg)](SPECIFICATION.md)
 
-**Version**: 1.0.0 + CORRECTION_SPEC v1.0 + ENRICHMENT_SPEC v1.0  
-**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION + ENRICHMENT  
-**Status**: ✅ Production Ready - Hardened + Enriched
+**Version**: 1.0.0 + CORRECTION_SPEC v1.0 + MEASUREMENT_SPEC v1.0  
+**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION + MEASUREMENT  
+**Status**: ✅ Production Ready - Hardened + Measurement-Complete
 
 ## Overview
 
@@ -147,9 +147,10 @@ The system produces a truth delta containing:
 - **[QUICKSTART.md](QUICKSTART.md)**: 5-minute getting started guide
 - **[INSTALL.md](INSTALL.md)**: Complete installation guide with dependency troubleshooting
 - **[USAGE.md](USAGE.md)**: Comprehensive usage guide with examples and best practices
-- **[SPECIFICATION.md](SPECIFICATION.md)**: Formal specification (BASE + CORRECTION + ENRICHMENT)
+- **[SPECIFICATION.md](SPECIFICATION.md)**: Formal specification (BASE + CORRECTION + MEASUREMENT)
 - **[CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md)**: Hardening corrections and verification
 - **[ENRICHMENT_SUMMARY.md](ENRICHMENT_SUMMARY.md)**: Relational enrichment implementation and analysis
+- **[MEASUREMENT_SUMMARY.md](MEASUREMENT_SUMMARY.md)**: Top-K measurement architecture (supersedes enrichment)
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)**: Technical implementation details
 
 ## Examples
@@ -220,16 +221,16 @@ This implementation is **fully compliant** with:
 - ✓ No implicit inference
 - ✓ Strict compilation discipline
 
-### INGESTION_RELATIONAL_ENRICHMENT_SPEC.v1.0 (Density Enhancement)
-- ✓ Fixed similarity threshold (0.65)
-- ✓ Symmetric `related_to` edges only
-- ✓ Weight metadata with method provenance
-- ✓ No causation inference from similarity
-- ✓ No clustering or containment
-- ✓ Semantic adjacency without distortion
+### INGESTION_SIMILARITY_MEASUREMENT_SPEC.v1.0 (Bounded Measurement)
+- ✓ Top-K similarity measurement (K=10)
+- ✓ No ingestion-time threshold cutoffs
+- ✓ Measurement completeness within bounded horizon
+- ✓ Linear growth (O(N×K))
+- ✓ Projection-agnostic (thresholds applied at query time)
+- ✓ Reversible zoom (adjust coherence threshold in projection layer)
 
 **See [CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md) for hardening verification.**  
-**See [ENRICHMENT_SUMMARY.md](ENRICHMENT_SUMMARY.md) for enrichment analysis.**
+**See [MEASUREMENT_SUMMARY.md](MEASUREMENT_SUMMARY.md) for measurement architecture.**
 
 ## Contributing
 

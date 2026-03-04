@@ -44,23 +44,24 @@ class IngestionEngine:
     
     def __init__(
         self,
-        similarity_threshold: float = 0.65,
+        similarity_k: int = 10,
         strict_validation: bool = True,
     ):
         """
         Initialize ingestion engine.
         
-        Per INGESTION_RELATIONAL_ENRICHMENT_SPEC.v1.0:
-        - similarity_threshold is FIXED at 0.65 for related_to edges
-        - This threshold ensures semantic adjacency without over-connecting
-        - Deduplication uses higher threshold (0.85) to prevent duplicates
+        Per INGESTION_SIMILARITY_MEASUREMENT_SPEC.v1.0:
+        - similarity_k is the top-K bound for related_to edges (default K=10)
+        - NO semantic threshold filtering during ingestion
+        - Similarity is MEASUREMENT, threshold is PROJECTION
+        - Deduplication uses high threshold (0.85) to prevent duplicates
         
         Args:
-            similarity_threshold: Fixed at 0.65 for related_to edges (per spec)
+            similarity_k: Maximum similar neighbors per node (default 10, bounded growth)
             strict_validation: Enable strict atomicity validation
         """
-        self.similarity_threshold = similarity_threshold
-        self.deduplication_threshold = 0.85  # Higher threshold for deduplication
+        self.similarity_k = similarity_k
+        self.deduplication_threshold = 0.85  # High threshold for deduplication only
         
         # Initialize components
         self.parser = TextParser()
@@ -204,9 +205,10 @@ class IngestionEngine:
             self.graph.add_edge(edge)
         
         # 2. Build semantic similarity edges (related_to)
+        # Use top-K measurement (no threshold filtering)
         similarity_edges = self.relationship_builder.build_similarity_edges(
             atomic_nodes,
-            self.similarity_threshold
+            self.similarity_k
         )
         for edge in similarity_edges:
             self.graph.add_weighted_edge(edge)

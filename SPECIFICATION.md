@@ -1,6 +1,6 @@
-# INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION_SPEC.v1.0 + ENRICHMENT_SPEC.v1.0
+# INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION_SPEC.v1.0 + MEASUREMENT_SPEC.v1.0
 
-This document describes the authoritative specification that this implementation follows, including hardening corrections and relational enrichment.
+This document describes the authoritative specification that this implementation follows, including hardening corrections and similarity measurement discipline.
 
 ## Core Principles
 
@@ -153,7 +153,14 @@ Context nodes represent source files as evidence carriers:
 
 ### Weighted (Continuous 0.0-1.0)
 
-**related_to**: Semantic similarity between atomic nodes
+**related_to**: Semantic similarity measurement between atomic nodes
+- **Top-K bounded** (K=10): Each node retains 10 most similar neighbors
+- **NO global threshold**: All top-K measurements stored
+- **Symmetric**: No duplicate inverse edges
+- **Method provenance**: Metadata includes similarity method
+- **Does NOT imply**: causation, dependency, or refinement
+- **Threshold filtering**: Happens in projection layer, not ingestion
+- **Linear growth**: Max edges = N × K (bounded)
 
 ### Directed (Boolean)
 

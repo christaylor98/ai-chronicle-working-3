@@ -24,25 +24,30 @@ class RelationshipBuilder:
     def build_similarity_edges(
         self,
         nodes: List[AtomicNode],
-        threshold: float = 0.65
+        k: int = 10
     ) -> List[WeightedEdge]:
         """
-        Build related_to edges based on semantic similarity.
+        Build related_to edges based on top-K semantic similarity.
         
-        Per INGESTION_RELATIONAL_ENRICHMENT_SPEC.v1.0:
-        - Fixed threshold of 0.65 (not configurable)
+        Per INGESTION_SIMILARITY_MEASUREMENT_SPEC.v1.0:
+        - NO global threshold filtering during ingestion
+        - Store top-K most similar neighbors per node (default K=10)
+        - Preserve ALL measurements within bounded horizon
+        - Threshold filtering belongs to projection layer, not ingestion
         - Symmetric edges (no duplicates)
-        - Weight between 0.0 and 1.0
-        - Metadata includes similarity method
-        - No self-links
-        - No clustering or containment
+        - Metadata includes similarity method only (no threshold)
+        
+        Philosophical shift:
+        - Similarity is MEASUREMENT (stored in truth layer)
+        - Threshold is PROJECTION (applied in query layer)
+        - Ingestion MUST NOT apply semantic cutoffs
         
         Args:
             nodes: List of atomic nodes to compare
-            threshold: Fixed at 0.65 per specification
+            k: Maximum number of neighbors to retain per node (bounded growth)
         
         Returns:
-            List of weighted edges with similarity metadata
+            List of weighted edges with similarity measurements
         """
         edges = []
         
@@ -53,19 +58,16 @@ class RelationshipBuilder:
         statements = [node.statement for node in nodes]
         node_ids = [node.node_id for node in nodes]
         
-        # Compute pairwise similarities
-        # Note: compute_pairwise_similarities already ensures:
-        # - No self-links (i != j)
-        # - No duplicates (i < j only)
-        # - Symmetric relationships
-        similarities = self.similarity_engine.compute_pairwise_similarities(
-            statements, threshold
+        # Compute top-K similarities (no threshold filtering)
+        # This returns ALL top-K pairs, preserving measurement completeness
+        similarities = self.similarity_engine.compute_topk_similarities(
+            statements, k
         )
         
         # Determine similarity method
         method = "embedding_cosine" if self.similarity_engine._use_semantic else "basic_bow_cosine"
         
-        # Create weighted edges with metadata
+        # Create weighted edges with metadata (no threshold in metadata)
         for idx1, idx2, weight in similarities:
             edges.append(WeightedEdge(
                 source=node_ids[idx1],
@@ -73,7 +75,8 @@ class RelationshipBuilder:
                 weight=weight,
                 metadata={
                     "similarity_method": method,
-                    "threshold": threshold
+                    "k": k,  # Document bounding parameter, not semantic cutoff
+                    "measurement_type": "topk_similarity"
                 }
             ))
         

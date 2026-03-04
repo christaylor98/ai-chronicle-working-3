@@ -1,0 +1,1467 @@
+{
+  "nodes_added": [
+    {
+      "node_id": "atomic_28cf70b6fc7a9bce",
+      "statement": "Neural networks are computational models inspired by biological neural systems",
+      "canonical_terms": [
+        "Neural",
+        "networks",
+        "computational",
+        "inspired",
+        "biological"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            282,
+            360
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "28cf70b6fc7a9bce",
+      "created_at": "2026-03-04T21:10:30.119636",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_25df1b32ffca1ea5",
+      "statement": "Deep learning uses multiple layers of neural networks to learn hierarchical representations",
+      "canonical_terms": [
+        "Deep",
+        "learning",
+        "multiple",
+        "networks",
+        "hierarchical"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            363,
+            454
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "25df1b32ffca1ea5",
+      "created_at": "2026-03-04T21:10:30.119760",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_171083ebb62d5564",
+      "statement": "Backpropagation is an algorithm for training neural networks by computing gradients",
+      "canonical_terms": [
+        "Backpropagation",
+        "backpropagation",
+        "algorithm",
+        "training",
+        "networks"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            457,
+            540
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "171083ebb62d5564",
+      "created_at": "2026-03-04T21:10:30.119822",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_8581bf96832aba78",
+      "statement": "Gradient descent requires backpropagation to update network weights",
+      "canonical_terms": [
+        "Gradient",
+        "gradient",
+        "descent",
+        "requires",
+        "backpropagation"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "8581bf96832aba78",
+      "created_at": "2026-03-04T21:10:30.119883",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_748c257105ceca5a",
+      "statement": "Convolutional neural networks specialize in processing grid-like data such as images",
+      "canonical_terms": [
+        "Convolutional",
+        "convolutional",
+        "networks",
+        "specialize",
+        "processing"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            613,
+            697
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "748c257105ceca5a",
+      "created_at": "2026-03-04T21:10:30.119951",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d5c51560afc51829",
+      "statement": "Recurrent neural networks maintain internal state to process sequential data",
+      "canonical_terms": [
+        "Recurrent",
+        "recurrent",
+        "networks",
+        "maintain",
+        "internal"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            700,
+            776
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "d5c51560afc51829",
+      "created_at": "2026-03-04T21:10:30.120023",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_27268a560e2bdfed",
+      "statement": "Transformers replaced recurrent architectures in many natural language processing tasks",
+      "canonical_terms": [
+        "Transformers",
+        "transformers",
+        "replaced",
+        "recurrent",
+        "architectures"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            779,
+            866
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "27268a560e2bdfed",
+      "created_at": "2026-03-04T21:10:30.120100",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_40bd0d211dacf10d",
+      "statement": "Attention mechanisms allow models to focus on relevant parts of the input",
+      "canonical_terms": [
+        "Attention",
+        "attention",
+        "mechanisms",
+        "relevant"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            869,
+            942
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "40bd0d211dacf10d",
+      "created_at": "2026-03-04T21:10:30.120180",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_b9f48005a9afadb5",
+      "statement": "The transformer architecture depends on self-attention mechanisms",
+      "canonical_terms": [
+        "transformer",
+        "architecture",
+        "depends",
+        "attention",
+        "mechanisms"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            945,
+            1010
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "b9f48005a9afadb5",
+      "created_at": "2026-03-04T21:10:30.120262",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_053b638840c82cb8",
+      "statement": "Large language models are transformers trained on massive text corpora",
+      "canonical_terms": [
+        "Large",
+        "language",
+        "transformers",
+        "trained",
+        "massive"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1013,
+            1083
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "053b638840c82cb8",
+      "created_at": "2026-03-04T21:10:30.120351",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_ab1e16a498e79604",
+      "statement": "BERT introduced bidirectional training for language understanding tasks",
+      "canonical_terms": [
+        "introduced",
+        "bidirectional",
+        "training",
+        "language",
+        "understanding"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1086,
+            1157
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "ab1e16a498e79604",
+      "created_at": "2026-03-04T21:10:30.120443",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d463cde3e5e8114d",
+      "statement": "GPT models use autoregressive generation for text completion",
+      "canonical_terms": [
+        "autoregressive",
+        "generation",
+        "completion"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1160,
+            1220
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "d463cde3e5e8114d",
+      "created_at": "2026-03-04T21:10:30.120539",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_f31d8477ee3f5f05",
+      "statement": "Fine-tuning adapts pre-trained models to specific downstream tasks",
+      "canonical_terms": [
+        "Fine",
+        "trained",
+        "specific",
+        "downstream"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1223,
+            1289
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "f31d8477ee3f5f05",
+      "created_at": "2026-03-04T21:10:30.120642",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_f736a341d4e587e2",
+      "statement": "Transfer learning leverages knowledge from one domain to improve performance in another",
+      "canonical_terms": [
+        "Transfer",
+        "transfer",
+        "learning",
+        "leverages",
+        "knowledge"
+      ],
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1292,
+            1379
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "stability_hash": "f736a341d4e587e2",
+      "created_at": "2026-03-04T21:10:30.120753",
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "context_e574ea8fbfe3f1ed",
+      "source_file": "examples/neural_networks.txt",
+      "content_hash": "e574ea8fbfe3f1ed",
+      "metadata": {},
+      "created_at": "2026-03-04T21:10:30.119068",
+      "node_type": "context"
+    }
+  ],
+  "edges_added": [
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            282,
+            360
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            363,
+            454
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            457,
+            540
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            613,
+            697
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            700,
+            776
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            779,
+            866
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            869,
+            942
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            945,
+            1010
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1013,
+            1083
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1086,
+            1157
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d463cde3e5e8114d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1160,
+            1220
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_f31d8477ee3f5f05",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1223,
+            1289
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_f736a341d4e587e2",
+      "target": "context_e574ea8fbfe3f1ed",
+      "type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            1292,
+            1379
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_171083ebb62d5564",
+      "type": "depends_on",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            543,
+            610
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "depends_on",
+      "evidence": [
+        {
+          "source": "context_e574ea8fbfe3f1ed",
+          "span": [
+            945,
+            1010
+          ],
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "weights_added": [
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_25df1b32ffca1ea5",
+      "type": "related_to",
+      "weight": 0.625,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_171083ebb62d5564",
+      "type": "related_to",
+      "weight": 0.6740776559556978,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_8581bf96832aba78",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_748c257105ceca5a",
+      "type": "related_to",
+      "weight": 0.6305582419667735,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_d5c51560afc51829",
+      "type": "related_to",
+      "weight": 0.6369306393762916,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_27268a560e2bdfed",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "related_to",
+      "weight": 0.5416666666666666,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.6369306393762916,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_171083ebb62d5564",
+      "type": "related_to",
+      "weight": 0.5870388279778489,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_8581bf96832aba78",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_748c257105ceca5a",
+      "type": "related_to",
+      "weight": 0.5870388279778489,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_d5c51560afc51829",
+      "type": "related_to",
+      "weight": 0.6369306393762916,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_27268a560e2bdfed",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "related_to",
+      "weight": 0.5833333333333334,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.5456435464587639,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5833333333333334,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_8581bf96832aba78",
+      "type": "related_to",
+      "weight": 0.5533001790889026,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_748c257105ceca5a",
+      "type": "related_to",
+      "weight": 0.5909090909090909,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_d5c51560afc51829",
+      "type": "related_to",
+      "weight": 0.5953462589245593,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_27268a560e2bdfed",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.5476731294622796,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.6066003581778052,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5533001790889026,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_748c257105ceca5a",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_d5c51560afc51829",
+      "type": "related_to",
+      "weight": 0.5559016994374948,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_27268a560e2bdfed",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5625,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.6020620726159658,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_d5c51560afc51829",
+      "type": "related_to",
+      "weight": 0.6430193883868389,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_27268a560e2bdfed",
+      "type": "related_to",
+      "weight": 0.5953462589245593,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.5476731294622796,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5435194139889244,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_27268a560e2bdfed",
+      "type": "related_to",
+      "weight": 0.55,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_40bd0d211dacf10d",
+      "type": "related_to",
+      "weight": 0.5456435464587639,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.55,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.5559016994374948,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5559016994374948,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5456435464587639,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.65,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.6118033988749895,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5559016994374948,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5912870929175277,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_b9f48005a9afadb5",
+      "type": "related_to",
+      "weight": 0.6636634176769943,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.5912870929175277,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.6020620726159658,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5416666666666666,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_053b638840c82cb8",
+      "type": "related_to",
+      "weight": 0.5597614304667197,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.5,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_ab1e16a498e79604",
+      "type": "related_to",
+      "weight": 0.5559016994374948,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.6118033988749895,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5559016994374948,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5456435464587639,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "atomic_d463cde3e5e8114d",
+      "type": "related_to",
+      "weight": 0.5625,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5625,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d463cde3e5e8114d",
+      "target": "atomic_f31d8477ee3f5f05",
+      "type": "related_to",
+      "weight": 0.5625,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_f31d8477ee3f5f05",
+      "target": "atomic_f736a341d4e587e2",
+      "type": "related_to",
+      "weight": 0.5510310363079829,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    }
+  ],
+  "candidates": [],
+  "provenance": [
+    {
+      "record_id": "prov_000000",
+      "context_node_id": "context_e574ea8fbfe3f1ed",
+      "source_file": "examples/neural_networks.txt",
+      "ingestion_timestamp": "2026-03-04T21:10:30.119082",
+      "metadata": {}
+    }
+  ]
+}

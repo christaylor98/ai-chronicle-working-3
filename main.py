@@ -22,7 +22,7 @@ def cmd_ingest(args):
     
     # Initialize engine
     engine = IngestionEngine(
-        similarity_threshold=args.similarity_threshold,
+        similarity_k=args.similarity_k,
         strict_validation=not args.permissive,
     )
     
@@ -196,10 +196,10 @@ def main():
     ingest_parser.add_argument("-a", "--author", help="Author attribution")
     ingest_parser.add_argument("-d", "--description", help="File description")
     ingest_parser.add_argument(
-        "-t", "--similarity-threshold",
-        type=float,
-        default=0.65,
-        help="Similarity threshold for related_to edges (default: 0.65, fixed per ENRICHMENT_SPEC v1.0)"
+        "-k", "--similarity-k",
+        type=int,
+        default=10,
+        help="Top-K similar neighbors per node (default: 10, per MEASUREMENT_SPEC v1.0)"
     )
     ingest_parser.add_argument(
         "-p", "--permissive",
