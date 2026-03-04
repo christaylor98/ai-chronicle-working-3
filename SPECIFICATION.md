@@ -1,6 +1,6 @@
-# INGESTION_SYSTEM_SPEC.v1.0
+# INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION_SPEC.v1.0
 
-This document describes the authoritative specification that this implementation follows.
+This document describes the authoritative specification that this implementation follows, including hardening corrections.
 
 ## Core Principles
 
@@ -35,6 +35,7 @@ This document describes the authoritative specification that this implementation
 
 These constraints MUST be enforced by the implementation:
 
+### Base Constraints (v1.0)
 1. Truth layer consists ONLY of atomic nodes and typed relationships
 2. Documents are context nodes, NOT containers
 3. All atomic nodes must be self-contained and minimally sufficient
@@ -42,6 +43,31 @@ These constraints MUST be enforced by the implementation:
 5. Every relationship must match an allowed type exactly
 6. No implicit merging, clustering, summarizing, or abstraction
 7. All nodes and edges must include evidence provenance
+
+### Hardening Constraints (CORRECTION_SPEC v1.0)
+
+#### Meta-Content Elimination
+8. Lines that are comments, docstrings, markdown headers, or instructional scaffolding MUST NOT produce atomic nodes
+9. Text inside triple-quoted blocks MUST be discarded unless explicitly marked as domain knowledge
+10. Lines beginning with comment markers (#, //, etc.) MUST be discarded before atomic extraction
+
+#### Atomic Purity Enforcement
+11. Each atomic node must contain exactly one declarative domain claim
+12. If a sentence contains multiple claims joined by conjunction, it MUST be split or placed in candidates[]
+
+#### Directed Edge Discipline
+13. Directed edges (derived_from, refines, depends_on) MUST only be created when explicit lexical triggers are present in the source span
+14. Allowed lexical triggers for depends_on: 'depends on', 'requires', 'relies on'
+15. Allowed lexical triggers for derived_from: 'derived from', 'follows from', 'based on'
+16. Allowed lexical triggers for refines: 'more specifically', 'in particular', 'more precisely'
+17. If no explicit lexical trigger exists, directed edge MUST NOT be created
+
+#### Evidence Integrity
+18. Every edge MUST include a non-null evidence span referencing the original context
+19. Edges with null span MUST NOT be emitted
+
+#### Canonical Term Hygiene
+20. Stopwords and articles (e.g., 'the', 'a', 'an', 'is', 'are', 'and', 'or') MUST NOT appear in canonical_terms
 
 ## Atomic Node Requirements
 

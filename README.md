@@ -2,10 +2,11 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-See%20LICENSE-green.svg)](LICENSE)
+[![Specification](https://img.shields.io/badge/spec-v1.0%20%2B%20CORRECTION-brightgreen.svg)](SPECIFICATION.md)
 
-**Version**: 1.0.0  
-**Specification**: INGESTION_SYSTEM_SPEC.v1.0  
-**Status**: ✅ Production Ready
+**Version**: 1.0.0 + CORRECTION_SPEC v1.0  
+**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + INGESTION_CORRECTION_SPEC.v1.0  
+**Status**: ✅ Production Ready - Hardened
 
 ## Overview
 
@@ -143,9 +144,11 @@ The system produces a truth delta containing:
 
 ## Documentation
 
+- **[QUICKSTART.md](QUICKSTART.md)**: 5-minute getting started guide
 - **[INSTALL.md](INSTALL.md)**: Complete installation guide with dependency troubleshooting
 - **[USAGE.md](USAGE.md)**: Comprehensive usage guide with examples and best practices
-- **[SPECIFICATION.md](SPECIFICATION.md)**: Formal specification (INGESTION_SYSTEM_SPEC.v1.0)
+- **[SPECIFICATION.md](SPECIFICATION.md)**: Formal specification (v1.0 + CORRECTION_SPEC v1.0)
+- **[CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md)**: Hardening corrections and verification
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)**: Technical implementation details
 
 ## Examples
@@ -192,10 +195,9 @@ pytest tests/test_nodes.py -v
 
 **Note**: System works with basic text similarity if sentence-transformers is unavailable. See [INSTALL.md](INSTALL.md) for details.
 
-## Specification Compliance
+## Specification Compliance:
 
-This implementation is **fully compliant** with INGESTION_SYSTEM_SPEC.v1.0:
-
+### INGESTION_SYSTEM_SPEC.v1.0 (Base Constraints)
 - ✓ Relational truth layer (no hierarchies)
 - ✓ Atomic nodes only
 - ✓ Typed relationships only
@@ -203,6 +205,19 @@ This implementation is **fully compliant** with INGESTION_SYSTEM_SPEC.v1.0:
 - ✓ Evidence-backed assertions
 - ✓ Append-only operations
 - ✓ Reversibility guarantees
+- ✓ No semantic freeloaders
+- ✓ Connectivity enforcement
+
+### INGESTION_CORRECTION_SPEC.v1.0 (Hardening Constraints)
+- ✓ Meta-content elimination (docstrings, comments, headers)
+- ✓ Single-claim atomicity enforcement
+- ✓ Lexical trigger requirements for directed edges
+- ✓ Non-null evidence spans mandatory
+- ✓ Stopword-free canonical terms
+- ✓ No implicit inference
+- ✓ Strict compilation discipline
+
+**See [CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md) for detailed verification.**
 - ✓ No semantic freeloaders
 - ✓ Connectivity enforcement
 
@@ -235,8 +250,8 @@ See [LICENSE](LICENSE) file.
   version={1.0.0},
   note={Implementation of INGESTION_SYSTEM_SPEC.v1.0}
 }
-```
-
+```+ CORRECTION_SPEC v1.0  
+**Status**: ✅ Production Ready - Hardened
 ## Acknowledgments
 
 Built following the **INGESTION_SYSTEM_SPEC.v1.0** specification, which emphasizes:

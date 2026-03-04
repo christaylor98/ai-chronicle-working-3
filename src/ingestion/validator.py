@@ -123,12 +123,24 @@ class AtomicityValidator:
                 suggestion="Split into separate atomic statements"
             )
         
-        # Check for complex conjunctions
+        # Check for complex conjunctions indicating multiple claims
+        # Per INGESTION_CORRECTION_SPEC: concatenated claims must be split
         for pattern in self.MULTI_CLAIM_PATTERNS:
             if re.search(pattern, statement):
                 return AtomicityViolation(
                     rule="SINGLE_CLAIM",
-                    description="Statement appears to contain multiple claims",
+                    description="Statement contains multiple claims joined by conjunction",
+                    suggestion="Split into separate atomic statements"
+                )
+        
+        # Check for embedded clauses that contain separate claims
+        clause_indicators = [r'\bwhich\b', r'\bthat\b.*\band\b', r',\s*and\b']
+        for pattern in clause_indicators:
+            if re.search(pattern, statement.lower()):
+                # This might be multiple claims
+                return AtomicityViolation(
+                    rule="SINGLE_CLAIM",
+                    description="Statement may contain multiple embedded claims",
                     suggestion="Split into separate atomic statements"
                 )
         

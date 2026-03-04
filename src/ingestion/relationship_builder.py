@@ -67,44 +67,53 @@ class RelationshipBuilder:
         """
         Infer derived_from relationships using textual patterns.
         
-        Patterns indicating derivation:
-        - "because", "since", "given that"
-        - "follows from", "derived from"
-        - References to prior statements
+        Per INGESTION_CORRECTION_SPEC.v1.0:
+        - ONLY create when explicit lexical trigger present
+        - Evidence MUST include non-null span
+        - No implicit inference
         """
         edges = []
         
+        # Strict lexical triggers
         derivation_patterns = [
-            "because", "since", "given that", "follows from",
-            "derived from", "based on", "according to"
+            "derived from", "follows from", "based on"
         ]
         
         for i, node in enumerate(nodes):
             statement_lower = node.statement.lower()
             
-            # Check if this node references others
+            # Only proceed if explicit lexical trigger present
+            trigger_found = False
             for pattern in derivation_patterns:
                 if pattern in statement_lower:
-                    # Look for potential source nodes mentioned nearby
-                    # Simple heuristic: check statements that appear earlier
-                    for j in range(max(0, i - 3), i):
-                        # If semantic similarity is high, create edge
-                        similarity = self.similarity_engine.compute_similarity(
-                            node.statement,
-                            nodes[j].statement
-                        )
-                        
-                        if similarity > 0.7:
-                            edges.append(Edge(
-                                source=node.node_id,
-                                target=nodes[j].node_id,
-                                edge_type=EdgeType.DERIVED_FROM,
-                                evidence=[Evidence(
-                                    source=node.evidence[0].source if node.evidence else "unknown",
-                                    span=node.evidence[0].span if node.evidence else None
-                                )]
-                            ))
-                            break  # Only one derivation source per pattern
+                    trigger_found = True
+                    break
+            
+            if not trigger_found:
+                continue  # No lexical trigger, skip
+            
+            # Look for potential source nodes mentioned nearby
+            for j in range(max(0, i - 3), i):
+                # Check if target node's terms appear in source statement
+                similarity = self.similarity_engine.compute_similarity(
+                    node.statement,
+                    nodes[j].statement
+                )
+                
+                if similarity > 0.7:
+                    # Only create if we have valid evidence span
+                    if node.evidence and node.evidence[0].span:
+                        edges.append(Edge(
+                            source=node.node_id,
+                            target=nodes[j].node_id,
+                            edge_type=EdgeType.DERIVED_FROM,
+                            evidence=[Evidence(
+                                source=node.evidence[0].source,
+                                span=node.evidence[0].span,
+                                confidence=1.0
+                            )]
+                        ))
+                    break
         
         return edges
     
@@ -115,41 +124,53 @@ class RelationshipBuilder:
         """
         Infer refines relationships (specialization).
         
-        Patterns indicating refinement:
-        - "specifically", "in particular", "more precisely"
-        - Subsumption (statement contains another's key terms plus more specifics)
+        Per INGESTION_CORRECTION_SPEC.v1.0:
+        - ONLY create when explicit lexical trigger present
+        - Evidence MUST include non-null span
         """
         edges = []
         
+        # Strict lexical triggers
         refinement_patterns = [
-            "specifically", "in particular", "more precisely",
-            "that is", "namely"
+            "more specifically", "in particular", "more precisely"
         ]
         
         for i, node in enumerate(nodes):
             statement_lower = node.statement.lower()
             
+            # Only proceed if explicit lexical trigger present
+            trigger_found = False
             for pattern in refinement_patterns:
                 if pattern in statement_lower:
-                    # Look for broader statement this might refine
-                    for j, other_node in enumerate(nodes):
-                        if i == j:
-                            continue
-                        
-                        # Check if this node's terms are superset of other's
-                        node_terms = set(node.canonical_terms)
-                        other_terms = set(other_node.canonical_terms)
-                        
-                        if other_terms and other_terms.issubset(node_terms):
-                            edges.append(Edge(
-                                source=node.node_id,
-                                target=other_node.node_id,
-                                edge_type=EdgeType.REFINES,
-                                evidence=[Evidence(
-                                    source=node.evidence[0].source if node.evidence else "unknown"
-                                )]
-                            ))
-                            break
+                    trigger_found = True
+                    break
+            
+            if not trigger_found:
+                continue  # No lexical trigger, skip
+            
+            # Look for broader statement this might refine
+            for j, other_node in enumerate(nodes):
+                if i == j:
+                    continue
+                
+                # Check if this node's terms are superset of other's
+                node_terms = set(node.canonical_terms)
+                other_terms = set(other_node.canonical_terms)
+                
+                if other_terms and other_terms.issubset(node_terms):
+                    # Only create if we have valid evidence span
+                    if node.evidence and node.evidence[0].span:
+                        edges.append(Edge(
+                            source=node.node_id,
+                            target=other_node.node_id,
+                            edge_type=EdgeType.REFINES,
+                            evidence=[Evidence(
+                                source=node.evidence[0].source,
+                                span=node.evidence[0].span,
+                                confidence=1.0
+                            )]
+                        ))
+                    break
         
         return edges
     
@@ -160,44 +181,59 @@ class RelationshipBuilder:
         """
         Infer depends_on relationships (operational dependency).
         
-        Patterns indicating dependency:
-        - "requires", "needs", "depends on"
-        - "assumes", "presupposes"
+        Per INGESTION_CORRECTION_SPEC.v1.0:
+        - ONLY create edges when explicit lexical triggers present
+        - Allowed triggers: 'depends on', 'requires', 'relies on'
+        - Evidence MUST include non-null span
         """
         edges = []
         
+        # STRICT lexical triggers only
         dependency_patterns = [
-            "requires", "needs", "depends on", "relies on",
-            "assumes", "presupposes", "contingent on"
+            "depends on", "requires", "relies on"
         ]
         
         for i, node in enumerate(nodes):
             statement_lower = node.statement.lower()
             
+            # Only proceed if explicit lexical trigger present
+            trigger_found = None
+            trigger_pos = -1
+            
             for pattern in dependency_patterns:
                 if pattern in statement_lower:
-                    # Look for nodes that might satisfy the dependency
-                    for j, other_node in enumerate(nodes):
-                        if i == j:
-                            continue
-                        
-                        # Check if other node's terms appear after dependency keyword
-                        pattern_pos = statement_lower.find(pattern)
-                        after_pattern = statement_lower[pattern_pos:]
-                        
-                        # Simple heuristic: if other node's key term appears after pattern
-                        if other_node.canonical_terms:
-                            for term in other_node.canonical_terms:
-                                if term.lower() in after_pattern:
-                                    edges.append(Edge(
-                                        source=node.node_id,
-                                        target=other_node.node_id,
-                                        edge_type=EdgeType.DEPENDS_ON,
-                                        evidence=[Evidence(
-                                            source=node.evidence[0].source if node.evidence else "unknown"
-                                        )]
-                                    ))
-                                    break
+                    trigger_found = pattern
+                    trigger_pos = statement_lower.find(pattern)
+                    break
+            
+            if not trigger_found:
+                continue  # No lexical trigger, skip
+            
+            # Look for nodes that might satisfy the dependency
+            for j, other_node in enumerate(nodes):
+                if i == j:
+                    continue
+                
+                # Check if other node's terms appear after dependency keyword
+                after_pattern = statement_lower[trigger_pos:]
+                
+                # If other node's key term appears after trigger in source statement
+                if other_node.canonical_terms:
+                    for term in other_node.canonical_terms:
+                        if term.lower() in after_pattern and len(term) > 3:
+                            # Create edge with proper evidence span
+                            if node.evidence and node.evidence[0].span:
+                                edges.append(Edge(
+                                    source=node.node_id,
+                                    target=other_node.node_id,
+                                    edge_type=EdgeType.DEPENDS_ON,
+                                    evidence=[Evidence(
+                                        source=node.evidence[0].source,
+                                        span=node.evidence[0].span,  # Use actual span from source
+                                        confidence=1.0
+                                    )]
+                                ))
+                            break
         
         return edges
     

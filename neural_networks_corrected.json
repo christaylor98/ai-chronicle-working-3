@@ -21,7 +21,7 @@
         }
       ],
       "stability_hash": "28cf70b6fc7a9bce",
-      "created_at": "2026-03-04T06:36:35.496746",
+      "created_at": "2026-03-04T06:34:20.218616",
       "node_type": "atomic"
     },
     {
@@ -45,7 +45,7 @@
         }
       ],
       "stability_hash": "25df1b32ffca1ea5",
-      "created_at": "2026-03-04T06:36:35.496861",
+      "created_at": "2026-03-04T06:34:20.218740",
       "node_type": "atomic"
     },
     {
@@ -69,7 +69,7 @@
         }
       ],
       "stability_hash": "171083ebb62d5564",
-      "created_at": "2026-03-04T06:36:35.496923",
+      "created_at": "2026-03-04T06:34:20.218804",
       "node_type": "atomic"
     },
     {
@@ -93,7 +93,7 @@
         }
       ],
       "stability_hash": "8581bf96832aba78",
-      "created_at": "2026-03-04T06:36:35.496982",
+      "created_at": "2026-03-04T06:34:20.218867",
       "node_type": "atomic"
     },
     {
@@ -117,7 +117,7 @@
         }
       ],
       "stability_hash": "748c257105ceca5a",
-      "created_at": "2026-03-04T06:36:35.497047",
+      "created_at": "2026-03-04T06:34:20.218935",
       "node_type": "atomic"
     },
     {
@@ -141,7 +141,7 @@
         }
       ],
       "stability_hash": "d5c51560afc51829",
-      "created_at": "2026-03-04T06:36:35.497116",
+      "created_at": "2026-03-04T06:34:20.219005",
       "node_type": "atomic"
     },
     {
@@ -165,7 +165,7 @@
         }
       ],
       "stability_hash": "27268a560e2bdfed",
-      "created_at": "2026-03-04T06:36:35.497200",
+      "created_at": "2026-03-04T06:34:20.219082",
       "node_type": "atomic"
     },
     {
@@ -188,7 +188,7 @@
         }
       ],
       "stability_hash": "40bd0d211dacf10d",
-      "created_at": "2026-03-04T06:36:35.497283",
+      "created_at": "2026-03-04T06:34:20.219162",
       "node_type": "atomic"
     },
     {
@@ -212,7 +212,7 @@
         }
       ],
       "stability_hash": "b9f48005a9afadb5",
-      "created_at": "2026-03-04T06:36:35.497364",
+      "created_at": "2026-03-04T06:34:20.219243",
       "node_type": "atomic"
     },
     {
@@ -236,7 +236,7 @@
         }
       ],
       "stability_hash": "053b638840c82cb8",
-      "created_at": "2026-03-04T06:36:35.497452",
+      "created_at": "2026-03-04T06:34:20.219330",
       "node_type": "atomic"
     },
     {
@@ -260,7 +260,7 @@
         }
       ],
       "stability_hash": "ab1e16a498e79604",
-      "created_at": "2026-03-04T06:36:35.497542",
+      "created_at": "2026-03-04T06:34:20.219422",
       "node_type": "atomic"
     },
     {
@@ -282,7 +282,7 @@
         }
       ],
       "stability_hash": "d463cde3e5e8114d",
-      "created_at": "2026-03-04T06:36:35.497637",
+      "created_at": "2026-03-04T06:34:20.219517",
       "node_type": "atomic"
     },
     {
@@ -305,7 +305,7 @@
         }
       ],
       "stability_hash": "f31d8477ee3f5f05",
-      "created_at": "2026-03-04T06:36:35.497738",
+      "created_at": "2026-03-04T06:34:20.219618",
       "node_type": "atomic"
     },
     {
@@ -329,7 +329,7 @@
         }
       ],
       "stability_hash": "f736a341d4e587e2",
-      "created_at": "2026-03-04T06:36:35.497847",
+      "created_at": "2026-03-04T06:34:20.219729",
       "node_type": "atomic"
     },
     {
@@ -337,7 +337,7 @@
       "source_file": "examples/neural_networks.txt",
       "content_hash": "e574ea8fbfe3f1ed",
       "metadata": {},
-      "created_at": "2026-03-04T06:36:35.496194",
+      "created_at": "2026-03-04T06:34:20.218049",
       "node_type": "context"
     }
   ],
@@ -590,7 +590,7 @@
       "record_id": "prov_000000",
       "context_node_id": "context_e574ea8fbfe3f1ed",
       "source_file": "examples/neural_networks.txt",
-      "ingestion_timestamp": "2026-03-04T06:36:35.496206",
+      "ingestion_timestamp": "2026-03-04T06:34:20.218062",
       "metadata": {}
     }
   ]
