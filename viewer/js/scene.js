@@ -1,0 +1,173 @@
+/**
+ * 3D scene construction from snapshot data.
+ * Creates nodes (spheres) and edges (lines) with visual encodings.
+ */
+
+export class SceneBuilder {
+    constructor(scene) {
+        this.scene = scene;
+        this.nodeMeshes = new Map();  // node_id -> mesh
+        this.edgeLines = [];
+        this.nodeData = new Map();    // node_id -> data
+    }
+
+    /**
+     * Build complete 3D scene from snapshot data.
+     */
+    buildFromSnapshot(snapshot) {
+        this.clear();
+        
+        const nodes = snapshot.nodes;
+        const edges = snapshot.edges;
+        
+        // Create nodes
+        for (const node of nodes) {
+            this.createNode(node);
+        }
+        
+        // Create edges
+        for (const edge of edges) {
+            this.createEdge(edge, nodes);
+        }
+        
+        return {
+            nodeMeshes: this.nodeMeshes,
+            edgeLines: this.edgeLines
+        };
+    }
+
+    /**
+     * Create a 3D sphere node with visual encoding.
+     */
+    createNode(nodeData) {
+        const { id, x, y, z, size, color, degree } = nodeData;
+        
+        // Sphere geometry
+        const geometry = new THREE.SphereGeometry(size, 32, 32);
+        
+        // Material with emissive glow based on degree (hub detection)
+        const emissiveIntensity = Math.min(degree / 20.0, 0.5);
+        const material = new THREE.MeshPhongMaterial({
+            color: new THREE.Color(color),
+            emissive: new THREE.Color(color),
+            emissiveIntensity: emissiveIntensity,
+            shininess: 60,
+            transparent: false
+        });
+        
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.position.set(x, y, z);
+        
+        // Store reference for raycasting
+        mesh.userData = {
+            nodeId: id,
+            nodeData: nodeData
+        };
+        
+        this.scene.add(mesh);
+        this.nodeMeshes.set(id, mesh);
+        this.nodeData.set(id, nodeData);
+    }
+
+    /**
+     * Create edge line between two nodes.
+     */
+    createEdge(edgeData, nodes) {
+        const { source, target, weight, type, color } = edgeData;
+        
+        const sourceNode = this.nodeData.get(source);
+        const targetNode = this.nodeData.get(target);
+        
+        if (!sourceNode || !targetNode) {
+            console.warn(`Edge references missing node: ${source} -> ${target}`);
+            return;
+        }
+        
+        // Line geometry
+        const points = [
+            new THREE.Vector3(sourceNode.x, sourceNode.y, sourceNode.z),
+            new THREE.Vector3(targetNode.x, targetNode.y, targetNode.z)
+        ];
+        
+        const geometry = new THREE.BufferGeometry().setFromPoints(points);
+        
+        // Material with opacity based on weight
+        const opacity = Math.max(0.2, Math.min(1.0, weight));
+        const material = new THREE.LineBasicMaterial({
+            color: new THREE.Color(color),
+            opacity: opacity,
+            transparent: true,
+            linewidth: 1  // Note: linewidth > 1 not supported in WebGL
+        });
+        
+        const line = new THREE.Line(geometry, material);
+        line.userData = {
+            edgeType: type,
+            weight: weight
+        };
+        
+        this.scene.add(line);
+        this.edgeLines.push(line);
+    }
+
+    /**
+     * Clear all scene objects.
+     */
+    clear() {
+        // Remove nodes
+        for (const mesh of this.nodeMeshes.values()) {
+            this.scene.remove(mesh);
+            mesh.geometry.dispose();
+            mesh.material.dispose();
+        }
+        this.nodeMeshes.clear();
+        this.nodeData.clear();
+        
+        // Remove edges
+        for (const line of this.edgeLines) {
+            this.scene.remove(line);
+            line.geometry.dispose();
+            line.material.dispose();
+        }
+        this.edgeLines = [];
+    }
+
+    /**
+     * Get node mesh by ID.
+     */
+    getNodeMesh(nodeId) {
+        return this.nodeMeshes.get(nodeId);
+    }
+
+    /**
+     * Get node data by ID.
+     */
+    getNodeData(nodeId) {
+        return this.nodeData.get(nodeId);
+    }
+
+    /**
+     * Get all node meshes for raycasting.
+     */
+    getAllNodeMeshes() {
+        return Array.from(this.nodeMeshes.values());
+    }
+
+    /**
+     * Highlight a node (e.g., on hover or selection).
+     */
+    highlightNode(nodeId, highlight = true) {
+        const mesh = this.nodeMeshes.get(nodeId);
+        if (!mesh) return;
+        
+        if (highlight) {
+            mesh.material.emissiveIntensity = 0.8;
+            mesh.scale.set(1.2, 1.2, 1.2);
+        } else {
+            const nodeData = this.nodeData.get(nodeId);
+            const degree = nodeData ? nodeData.degree : 0;
+            mesh.material.emissiveIntensity = Math.min(degree / 20.0, 0.5);
+            mesh.scale.set(1, 1, 1);
+        }
+    }
+}

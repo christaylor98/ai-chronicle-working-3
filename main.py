@@ -22,6 +22,7 @@ from src.core import (
     WeightedEdge,
     generate_perspective_suite,
 )
+from src.visualization import visualize_projection
 
 
 def cmd_ingest(args):
@@ -330,6 +331,44 @@ def _reconstruct_graph(graph_data: dict) -> KnowledgeGraph:
     return kg
 
 
+def cmd_visualize(args):
+    """Execute visualization command."""
+    projection_files = []
+    
+    # Handle explicit projection file or directory scan
+    if args.projection:
+        projection_files = [Path(args.projection)]
+    elif args.all:
+        projections_dir = Path(args.directory or "projections")
+        if not projections_dir.exists():
+            print(f"Error: Directory not found: {projections_dir}", file=sys.stderr)
+            sys.exit(1)
+        projection_files = sorted(projections_dir.glob("projection_*.json"))
+        if not projection_files:
+            print(f"Error: No projection files found in {projections_dir}", file=sys.stderr)
+            sys.exit(1)
+    else:
+        print("Error: Must specify either --projection or --all", file=sys.stderr)
+        sys.exit(1)
+    
+    # Visualize each projection
+    for proj_path in projection_files:
+        try:
+            print(f"\nVisualizing: {proj_path.name}")
+            output_path, metrics = visualize_projection(
+                projection_path=str(proj_path),
+                mode=args.mode,
+                layout=args.layout,
+                output_path=args.output
+            )
+            print(f"✓ Saved to: {output_path}")
+        except Exception as e:
+            print(f"✗ Error visualizing {proj_path.name}: {e}", file=sys.stderr)
+            if args.verbose:
+                import traceback
+                traceback.print_exc()
+
+
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
@@ -377,6 +416,47 @@ def main():
         help="Output directory for projections (default: ./projections)"
     )
     
+    # Visualize command
+    visualize_parser = subparsers.add_parser(
+        "visualize",
+        help="Render projection as structural graph visualization"
+    )
+    visualize_parser.add_argument(
+        "-p", "--projection",
+        help="Specific projection JSON file to visualize"
+    )
+    visualize_parser.add_argument(
+        "-a", "--all",
+        action="store_true",
+        help="Visualize all projections in directory"
+    )
+    visualize_parser.add_argument(
+        "-d", "--directory",
+        default="projections",
+        help="Directory to scan for projections (default: ./projections)"
+    )
+    visualize_parser.add_argument(
+        "-m", "--mode",
+        choices=["static_png", "interactive_html"],
+        default="static_png",
+        help="Rendering mode (default: static_png)"
+    )
+    visualize_parser.add_argument(
+        "-l", "--layout",
+        choices=["force", "circular"],
+        default="force",
+        help="Graph layout algorithm (default: force)"
+    )
+    visualize_parser.add_argument(
+        "-o", "--output",
+        help="Custom output path"
+    )
+    visualize_parser.add_argument(
+        "-v", "--verbose",
+        action="store_true",
+        help="Show detailed error messages"
+    )
+    
     # Parse arguments
     args = parser.parse_args()
     
@@ -393,6 +473,8 @@ def main():
         cmd_stats(args)
     elif args.command == "project":
         cmd_project(args)
+    elif args.command == "visualize":
+        cmd_visualize(args)
 
 
 if __name__ == "__main__":

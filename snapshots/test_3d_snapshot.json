@@ -1,0 +1,865 @@
+{
+  "nodes": [
+    {
+      "id": "atomic_28cf70b6fc7a9bce",
+      "x": 2.81581991737238,
+      "y": 4.397145018434884,
+      "z": 1.4001222157477613,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Neural networks are computational models",
+      "node_type": "atomic",
+      "degree": 14,
+      "full_statement": "Neural networks are computational models inspired by biological neural systems"
+    },
+    {
+      "id": "atomic_ab1e16a498e79604",
+      "x": 10.797724928427584,
+      "y": 33.93403450428272,
+      "z": 30.593941674228166,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "BERT introduced bidirectional training f",
+      "node_type": "atomic",
+      "degree": 12,
+      "full_statement": "BERT introduced bidirectional training for language understanding tasks"
+    },
+    {
+      "id": "context_e574ea8fbfe3f1ed",
+      "x": -3.952718784455248,
+      "y": -38.01730512000934,
+      "z": 17.238162026317248,
+      "size": 2.5,
+      "color": "#9B9B9B",
+      "label": "Context: examples/neural_networks.txt",
+      "node_type": "context",
+      "degree": 14,
+      "full_statement": null
+    },
+    {
+      "id": "atomic_f736a341d4e587e2",
+      "x": 34.87080670452801,
+      "y": 10.372045397168561,
+      "z": -29.01472774982111,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Transfer learning leverages knowledge fr",
+      "node_type": "atomic",
+      "degree": 11,
+      "full_statement": "Transfer learning leverages knowledge from one domain to improve performance in another"
+    },
+    {
+      "id": "atomic_40bd0d211dacf10d",
+      "x": -20.951941074751378,
+      "y": -4.81288392829743,
+      "z": 35.85130598138366,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Attention mechanisms allow models to foc",
+      "node_type": "atomic",
+      "degree": 14,
+      "full_statement": "Attention mechanisms allow models to focus on relevant parts of the input"
+    },
+    {
+      "id": "atomic_8581bf96832aba78",
+      "x": 12.845344682152374,
+      "y": -38.59852486779222,
+      "z": -28.202130612302845,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Gradient descent requires backpropagatio",
+      "node_type": "atomic",
+      "degree": 13,
+      "full_statement": "Gradient descent requires backpropagation to update network weights"
+    },
+    {
+      "id": "atomic_25df1b32ffca1ea5",
+      "x": -28.734706179018165,
+      "y": 10.920034625806164,
+      "z": -15.57393688169822,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Deep learning uses multiple layers of ne",
+      "node_type": "atomic",
+      "degree": 14,
+      "full_statement": "Deep learning uses multiple layers of neural networks to learn hierarchical representations"
+    },
+    {
+      "id": "atomic_b9f48005a9afadb5",
+      "x": -54.280588288836775,
+      "y": -3.8074661578589892,
+      "z": 13.272557741750099,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "The transformer architecture depends on ",
+      "node_type": "atomic",
+      "degree": 12,
+      "full_statement": "The transformer architecture depends on self-attention mechanisms"
+    },
+    {
+      "id": "atomic_053b638840c82cb8",
+      "x": -20.131992658697673,
+      "y": 35.53227234907268,
+      "z": 11.204510600683836,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Large language models are transformers t",
+      "node_type": "atomic",
+      "degree": 13,
+      "full_statement": "Large language models are transformers trained on massive text corpora"
+    },
+    {
+      "id": "atomic_d463cde3e5e8114d",
+      "x": 18.49112849342246,
+      "y": -16.910769238019718,
+      "z": 45.95270087903786,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "GPT models use autoregressive generation",
+      "node_type": "atomic",
+      "degree": 11,
+      "full_statement": "GPT models use autoregressive generation for text completion"
+    },
+    {
+      "id": "atomic_f31d8477ee3f5f05",
+      "x": 45.199299227396274,
+      "y": 18.246345874059905,
+      "z": 14.672118824874428,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Fine-tuning adapts pre-trained models to",
+      "node_type": "atomic",
+      "degree": 11,
+      "full_statement": "Fine-tuning adapts pre-trained models to specific downstream tasks"
+    },
+    {
+      "id": "atomic_171083ebb62d5564",
+      "x": -17.732187202691986,
+      "y": -16.619813050162563,
+      "z": -35.71310477040076,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Backpropagation is an algorithm for trai",
+      "node_type": "atomic",
+      "degree": 13,
+      "full_statement": "Backpropagation is an algorithm for training neural networks by computing gradients"
+    },
+    {
+      "id": "atomic_d5c51560afc51829",
+      "x": 27.46107039494411,
+      "y": -19.815640445865757,
+      "z": 1.917696813176928,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Recurrent neural networks maintain inter",
+      "node_type": "atomic",
+      "degree": 14,
+      "full_statement": "Recurrent neural networks maintain internal state to process sequential data"
+    },
+    {
+      "id": "atomic_748c257105ceca5a",
+      "x": -33.47623773092106,
+      "y": -36.99169631052671,
+      "z": -9.385075477729055,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Convolutional neural networks specialize",
+      "node_type": "atomic",
+      "degree": 12,
+      "full_statement": "Convolutional neural networks specialize in processing grid-like data such as images"
+    },
+    {
+      "id": "atomic_27268a560e2bdfed",
+      "x": -0.27136604464109515,
+      "y": 29.402833353324347,
+      "z": -35.46915101610385,
+      "size": 2.5,
+      "color": "#4A90E2",
+      "label": "Transformers replaced recurrent architec",
+      "node_type": "atomic",
+      "degree": 12,
+      "full_statement": "Transformers replaced recurrent architectures in many natural language processing tasks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_25df1b32ffca1ea5",
+      "weight": 0.625,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_171083ebb62d5564",
+      "weight": 0.6740776559556978,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_8581bf96832aba78",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_748c257105ceca5a",
+      "weight": 0.6305582419667735,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_d5c51560afc51829",
+      "weight": 0.6369306393762916,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_27268a560e2bdfed",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5416666666666666,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.6369306393762916,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_171083ebb62d5564",
+      "weight": 0.5870388279778489,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_8581bf96832aba78",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_748c257105ceca5a",
+      "weight": 0.5870388279778489,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_d5c51560afc51829",
+      "weight": 0.6369306393762916,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_27268a560e2bdfed",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5833333333333334,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.5456435464587639,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5833333333333334,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_8581bf96832aba78",
+      "weight": 0.5533001790889026,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_748c257105ceca5a",
+      "weight": 0.5909090909090909,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_d5c51560afc51829",
+      "weight": 0.5953462589245593,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_27268a560e2bdfed",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.5476731294622796,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.6066003581778052,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5533001790889026,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_748c257105ceca5a",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_d5c51560afc51829",
+      "weight": 0.5559016994374948,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_27268a560e2bdfed",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5625,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.6020620726159658,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_d5c51560afc51829",
+      "weight": 0.6430193883868389,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_27268a560e2bdfed",
+      "weight": 0.5953462589245593,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.5476731294622796,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5435194139889244,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_27268a560e2bdfed",
+      "weight": 0.55,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5456435464587639,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.55,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.5559016994374948,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5559016994374948,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5456435464587639,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.65,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.6118033988749895,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5559016994374948,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5912870929175277,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_b9f48005a9afadb5",
+      "weight": 0.6636634176769943,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.5912870929175277,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.6020620726159658,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5416666666666666,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_053b638840c82cb8",
+      "weight": 0.5597614304667197,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_ab1e16a498e79604",
+      "weight": 0.5559016994374948,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.6118033988749895,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5559016994374948,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5456435464587639,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "atomic_d463cde3e5e8114d",
+      "weight": 0.5625,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5625,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d463cde3e5e8114d",
+      "target": "atomic_f31d8477ee3f5f05",
+      "weight": 0.5625,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_f31d8477ee3f5f05",
+      "target": "atomic_f736a341d4e587e2",
+      "weight": 0.5510310363079829,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_28cf70b6fc7a9bce",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_25df1b32ffca1ea5",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_171083ebb62d5564",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_748c257105ceca5a",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_d5c51560afc51829",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_27268a560e2bdfed",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_40bd0d211dacf10d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_053b638840c82cb8",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_ab1e16a498e79604",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_d463cde3e5e8114d",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_f31d8477ee3f5f05",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_f736a341d4e587e2",
+      "target": "context_e574ea8fbfe3f1ed",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_8581bf96832aba78",
+      "target": "atomic_171083ebb62d5564",
+      "weight": 0.5,
+      "type": "depends_on",
+      "color": "#E74C3C"
+    },
+    {
+      "source": "atomic_b9f48005a9afadb5",
+      "target": "atomic_40bd0d211dacf10d",
+      "weight": 0.5,
+      "type": "depends_on",
+      "color": "#E74C3C"
+    }
+  ],
+  "metadata": {
+    "projection_parameters": {
+      "focus_node": "atomic_28cf70b6fc7a9bce",
+      "coherence_threshold": 0.2,
+      "max_depth": 1,
+      "max_nodes": 50
+    },
+    "layout_algorithm": "deterministic_force_3d",
+    "layout_seed": 103400941,
+    "node_count": 15,
+    "edge_count": 95,
+    "max_degree": 14,
+    "source_file": "projections/projection_1_t0.2_d1.json"
+  }
+}
