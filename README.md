@@ -2,11 +2,11 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-See%20LICENSE-green.svg)](LICENSE)
-[![Specification](https://img.shields.io/badge/spec-v1.0%20%2B%20CORRECTION-brightgreen.svg)](SPECIFICATION.md)
+[![Specification](https://img.shields.io/badge/spec-v1.0%20Full-brightgreen.svg)](SPECIFICATION.md)
 
-**Version**: 1.0.0 + CORRECTION_SPEC v1.0  
-**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + INGESTION_CORRECTION_SPEC.v1.0  
-**Status**: ✅ Production Ready - Hardened
+**Version**: 1.0.0 + CORRECTION_SPEC v1.0 + ENRICHMENT_SPEC v1.0  
+**Specification**: INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION + ENRICHMENT  
+**Status**: ✅ Production Ready - Hardened + Enriched
 
 ## Overview
 
@@ -147,8 +147,9 @@ The system produces a truth delta containing:
 - **[QUICKSTART.md](QUICKSTART.md)**: 5-minute getting started guide
 - **[INSTALL.md](INSTALL.md)**: Complete installation guide with dependency troubleshooting
 - **[USAGE.md](USAGE.md)**: Comprehensive usage guide with examples and best practices
-- **[SPECIFICATION.md](SPECIFICATION.md)**: Formal specification (v1.0 + CORRECTION_SPEC v1.0)
+- **[SPECIFICATION.md](SPECIFICATION.md)**: Formal specification (BASE + CORRECTION + ENRICHMENT)
 - **[CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md)**: Hardening corrections and verification
+- **[ENRICHMENT_SUMMARY.md](ENRICHMENT_SUMMARY.md)**: Relational enrichment implementation and analysis
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)**: Technical implementation details
 
 ## Examples
@@ -195,7 +196,9 @@ pytest tests/test_nodes.py -v
 
 **Note**: System works with basic text similarity if sentence-transformers is unavailable. See [INSTALL.md](INSTALL.md) for details.
 
-## Specification Compliance:
+## Specification Compliance
+
+This implementation is **fully compliant** with:
 
 ### INGESTION_SYSTEM_SPEC.v1.0 (Base Constraints)
 - ✓ Relational truth layer (no hierarchies)
@@ -217,9 +220,16 @@ pytest tests/test_nodes.py -v
 - ✓ No implicit inference
 - ✓ Strict compilation discipline
 
-**See [CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md) for detailed verification.**
-- ✓ No semantic freeloaders
-- ✓ Connectivity enforcement
+### INGESTION_RELATIONAL_ENRICHMENT_SPEC.v1.0 (Density Enhancement)
+- ✓ Fixed similarity threshold (0.65)
+- ✓ Symmetric `related_to` edges only
+- ✓ Weight metadata with method provenance
+- ✓ No causation inference from similarity
+- ✓ No clustering or containment
+- ✓ Semantic adjacency without distortion
+
+**See [CORRECTION_SUMMARY.md](CORRECTION_SUMMARY.md) for hardening verification.**  
+**See [ENRICHMENT_SUMMARY.md](ENRICHMENT_SUMMARY.md) for enrichment analysis.**
 
 ## Contributing
 

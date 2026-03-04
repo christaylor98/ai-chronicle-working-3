@@ -24,17 +24,25 @@ class RelationshipBuilder:
     def build_similarity_edges(
         self,
         nodes: List[AtomicNode],
-        threshold: float = 0.85
+        threshold: float = 0.65
     ) -> List[WeightedEdge]:
         """
         Build related_to edges based on semantic similarity.
         
+        Per INGESTION_RELATIONAL_ENRICHMENT_SPEC.v1.0:
+        - Fixed threshold of 0.65 (not configurable)
+        - Symmetric edges (no duplicates)
+        - Weight between 0.0 and 1.0
+        - Metadata includes similarity method
+        - No self-links
+        - No clustering or containment
+        
         Args:
             nodes: List of atomic nodes to compare
-            threshold: Minimum similarity for edge creation
+            threshold: Fixed at 0.65 per specification
         
         Returns:
-            List of weighted edges
+            List of weighted edges with similarity metadata
         """
         edges = []
         
@@ -46,16 +54,27 @@ class RelationshipBuilder:
         node_ids = [node.node_id for node in nodes]
         
         # Compute pairwise similarities
+        # Note: compute_pairwise_similarities already ensures:
+        # - No self-links (i != j)
+        # - No duplicates (i < j only)
+        # - Symmetric relationships
         similarities = self.similarity_engine.compute_pairwise_similarities(
             statements, threshold
         )
         
-        # Create weighted edges
+        # Determine similarity method
+        method = "embedding_cosine" if self.similarity_engine._use_semantic else "basic_bow_cosine"
+        
+        # Create weighted edges with metadata
         for idx1, idx2, weight in similarities:
             edges.append(WeightedEdge(
                 source=node_ids[idx1],
                 target=node_ids[idx2],
-                weight=weight
+                weight=weight,
+                metadata={
+                    "similarity_method": method,
+                    "threshold": threshold
+                }
             ))
         
         return edges

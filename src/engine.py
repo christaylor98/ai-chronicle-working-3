@@ -44,17 +44,23 @@ class IngestionEngine:
     
     def __init__(
         self,
-        similarity_threshold: float = 0.85,
+        similarity_threshold: float = 0.65,
         strict_validation: bool = True,
     ):
         """
         Initialize ingestion engine.
         
+        Per INGESTION_RELATIONAL_ENRICHMENT_SPEC.v1.0:
+        - similarity_threshold is FIXED at 0.65 for related_to edges
+        - This threshold ensures semantic adjacency without over-connecting
+        - Deduplication uses higher threshold (0.85) to prevent duplicates
+        
         Args:
-            similarity_threshold: Minimum similarity for deduplication and related_to edges
+            similarity_threshold: Fixed at 0.65 for related_to edges (per spec)
             strict_validation: Enable strict atomicity validation
         """
         self.similarity_threshold = similarity_threshold
+        self.deduplication_threshold = 0.85  # Higher threshold for deduplication
         
         # Initialize components
         self.parser = TextParser()
@@ -131,11 +137,12 @@ class IngestionEngine:
                 continue
             
             # Check for similarity with existing nodes (deduplication)
+            # Use higher threshold for deduplication to prevent true duplicates
             existing_statements = [node.statement for node in self.graph.atomic_nodes.values()]
             similar = self.similarity_engine.find_similar(
                 unit.text,
                 existing_statements,
-                self.similarity_threshold
+                self.deduplication_threshold
             )
             
             if similar:

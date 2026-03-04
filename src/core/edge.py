@@ -164,6 +164,7 @@ class WeightedEdge(BaseModel):
     target: str
     edge_type: EdgeType = Field(default=EdgeType.RELATED_TO, frozen=True)
     weight: float = Field(..., ge=0.0, le=1.0)
+    metadata: dict = Field(default_factory=dict, description="Similarity method and provenance")
     
     def to_edge(self) -> Edge:
         """Convert to standard Edge model."""
@@ -177,9 +178,12 @@ class WeightedEdge(BaseModel):
     
     def to_dict(self) -> dict:
         """Export to dict for JSON serialization."""
-        return {
+        result = {
             "source": self.source,
             "target": self.target,
             "type": self.edge_type.value,
             "weight": self.weight,
         }
+        if self.metadata:
+            result["metadata"] = self.metadata
+        return result

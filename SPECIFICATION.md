@@ -1,6 +1,6 @@
-# INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION_SPEC.v1.0
+# INGESTION_SYSTEM_SPEC.v1.0 + CORRECTION_SPEC.v1.0 + ENRICHMENT_SPEC.v1.0
 
-This document describes the authoritative specification that this implementation follows, including hardening corrections.
+This document describes the authoritative specification that this implementation follows, including hardening corrections and relational enrichment.
 
 ## Core Principles
 
@@ -68,6 +68,62 @@ These constraints MUST be enforced by the implementation:
 
 #### Canonical Term Hygiene
 20. Stopwords and articles (e.g., 'the', 'a', 'an', 'is', 'are', 'and', 'or') MUST NOT appear in canonical_terms
+
+### Relational Enrichment Constraints (ENRICHMENT_SPEC v1.0)
+
+#### Purpose
+Add disciplined `related_to` edge generation to increase relational density without introducing ontological distortion.
+
+#### Hard Constraints for related_to Edges
+
+21. **Semantic similarity only**: `related_to` edges represent weighted semantic similarity ONLY. They MUST NOT imply causation, derivation, refinement, or dependency.
+
+22. **No directed inference**: No directed edge (derived_from, refines, depends_on) may be inferred from a `related_to` edge.
+
+23. **Fixed threshold**: Similarity threshold is FIXED at 0.65 and MUST be explicit. Threshold tuning MUST NOT be based on readability or visual density goals.
+
+24. **Weight requirement**: All `related_to` edges MUST include a numeric weight between 0.0 and 1.0.
+
+25. **Threshold enforcement**: `related_to` edges below threshold (< 0.65) MUST NOT be emitted.
+
+26. **Symmetry**: `related_to` edges MUST be symmetric. Inverse edges MUST NOT be duplicated (e.g., if A→B exists, B→A should not).
+
+27. **No self-links**: Nodes MUST NOT have `related_to` edges to themselves.
+
+28. **No clustering**: No clustering, grouping, or containment may be introduced during enrichment. Clusters may only exist in projection layers.
+
+29. **Method provenance**: Each `related_to` edge MUST include metadata identifying the similarity method used (e.g., "embedding_cosine", "basic_bow_cosine").
+
+30. **Sparsity preservation**: Edges MUST NOT be pruned for aesthetic sparsity. Let natural threshold determine density.
+
+#### Similarity Method
+
+- Fixed threshold: 0.65
+- Symmetric (no duplicate inverses)
+- Includes similarity method metadata
+- Does NOT imply causation or dependency
+- **Method**: Embedding cosine similarity (sentence transformers) or basic bag-of-words cosine (fallback)
+- **Threshold**: Fixed at 0.65
+- **Pairwise computation**: All atomic nodes compared pairwise
+- **Symmetry enforcement**: Only emit one edge per pair (i < j)
+- **Self-link prevention**: Never compare node to itself
+
+#### Failure Conditions
+
+Enrichment has failed if:
+- `related_to` edges imply directionality
+- `related_to` edges are used to justify directed edges
+- Similarity threshold dynamically adapts to density
+- Graph becomes fully connected
+- Clusters are stored as ontology in truth layer
+
+#### Success Criteria
+
+Enrichment is successful if:
+- Semantically adjacent claims exhibit measurable `related_to` weights
+- Graph remains sparse but connected
+- Directed edges remain lexically grounded only
+- Projection layer can form clusters without altering truth layer
 
 ## Atomic Node Requirements
 

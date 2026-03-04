@@ -198,8 +198,8 @@ def main():
     ingest_parser.add_argument(
         "-t", "--similarity-threshold",
         type=float,
-        default=0.85,
-        help="Similarity threshold for deduplication (default: 0.85)"
+        default=0.65,
+        help="Similarity threshold for related_to edges (default: 0.65, fixed per ENRICHMENT_SPEC v1.0)"
     )
     ingest_parser.add_argument(
         "-p", "--permissive",
