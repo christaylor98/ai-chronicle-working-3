@@ -1,0 +1,741 @@
+{
+  "nodes": [
+    {
+      "id": "atomic_093c41bf683097e1",
+      "x": 21.85247910809675,
+      "y": 8.764690956211247,
+      "z": -12.19987575456326,
+      "size": 2.544235415107324,
+      "color": "#4A90E2",
+      "label": "The French Revolution began in 1789 with",
+      "node_type": "atomic",
+      "degree": 11,
+      "importance": 7.200339345996953,
+      "full_statement": "The French Revolution began in 1789 with the storming of the Bastille"
+    },
+    {
+      "id": "atomic_0e80ab47a9e35a0c",
+      "x": 21.758749435251467,
+      "y": -19.11421398499444,
+      "z": 10.130923633094888,
+      "size": 1.6625205834736307,
+      "color": "#4A90E2",
+      "label": "Indigenous peoples have lived sustainabl",
+      "node_type": "atomic",
+      "degree": 7,
+      "importance": 4.192601729584234,
+      "full_statement": "Indigenous peoples have lived sustainably in the Amazon for thousands of years"
+    },
+    {
+      "id": "atomic_1af98d0bef669280",
+      "x": 0.11719109726561006,
+      "y": 2.932337894770507,
+      "z": -12.583425918808423,
+      "size": 2.9975397426889474,
+      "color": "#4A90E2",
+      "label": "The pyramids of Giza were built as monum",
+      "node_type": "atomic",
+      "degree": 15,
+      "importance": 8.973875738870175,
+      "full_statement": "The pyramids of Giza were built as monumental tombs for the pharaohs"
+    },
+    {
+      "id": "atomic_42b1bd056f44bba0",
+      "x": -13.155329284899377,
+      "y": 5.252528231650135,
+      "z": -33.42150604894634,
+      "size": 1.9187721734876553,
+      "color": "#4A90E2",
+      "label": "Hieroglyphics served as the written lang",
+      "node_type": "atomic",
+      "degree": 9,
+      "importance": 4.999972293803182,
+      "full_statement": "Hieroglyphics served as the written language of ancient Egypt"
+    },
+    {
+      "id": "atomic_472692e0bd709f39",
+      "x": -5.741554600686078,
+      "y": -9.4681341158198,
+      "z": 19.763415256754314,
+      "size": 2.1775779507961266,
+      "color": "#4A90E2",
+      "label": "Ancient Egyptian civilization flourished",
+      "node_type": "atomic",
+      "degree": 11,
+      "importance": 5.873096030397866,
+      "full_statement": "Ancient Egyptian civilization flourished along the Nile River for over 3000 years"
+    },
+    {
+      "id": "atomic_78c5b335fd65ec43",
+      "x": -34.58751439333565,
+      "y": -31.89426296612789,
+      "z": -18.550732912596473,
+      "size": 0.9521459419895286,
+      "color": "#4A90E2",
+      "label": "Neural networks are inspired by biologic",
+      "node_type": "atomic",
+      "degree": 5,
+      "importance": 2.3097614304667196,
+      "full_statement": "Neural networks are inspired by biological brain structures"
+    },
+    {
+      "id": "atomic_838c5a33d2d2a7ce",
+      "x": 23.002460822532736,
+      "y": 38.3305808253319,
+      "z": -2.9708370865146936,
+      "size": 1.3911220572458667,
+      "color": "#4A90E2",
+      "label": "DNA contains the genetic instructions fo",
+      "node_type": "atomic",
+      "degree": 6,
+      "importance": 3.406147851624583,
+      "full_statement": "DNA contains the genetic instructions for all living organisms"
+    },
+    {
+      "id": "atomic_8633427b4b492df7",
+      "x": 1.3973519835436519,
+      "y": 35.66088432118893,
+      "z": -24.12858548635982,
+      "size": 1.4028840960713853,
+      "color": "#4A90E2",
+      "label": "Latin formed the basis for Romance langu",
+      "node_type": "atomic",
+      "degree": 6,
+      "importance": 3.4386526996613602,
+      "full_statement": "Latin formed the basis for Romance languages"
+    },
+    {
+      "id": "atomic_8f94e2c804bc8799",
+      "x": 27.51919799696528,
+      "y": 3.0420904727306226,
+      "z": 9.093700678848675,
+      "size": 2.2829150919368497,
+      "color": "#4A90E2",
+      "label": "The Renaissance began in Italy during th",
+      "node_type": "atomic",
+      "degree": 10,
+      "importance": 6.243954251730575,
+      "full_statement": "The Renaissance began in Italy during the 14th century"
+    },
+    {
+      "id": "atomic_9abb16a017b4feca",
+      "x": 9.228407824070711,
+      "y": 16.725390054177534,
+      "z": 4.483704149596439,
+      "size": 2.4236905810473415,
+      "color": "#4A90E2",
+      "label": "The Apollo 11 mission successfully lande",
+      "node_type": "atomic",
+      "degree": 11,
+      "importance": 6.752873347987235,
+      "full_statement": "The Apollo 11 mission successfully landed humans on the Moon in 1969"
+    },
+    {
+      "id": "atomic_a199c805eecdcc60",
+      "x": -11.755278882555666,
+      "y": -46.631321920505734,
+      "z": -2.8947275373499224,
+      "size": 0.9766201478161434,
+      "color": "#4A90E2",
+      "label": "Antibiotics revolutionized medicine by f",
+      "node_type": "atomic",
+      "degree": 5,
+      "importance": 2.3643159030257177,
+      "full_statement": "Antibiotics revolutionized medicine by fighting bacterial infections"
+    },
+    {
+      "id": "atomic_a1eec9b442c4344f",
+      "x": -34.334536797041565,
+      "y": 25.506135466070276,
+      "z": 8.64259208531139,
+      "size": 1.1712341107869468,
+      "color": "#4A90E2",
+      "label": "Steam engines powered factories and loco",
+      "node_type": "atomic",
+      "degree": 6,
+      "importance": 2.827151674981046,
+      "full_statement": "Steam engines powered factories and locomotives"
+    },
+    {
+      "id": "atomic_a611d90d2f9cce72",
+      "x": 10.075308298233793,
+      "y": -4.168123416432213,
+      "z": 56.4882641476846,
+      "size": 0.3,
+      "color": "#4A90E2",
+      "label": "Hawking radiation suggests black holes c",
+      "node_type": "atomic",
+      "degree": 3,
+      "importance": 1.3002518907629605,
+      "full_statement": "Hawking radiation suggests black holes can gradually lose mass"
+    },
+    {
+      "id": "atomic_ad32a875a79554b2",
+      "x": 16.202260015428905,
+      "y": -16.96404672246668,
+      "z": -15.188345288574526,
+      "size": 2.139468051990068,
+      "color": "#4A90E2",
+      "label": "The printing press revolutionized the sp",
+      "node_type": "atomic",
+      "degree": 9,
+      "importance": 5.741079678348831,
+      "full_statement": "The printing press revolutionized the spread of knowledge in Europe"
+    },
+    {
+      "id": "atomic_b8d1d1aad9f2c9b9",
+      "x": -50.65032320382035,
+      "y": 7.178042777113586,
+      "z": -7.785458008172696,
+      "size": 0.9599896742300078,
+      "color": "#4A90E2",
+      "label": "Roman engineering achievements included ",
+      "node_type": "atomic",
+      "degree": 5,
+      "importance": 2.327151674981046,
+      "full_statement": "Roman engineering achievements included aqueducts and roads"
+    },
+    {
+      "id": "atomic_d95262c571e2a0fe",
+      "x": 21.46681716186864,
+      "y": 1.0609471247873148,
+      "z": -32.412936076885366,
+      "size": 1.7320040472483034,
+      "color": "#4A90E2",
+      "label": "Leonardo da Vinci epitomized the Renaiss",
+      "node_type": "atomic",
+      "degree": 7,
+      "importance": 4.405595344093989,
+      "full_statement": "Leonardo da Vinci epitomized the Renaissance ideal of the polymath"
+    },
+    {
+      "id": "context_4a203d5fca38da17",
+      "x": -14.374695447646795,
+      "y": -1.180584267309509,
+      "z": 0.9551095106736964,
+      "size": 1.5983559396408968,
+      "color": "#9B9B9B",
+      "label": "Context: examples/diverse_topics.txt",
+      "node_type": "context",
+      "degree": 16,
+      "importance": 4.0,
+      "full_statement": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_0e80ab47a9e35a0c",
+      "weight": 0.6701034543599429,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_8633427b4b492df7",
+      "weight": 0.6336306209562123,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.7842676218074807,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.7721655269759087,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_d95262c571e2a0fe",
+      "weight": 0.7381448361039201,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.6305582419667735,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.7083333333333334,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_093c41bf683097e1",
+      "weight": 0.7204792759220493,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_0e80ab47a9e35a0c",
+      "weight": 0.6543033499620919,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_42b1bd056f44bba0",
+      "weight": 0.6781741612749496,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_78c5b335fd65ec43",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_838c5a33d2d2a7ce",
+      "weight": 0.6781741612749496,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_8633427b4b492df7",
+      "weight": 0.6515228816828316,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.661164592805076,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_9abb16a017b4feca",
+      "weight": 0.6785714285714286,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_a199c805eecdcc60",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_a1eec9b442c4344f",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.6928791874526149,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_d95262c571e2a0fe",
+      "weight": 0.6928791874526149,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_093c41bf683097e1",
+      "weight": 0.6571348402636772,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_78c5b335fd65ec43",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_8633427b4b492df7",
+      "weight": 0.6259881576697424,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_a1eec9b442c4344f",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.6443375672974064,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "atomic_d95262c571e2a0fe",
+      "weight": 0.6443375672974064,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_093c41bf683097e1",
+      "weight": 0.6360827634879543,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_0e80ab47a9e35a0c",
+      "weight": 0.625,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_1af98d0bef669280",
+      "weight": 0.615727512471569,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_78c5b335fd65ec43",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.6305582419667735,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_9abb16a017b4feca",
+      "weight": 0.615727512471569,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_a199c805eecdcc60",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_a1eec9b442c4344f",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_a611d90d2f9cce72",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
+      "target": "atomic_a199c805eecdcc60",
+      "weight": 0.5597614304667197,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_093c41bf683097e1",
+      "weight": 0.617851130197758,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_8633427b4b492df7",
+      "weight": 0.6259881576697424,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.6005037815259212,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_8633427b4b492df7",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_8f94e2c804bc8799",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.7175970699446224,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8f94e2c804bc8799",
+      "target": "atomic_d95262c571e2a0fe",
+      "weight": 0.7175970699446224,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_8f94e2c804bc8799",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_093c41bf683097e1",
+      "weight": 0.7204792759220493,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_0e80ab47a9e35a0c",
+      "weight": 0.6543033499620919,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_838c5a33d2d2a7ce",
+      "weight": 0.6336306209562121,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_8633427b4b492df7",
+      "weight": 0.6515228816828316,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.7014557410063451,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_a1eec9b442c4344f",
+      "weight": 0.5,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.6928791874526149,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_d95262c571e2a0fe",
+      "weight": 0.6543033499620919,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_a199c805eecdcc60",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_a1eec9b442c4344f",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "weight": 0.5771516749810459,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_a1eec9b442c4344f",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_a611d90d2f9cce72",
+      "target": "atomic_8f94e2c804bc8799",
+      "weight": 0.5502518907629605,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_a611d90d2f9cce72",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_ad32a875a79554b2",
+      "target": "atomic_a199c805eecdcc60",
+      "weight": 0.5545544725589981,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_ad32a875a79554b2",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_b8d1d1aad9f2c9b9",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    },
+    {
+      "source": "atomic_d95262c571e2a0fe",
+      "target": "atomic_ad32a875a79554b2",
+      "weight": 0.7083333333333334,
+      "type": "related_to",
+      "color": "#00AAFF"
+    },
+    {
+      "source": "atomic_d95262c571e2a0fe",
+      "target": "context_4a203d5fca38da17",
+      "weight": 0.5,
+      "type": "appears_in",
+      "color": "#FFFFFF"
+    }
+  ],
+  "metadata": {
+    "projection_parameters": {
+      "focus_node": "atomic_472692e0bd709f39",
+      "coherence_threshold": 0.2,
+      "top_k_per_node": 5,
+      "max_depth": 1,
+      "max_nodes": 50
+    },
+    "layout_algorithm": "deterministic_force_3d_weighted",
+    "layout_seed": 1161024916,
+    "node_count": 17,
+    "edge_count": 71,
+    "max_degree": 16,
+    "max_importance": 8.973875738870175,
+    "min_importance": 1.3002518907629605,
+    "source_file": "projections/projection_1_t0.2_k5_d1.json"
+  }
+}

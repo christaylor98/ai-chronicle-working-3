@@ -1,6 +1,6 @@
 {
   "projection_parameters": {
-    "focus_node": "atomic_cd0e09eb102662ee",
+    "focus_node": "atomic_472692e0bd709f39",
     "coherence_threshold": 0.9,
     "top_k_per_node": 2,
     "max_depth": 1,
@@ -8,21 +8,21 @@
   },
   "nodes": [
     {
-      "node_id": "atomic_cd0e09eb102662ee",
-      "statement": "Quantum mechanics describes the behavior of matter at atomic and subatomic scales",
+      "node_id": "atomic_472692e0bd709f39",
+      "statement": "Ancient Egyptian civilization flourished along the Nile River for over 3000 years",
       "canonical_terms": [
-        "Quantum",
-        "quantum",
-        "mechanics",
-        "describes",
-        "behavior"
+        "Ancient",
+        "Egyptian",
+        "Nile",
+        "River",
+        "ancient"
       ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
           "span": [
-            426,
-            507
+            0,
+            81
           ],
           "confidence": 1.0
         }
@@ -39,15 +39,15 @@
   ],
   "edges": [
     {
-      "source": "atomic_cd0e09eb102662ee",
+      "source": "atomic_472692e0bd709f39",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
           "span": [
-            426,
-            507
+            0,
+            81
           ],
           "confidence": 1.0
         }

@@ -1,6 +1,6 @@
 {
   "projection_parameters": {
-    "focus_node": "atomic_cd0e09eb102662ee",
+    "focus_node": "atomic_472692e0bd709f39",
     "coherence_threshold": 0.7,
     "top_k_per_node": 2,
     "max_depth": 4,
@@ -999,7 +999,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_2afe5f5db8d3d8ed",
       "edge_type": "related_to",
-      "weight": 0.7519763153394848,
+      "weight": 0.7357022603955159,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1021,7 +1021,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_ad32a875a79554b2",
       "edge_type": "related_to",
-      "weight": 0.8061862178478973,
+      "weight": 0.7721655269759087,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1071,6 +1071,17 @@
     },
     {
       "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_ad32a875a79554b2",
+      "edge_type": "related_to",
+      "weight": 0.7083333333333334,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1114,7 +1125,7 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_2afe5f5db8d3d8ed",
       "edge_type": "related_to",
-      "weight": 0.7142857142857143,
+      "weight": 0.7004459314343183,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1185,7 +1196,7 @@
       "source": "atomic_2afe5f5db8d3d8ed",
       "target": "atomic_ad32a875a79554b2",
       "edge_type": "related_to",
-      "weight": 0.731455024943138,
+      "weight": 0.7165063509461097,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1196,7 +1207,7 @@
       "source": "atomic_2afe5f5db8d3d8ed",
       "target": "atomic_d56656ecb6cc3bab",
       "edge_type": "related_to",
-      "weight": 0.722717701593687,
+      "weight": 0.7083333333333333,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1312,7 +1323,7 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_8c52f8194ce7e44e",
       "edge_type": "related_to",
-      "weight": 0.736227795630767,
+      "weight": 0.7041241452319316,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1411,9 +1422,20 @@
     },
     {
       "source": "atomic_8f94e2c804bc8799",
+      "target": "atomic_ad32a875a79554b2",
+      "edge_type": "related_to",
+      "weight": 0.7175970699446224,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_d95262c571e2a0fe",
       "edge_type": "related_to",
-      "weight": 0.7611164839335467,
+      "weight": 0.7175970699446224,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1534,9 +1556,9 @@
     },
     {
       "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_bc67a185eea27b2d",
+      "target": "atomic_093c41bf683097e1",
       "edge_type": "related_to",
-      "weight": 0.7020305089104422,
+      "weight": 0.7204792759220493,
       "metadata": {
         "similarity_method": "basic_bow_cosine",
         "k": 10,
@@ -1771,8 +1793,8 @@
   ],
   "metadata": {
     "node_count": 45,
-    "edge_count": 57,
-    "average_degree": 2.53,
-    "density": 0.0576
+    "edge_count": 59,
+    "average_degree": 2.62,
+    "density": 0.0596
   }
 }
