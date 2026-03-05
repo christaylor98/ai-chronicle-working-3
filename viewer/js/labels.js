@@ -9,7 +9,16 @@ export class LabelManager {
         this.container = document.getElementById(container);
         this.labels = new Map();  // nodeId -> DOM element
         this.nodePositions = new Map();  // nodeId -> {x, y, z}
+        this.nodeImportance = new Map();  // nodeId -> importance score
+        this.nodeMeshes = null;  // Reference to node meshes for visibility
         this.maxLabels = 30;  // LOD: limit number of visible labels
+    }
+
+    /**
+     * Set reference to node meshes for visibility checking.
+     */
+    setNodeMeshes(nodeMeshes) {
+        this.nodeMeshes = nodeMeshes;
     }
 
     /**
@@ -22,6 +31,7 @@ export class LabelManager {
             const label = this.createLabel(node);
             this.labels.set(node.id, label);
             this.nodePositions.set(node.id, { x: node.x, y: node.y, z: node.z });
+            this.nodeImportance.set(node.id, node.importance || node.degree || 0);
         }
     }
 
@@ -41,6 +51,7 @@ export class LabelManager {
 
     /**
      * Update label positions based on 3D -> 2D projection.
+     * CONTEXTUAL: Only shows labels for visible nodes, ranked by importance.
      */
     updateLabelPositions() {
         // Get camera frustum for culling
@@ -52,26 +63,30 @@ export class LabelManager {
         );
         frustum.setFromProjectionMatrix(projScreenMatrix);
         
-        // Calculate distances from camera for LOD
-        const labelDistances = [];
+        // Build candidate list: only nodes that are visible (not hidden by telescope)
+        const labelCandidates = [];
         for (const [nodeId, pos] of this.nodePositions) {
             const vector = new THREE.Vector3(pos.x, pos.y, pos.z);
-            const distance = this.camera.position.distanceTo(vector);
             const inFrustum = frustum.containsPoint(vector);
             
-            labelDistances.push({
-                nodeId,
-                distance,
-                inFrustum,
-                position: vector
-            });
+            // Check if node mesh is visible (telescope effect)
+            const mesh = this.nodeMeshes?.get(nodeId);
+            const nodeVisible = mesh ? mesh.visible : true;
+            
+            // Only consider nodes that are both in frustum AND visible
+            if (inFrustum && nodeVisible) {
+                const importance = this.nodeImportance.get(nodeId) || 0;
+                labelCandidates.push({
+                    nodeId,
+                    importance,
+                    position: vector
+                });
+            }
         }
         
-        // Sort by distance and take closest N labels
-        labelDistances.sort((a, b) => a.distance - b.distance);
-        const visibleLabels = labelDistances
-            .filter(l => l.inFrustum)
-            .slice(0, this.maxLabels);
+        // Sort by importance (highest first) and take top N
+        labelCandidates.sort((a, b) => b.importance - a.importance);
+        const visibleLabels = labelCandidates.slice(0, this.maxLabels);
         
         const visibleIds = new Set(visibleLabels.map(l => l.nodeId));
         
@@ -125,6 +140,7 @@ export class LabelManager {
         }
         this.labels.clear();
         this.nodePositions.clear();
+        this.nodeImportance.clear();
     }
 
     /**

@@ -53,6 +53,7 @@ class ProjectionViewer3D {
             // Create labels
             console.log('Creating labels...');
             this.labelManager.createLabels(this.snapshot.nodes);
+            this.labelManager.setNodeMeshes(this.sceneBuilder.nodeMeshes);
             
             // Setup input handling
             this.inputController.setNodeMeshes(
@@ -210,6 +211,7 @@ class ProjectionViewer3D {
             }
             
             this.labelManager.createLabels(this.snapshot.nodes);
+            this.labelManager.setNodeMeshes(this.sceneBuilder.nodeMeshes);
             this.inputController.setNodeMeshes(
                 this.sceneBuilder.getAllNodeMeshes()
             );

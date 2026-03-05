@@ -1,6 +1,6 @@
 {
   "projection_parameters": {
-    "focus_node": "atomic_171083ebb62d5564",
+    "focus_node": "atomic_cd0e09eb102662ee",
     "coherence_threshold": 0.7,
     "top_k_per_node": 2,
     "max_depth": 4,
@@ -8,21 +8,21 @@
   },
   "nodes": [
     {
-      "node_id": "atomic_8581bf96832aba78",
-      "statement": "Gradient descent requires backpropagation to update network weights",
+      "node_id": "atomic_0297ebf591d23972",
+      "statement": "The Roman Empire reached its greatest extent under Emperor Trajan",
       "canonical_terms": [
-        "Gradient",
-        "gradient",
-        "descent",
-        "requires",
-        "backpropagation"
+        "Roman",
+        "Empire",
+        "Emperor",
+        "Trajan",
+        "reached"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            543,
-            610
+            2870,
+            2935
           ],
           "confidence": 1.0
         }
@@ -30,21 +30,109 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_25df1b32ffca1ea5",
-      "statement": "Deep learning uses multiple layers of neural networks to learn hierarchical representations",
+      "node_id": "atomic_07a60a583eae6a86",
+      "statement": "The Amazon rainforest produces approximately 20% of Earth's oxygen",
       "canonical_terms": [
-        "Deep",
+        "Amazon",
+        "Earth",
+        "rainforest",
+        "produces",
+        "approximately"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1515,
+            1581
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_093c41bf683097e1",
+      "statement": "The French Revolution began in 1789 with the storming of the Bastille",
+      "canonical_terms": [
+        "French",
+        "Revolution",
+        "Bastille",
+        "revolution",
+        "storming"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1121,
+            1190
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_0aba4f85ac2c2004",
+      "statement": "Napoleon Bonaparte rose to power during the Revolutionary period",
+      "canonical_terms": [
+        "Napoleon",
+        "Bonaparte",
+        "Revolutionary",
+        "napoleon",
+        "bonaparte"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1192,
+            1256
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_0e80ab47a9e35a0c",
+      "statement": "Indigenous peoples have lived sustainably in the Amazon for thousands of years",
+      "canonical_terms": [
+        "Indigenous",
+        "Amazon",
+        "indigenous",
+        "peoples",
+        "sustainably"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1644,
+            1722
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_10c36b159bd12086",
+      "statement": "Machine learning algorithms can identify patterns in large datasets",
+      "canonical_terms": [
+        "Machine",
+        "machine",
         "learning",
-        "multiple",
-        "networks",
-        "hierarchical"
+        "algorithms",
+        "identify"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            363,
-            454
+            1314,
+            1381
           ],
           "confidence": 1.0
         }
@@ -52,28 +140,20 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "context_e574ea8fbfe3f1ed",
-      "source_file": "examples/neural_networks.txt",
-      "content_hash": "e574ea8fbfe3f1ed",
-      "node_type": "context",
-      "metadata": {}
-    },
-    {
-      "node_id": "atomic_b9f48005a9afadb5",
-      "statement": "The transformer architecture depends on self-attention mechanisms",
+      "node_id": "atomic_1af98d0bef669280",
+      "statement": "The pyramids of Giza were built as monumental tombs for the pharaohs",
       "canonical_terms": [
-        "transformer",
-        "architecture",
-        "depends",
-        "attention",
-        "mechanisms"
+        "Giza",
+        "pyramids",
+        "monumental",
+        "pharaohs"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            945,
-            1010
+            83,
+            151
           ],
           "confidence": 1.0
         }
@@ -81,20 +161,21 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_40bd0d211dacf10d",
-      "statement": "Attention mechanisms allow models to focus on relevant parts of the input",
+      "node_id": "atomic_208d41317669af65",
+      "statement": "Urbanization accelerated as workers moved to industrial cities",
       "canonical_terms": [
-        "Attention",
-        "attention",
-        "mechanisms",
-        "relevant"
+        "Urbanization",
+        "urbanization",
+        "accelerated",
+        "workers",
+        "industrial"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            869,
-            942
+            2615,
+            2677
           ],
           "confidence": 1.0
         }
@@ -102,21 +183,21 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_053b638840c82cb8",
-      "statement": "Large language models are transformers trained on massive text corpora",
+      "node_id": "atomic_216253bd36779f5d",
+      "statement": "Black holes are regions of spacetime where gravity is so strong that nothing can escape",
       "canonical_terms": [
-        "Large",
-        "language",
-        "transformers",
-        "trained",
-        "massive"
+        "Black",
+        "regions",
+        "spacetime",
+        "gravity",
+        "nothing"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1013,
-            1083
+            1725,
+            1812
           ],
           "confidence": 1.0
         }
@@ -124,21 +205,19 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_171083ebb62d5564",
-      "statement": "Backpropagation is an algorithm for training neural networks by computing gradients",
+      "node_id": "atomic_29b5032663747eb5",
+      "statement": "The Saturn V rocket was the most powerful launch vehicle ever built",
       "canonical_terms": [
-        "Backpropagation",
-        "backpropagation",
-        "algorithm",
-        "training",
-        "networks"
+        "Saturn",
+        "powerful",
+        "vehicle"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            457,
-            540
+            356,
+            423
           ],
           "confidence": 1.0
         }
@@ -146,20 +225,19 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_f31d8477ee3f5f05",
-      "statement": "Fine-tuning adapts pre-trained models to specific downstream tasks",
+      "node_id": "atomic_2afe5f5db8d3d8ed",
+      "statement": "The guillotine became a symbol of the Reign of Terror",
       "canonical_terms": [
-        "Fine",
-        "trained",
-        "specific",
-        "downstream"
+        "Reign",
+        "Terror",
+        "guillotine"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1223,
-            1289
+            1258,
+            1311
           ],
           "confidence": 1.0
         }
@@ -167,21 +245,20 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_27268a560e2bdfed",
-      "statement": "Transformers replaced recurrent architectures in many natural language processing tasks",
+      "node_id": "atomic_3606c58f79a01a72",
+      "statement": "Photosynthesis converts light energy into chemical energy in plants",
       "canonical_terms": [
-        "Transformers",
-        "transformers",
-        "replaced",
-        "recurrent",
-        "architectures"
+        "Photosynthesis",
+        "photosynthesis",
+        "converts",
+        "chemical"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            779,
-            866
+            2123,
+            2190
           ],
           "confidence": 1.0
         }
@@ -189,21 +266,21 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_748c257105ceca5a",
-      "statement": "Convolutional neural networks specialize in processing grid-like data such as images",
+      "node_id": "atomic_42b1bd056f44bba0",
+      "statement": "Hieroglyphics served as the written language of ancient Egypt",
       "canonical_terms": [
-        "Convolutional",
-        "convolutional",
-        "networks",
-        "specialize",
-        "processing"
+        "Hieroglyphics",
+        "Egypt",
+        "hieroglyphics",
+        "written",
+        "language"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            613,
-            697
+            153,
+            214
           ],
           "confidence": 1.0
         }
@@ -211,21 +288,21 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_ab1e16a498e79604",
-      "statement": "BERT introduced bidirectional training for language understanding tasks",
+      "node_id": "atomic_472692e0bd709f39",
+      "statement": "Ancient Egyptian civilization flourished along the Nile River for over 3000 years",
       "canonical_terms": [
-        "introduced",
-        "bidirectional",
-        "training",
-        "language",
-        "understanding"
+        "Ancient",
+        "Egyptian",
+        "Nile",
+        "River",
+        "ancient"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1086,
-            1157
+            0,
+            81
           ],
           "confidence": 1.0
         }
@@ -233,21 +310,21 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_d5c51560afc51829",
-      "statement": "Recurrent neural networks maintain internal state to process sequential data",
+      "node_id": "atomic_4925267c8fb14db2",
+      "statement": "Wave-particle duality is a fundamental concept in quantum theory",
       "canonical_terms": [
-        "Recurrent",
-        "recurrent",
-        "networks",
-        "maintain",
-        "internal"
+        "Wave",
+        "particle",
+        "duality",
+        "fundamental",
+        "concept"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            700,
-            776
+            627,
+            691
           ],
           "confidence": 1.0
         }
@@ -255,21 +332,86 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_28cf70b6fc7a9bce",
-      "statement": "Neural networks are computational models inspired by biological neural systems",
+      "node_id": "atomic_4cd44f4b5439c6c3",
+      "statement": "Vincent van Gogh painted Starry Night during his time at an asylum in Saint-Rémy",
+      "canonical_terms": [
+        "Vincent",
+        "Gogh",
+        "Starry",
+        "Night",
+        "Saint"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            694,
+            774
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_55019e0f54c92632",
+      "statement": "Deforestation threatens biodiversity in tropical ecosystems",
+      "canonical_terms": [
+        "Deforestation",
+        "deforestation",
+        "threatens",
+        "biodiversity",
+        "tropical"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1583,
+            1642
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_694feafb12154ae0",
+      "statement": "The double helix structure was discovered by Watson and Crick in 1953",
+      "canonical_terms": [
+        "Watson",
+        "Crick",
+        "structure",
+        "discovered"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            992,
+            1061
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_78c5b335fd65ec43",
+      "statement": "Neural networks are inspired by biological brain structures",
       "canonical_terms": [
         "Neural",
         "networks",
-        "computational",
         "inspired",
-        "biological"
+        "biological",
+        "structures"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            282,
-            360
+            1383,
+            1442
           ],
           "confidence": 1.0
         }
@@ -277,19 +419,20 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_d463cde3e5e8114d",
-      "statement": "GPT models use autoregressive generation for text completion",
+      "node_id": "atomic_838c5a33d2d2a7ce",
+      "statement": "DNA contains the genetic instructions for all living organisms",
       "canonical_terms": [
-        "autoregressive",
-        "generation",
-        "completion"
+        "contains",
+        "genetic",
+        "instructions",
+        "organisms"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1160,
-            1220
+            928,
+            990
           ],
           "confidence": 1.0
         }
@@ -297,264 +440,1329 @@
       "node_type": "atomic"
     },
     {
-      "node_id": "atomic_f736a341d4e587e2",
-      "statement": "Transfer learning leverages knowledge from one domain to improve performance in another",
+      "node_id": "atomic_8633427b4b492df7",
+      "statement": "Latin formed the basis for Romance languages",
       "canonical_terms": [
-        "Transfer",
-        "transfer",
-        "learning",
-        "leverages",
+        "Latin",
+        "Romance",
+        "romance",
+        "languages"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2998,
+            3042
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_88c8b7026ba39331",
+      "statement": "Chlorophyll absorbs light primarily in red and blue wavelengths",
+      "canonical_terms": [
+        "Chlorophyll",
+        "chlorophyll",
+        "absorbs",
+        "primarily",
+        "wavelengths"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2192,
+            2255
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_8c52f8194ce7e44e",
+      "statement": "Penicillin was discovered by Alexander Fleming in 1928",
+      "canonical_terms": [
+        "Penicillin",
+        "Alexander",
+        "Fleming",
+        "penicillin",
+        "discovered"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2750,
+            2804
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_8f94e2c804bc8799",
+      "statement": "The Renaissance began in Italy during the 14th century",
+      "canonical_terms": [
+        "Renaissance",
+        "Italy",
+        "renaissance",
+        "century"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1929,
+            1983
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_9215768b541ffbf9",
+      "statement": "Jazz music originated in African American communities in New Orleans",
+      "canonical_terms": [
+        "Jazz",
+        "African",
+        "American",
+        "New",
+        "Orleans"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2322,
+            2390
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_9abb16a017b4feca",
+      "statement": "The Apollo 11 mission successfully landed humans on the Moon in 1969",
+      "canonical_terms": [
+        "Apollo",
+        "Moon",
+        "mission",
+        "successfully"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            217,
+            285
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_9bb4af2855f33b2d",
+      "statement": "Antibiotic resistance poses a growing threat to public health",
+      "canonical_terms": [
+        "Antibiotic",
+        "antibiotic",
+        "resistance",
+        "growing"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2806,
+            2867
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_a199c805eecdcc60",
+      "statement": "Antibiotics revolutionized medicine by fighting bacterial infections",
+      "canonical_terms": [
+        "Antibiotics",
+        "antibiotics",
+        "revolutionized",
+        "medicine",
+        "fighting"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2680,
+            2748
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_a1eec9b442c4344f",
+      "statement": "Steam engines powered factories and locomotives",
+      "canonical_terms": [
+        "Steam",
+        "engines",
+        "powered",
+        "factories",
+        "locomotives"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2566,
+            2613
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_a3c43451f4bea227",
+      "statement": "Neil Armstrong became the first person to walk on the lunar surface",
+      "canonical_terms": [
+        "Neil",
+        "Armstrong",
+        "armstrong",
+        "surface"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            287,
+            354
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_a611d90d2f9cce72",
+      "statement": "Hawking radiation suggests black holes can gradually lose mass",
+      "canonical_terms": [
+        "Hawking",
+        "hawking",
+        "radiation",
+        "suggests",
+        "gradually"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1864,
+            1926
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_ad32a875a79554b2",
+      "statement": "The printing press revolutionized the spread of knowledge in Europe",
+      "canonical_terms": [
+        "Europe",
+        "printing",
+        "revolutionized",
         "knowledge"
       ],
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1292,
-            1379
+            2053,
+            2120
           ],
           "confidence": 1.0
         }
       ],
       "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_af45f434641c41af",
+      "statement": "Deep learning uses multiple layers to progressively extract features",
+      "canonical_terms": [
+        "Deep",
+        "learning",
+        "multiple",
+        "progressively",
+        "extract"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1444,
+            1512
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_b8d1d1aad9f2c9b9",
+      "statement": "Roman engineering achievements included aqueducts and roads",
+      "canonical_terms": [
+        "Roman",
+        "engineering",
+        "achievements",
+        "included",
+        "aqueducts"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2937,
+            2996
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_ba9385ad7b0ce368",
+      "statement": "Van Gogh used bold colors and dramatic brushwork in his paintings",
+      "canonical_terms": [
+        "Van",
+        "Gogh",
+        "dramatic",
+        "brushwork",
+        "paintings"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            860,
+            925
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_bc67a185eea27b2d",
+      "statement": "Louis Armstrong pioneered the jazz solo form",
+      "canonical_terms": [
+        "Louis",
+        "Armstrong",
+        "armstrong",
+        "pioneered"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2444,
+            2488
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_cd0e09eb102662ee",
+      "statement": "Quantum mechanics describes the behavior of matter at atomic and subatomic scales",
+      "canonical_terms": [
+        "Quantum",
+        "quantum",
+        "mechanics",
+        "describes",
+        "behavior"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            426,
+            507
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d2162e4ab6aed987",
+      "statement": "Genes are segments of DNA that encode specific proteins",
+      "canonical_terms": [
+        "Genes",
+        "segments",
+        "specific",
+        "proteins"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1063,
+            1118
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d273c25314568ad9",
+      "statement": "Improvisation is a key element of jazz performance",
+      "canonical_terms": [
+        "Improvisation",
+        "improvisation",
+        "element",
+        "performance"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2392,
+            2442
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d56656ecb6cc3bab",
+      "statement": "Event horizons mark the boundary of a black hole",
+      "canonical_terms": [
+        "Event",
+        "horizons",
+        "boundary"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1814,
+            1862
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_d95262c571e2a0fe",
+      "statement": "Leonardo da Vinci epitomized the Renaissance ideal of the polymath",
+      "canonical_terms": [
+        "Leonardo",
+        "Vinci",
+        "Renaissance",
+        "leonardo",
+        "epitomized"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1985,
+            2051
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_df163e6ef05cdc2f",
+      "statement": "Post-Impressionism emerged as a reaction to Impressionism in the late 19th century",
+      "canonical_terms": [
+        "Post",
+        "Impressionism",
+        "impressionism",
+        "emerged",
+        "reaction"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            776,
+            858
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_f2142db400da0a03",
+      "statement": "The Heisenberg uncertainty principle states that certain pairs of physical properties cannot be simultaneously known",
+      "canonical_terms": [
+        "Heisenberg",
+        "heisenberg",
+        "uncertainty",
+        "principle",
+        "certain"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            509,
+            625
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "atomic_ffb0580430ae83de",
+      "statement": "The Industrial Revolution transformed manufacturing through mechanization",
+      "canonical_terms": [
+        "Industrial",
+        "Revolution",
+        "industrial",
+        "revolution",
+        "transformed"
+      ],
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2491,
+            2564
+          ],
+          "confidence": 1.0
+        }
+      ],
+      "node_type": "atomic"
+    },
+    {
+      "node_id": "context_4a203d5fca38da17",
+      "source_file": "examples/diverse_topics.txt",
+      "content_hash": "4a203d5fca38da17",
+      "node_type": "context",
+      "metadata": {}
     }
   ],
   "edges": [
     {
-      "source": "atomic_28cf70b6fc7a9bce",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_0297ebf591d23972",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            282,
-            360
+            2870,
+            2935
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_25df1b32ffca1ea5",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_07a60a583eae6a86",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            363,
-            454
+            1515,
+            1581
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_171083ebb62d5564",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_2afe5f5db8d3d8ed",
+      "edge_type": "related_to",
+      "weight": 0.7519763153394848,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_8f94e2c804bc8799",
+      "edge_type": "related_to",
+      "weight": 0.7842676218074807,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_ad32a875a79554b2",
+      "edge_type": "related_to",
+      "weight": 0.8061862178478973,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "atomic_d95262c571e2a0fe",
+      "edge_type": "related_to",
+      "weight": 0.7381448361039201,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_093c41bf683097e1",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            457,
-            540
+            1121,
+            1190
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_8581bf96832aba78",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_0aba4f85ac2c2004",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            543,
-            610
+            1192,
+            1256
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_748c257105ceca5a",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            613,
-            697
+            1644,
+            1722
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_d5c51560afc51829",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_10c36b159bd12086",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            700,
-            776
+            1314,
+            1381
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_27268a560e2bdfed",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_093c41bf683097e1",
+      "edge_type": "related_to",
+      "weight": 0.7204792759220493,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_2afe5f5db8d3d8ed",
+      "edge_type": "related_to",
+      "weight": 0.7142857142857143,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            779,
-            866
+            83,
+            151
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_40bd0d211dacf10d",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_208d41317669af65",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            869,
-            942
+            2615,
+            2677
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_b9f48005a9afadb5",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_216253bd36779f5d",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            945,
-            1010
+            1725,
+            1812
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_053b638840c82cb8",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_29b5032663747eb5",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1013,
-            1083
+            356,
+            423
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_ab1e16a498e79604",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_2afe5f5db8d3d8ed",
+      "target": "atomic_ad32a875a79554b2",
+      "edge_type": "related_to",
+      "weight": 0.731455024943138,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_2afe5f5db8d3d8ed",
+      "target": "atomic_d56656ecb6cc3bab",
+      "edge_type": "related_to",
+      "weight": 0.722717701593687,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_2afe5f5db8d3d8ed",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1086,
-            1157
+            1258,
+            1311
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_d463cde3e5e8114d",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_3606c58f79a01a72",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1160,
-            1220
+            2123,
+            2190
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_f31d8477ee3f5f05",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_42b1bd056f44bba0",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1223,
-            1289
+            153,
+            214
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_f736a341d4e587e2",
-      "target": "context_e574ea8fbfe3f1ed",
+      "source": "atomic_472692e0bd709f39",
+      "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            1292,
-            1379
+            0,
+            81
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_8581bf96832aba78",
-      "target": "atomic_171083ebb62d5564",
-      "edge_type": "depends_on",
+      "source": "atomic_4925267c8fb14db2",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            543,
-            610
+            627,
+            691
           ],
           "confidence": 1.0
         }
       ]
     },
     {
-      "source": "atomic_b9f48005a9afadb5",
-      "target": "atomic_40bd0d211dacf10d",
-      "edge_type": "depends_on",
+      "source": "atomic_4cd44f4b5439c6c3",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
       "evidence": [
         {
-          "source": "context_e574ea8fbfe3f1ed",
+          "source": "context_4a203d5fca38da17",
           "span": [
-            945,
-            1010
+            694,
+            774
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_55019e0f54c92632",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1583,
+            1642
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_694feafb12154ae0",
+      "target": "atomic_8c52f8194ce7e44e",
+      "edge_type": "related_to",
+      "weight": 0.736227795630767,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_694feafb12154ae0",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            992,
+            1061
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1383,
+            1442
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            928,
+            990
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8633427b4b492df7",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2998,
+            3042
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_88c8b7026ba39331",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2192,
+            2255
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8c52f8194ce7e44e",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2750,
+            2804
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_8f94e2c804bc8799",
+      "target": "atomic_d95262c571e2a0fe",
+      "edge_type": "related_to",
+      "weight": 0.7611164839335467,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_8f94e2c804bc8799",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1929,
+            1983
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_9215768b541ffbf9",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2322,
+            2390
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_093c41bf683097e1",
+      "edge_type": "related_to",
+      "weight": 0.7204792759220493,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_8f94e2c804bc8799",
+      "edge_type": "related_to",
+      "weight": 0.7014557410063451,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            217,
+            285
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_9bb4af2855f33b2d",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2806,
+            2867
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_a199c805eecdcc60",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2680,
+            2748
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_a1eec9b442c4344f",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2566,
+            2613
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_a3c43451f4bea227",
+      "target": "atomic_bc67a185eea27b2d",
+      "edge_type": "related_to",
+      "weight": 0.7020305089104422,
+      "metadata": {
+        "similarity_method": "basic_bow_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_a3c43451f4bea227",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            287,
+            354
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_a611d90d2f9cce72",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1864,
+            1926
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_ad32a875a79554b2",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2053,
+            2120
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_af45f434641c41af",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1444,
+            1512
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_b8d1d1aad9f2c9b9",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2937,
+            2996
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_ba9385ad7b0ce368",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            860,
+            925
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_bc67a185eea27b2d",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2444,
+            2488
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_cd0e09eb102662ee",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            426,
+            507
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d2162e4ab6aed987",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1063,
+            1118
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d273c25314568ad9",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2392,
+            2442
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d56656ecb6cc3bab",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1814,
+            1862
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_d95262c571e2a0fe",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            1985,
+            2051
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_df163e6ef05cdc2f",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            776,
+            858
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_f2142db400da0a03",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            509,
+            625
+          ],
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "source": "atomic_ffb0580430ae83de",
+      "target": "context_4a203d5fca38da17",
+      "edge_type": "appears_in",
+      "evidence": [
+        {
+          "source": "context_4a203d5fca38da17",
+          "span": [
+            2491,
+            2564
           ],
           "confidence": 1.0
         }
@@ -562,9 +1770,9 @@
     }
   ],
   "metadata": {
-    "node_count": 15,
-    "edge_count": 16,
-    "average_degree": 2.13,
-    "density": 0.1524
+    "node_count": 45,
+    "edge_count": 57,
+    "average_degree": 2.53,
+    "density": 0.0576
   }
 }
