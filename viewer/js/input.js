@@ -16,12 +16,14 @@ export class InputController {
         this.isDragging = false;
         this.previousMousePosition = { x: 0, y: 0 };
         
-        // Raycaster for node selection
+        // Raycaster for node and edge selection
         this.raycaster = new THREE.Raycaster();
+        this.raycaster.params.Line.threshold = 0.5;  // Make edge lines easier to click
         this.mouse = new THREE.Vector2();
         
         // Callbacks
         this.onNodeClick = null;
+        this.onEdgeClick = null;
         this.onNodeHover = null;
         
         this.initEventListeners();
@@ -112,12 +114,19 @@ export class InputController {
     }
 
     onClick(event) {
-        // Raycast to detect node clicks
+        // Raycast to detect clicks
         this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
         this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
         
-        const intersectedNode = this.getIntersectedNode();
+        // First check for edge clicks
+        const intersectedEdge = this.getIntersectedEdge();
+        if (intersectedEdge && this.onEdgeClick) {
+            this.onEdgeClick(intersectedEdge);
+            return;  // Edge click takes priority
+        }
         
+        // Then check for node clicks
+        const intersectedNode = this.getIntersectedNode();
         if (intersectedNode && this.onNodeClick) {
             this.onNodeClick(intersectedNode);
         }
@@ -160,6 +169,24 @@ export class InputController {
     }
 
     /**
+     * Get the edge that the cursor is currently over.
+     */
+    getIntersectedEdge() {
+        if (!this.edgeLines || this.edgeLines.length === 0) {
+            return null;
+        }
+        
+        this.raycaster.setFromCamera(this.mouse, this.camera);
+        const intersects = this.raycaster.intersectObjects(this.edgeLines);
+        
+        if (intersects.length > 0) {
+            return intersects[0].object.userData;
+        }
+        
+        return null;
+    }
+
+    /**
      * Set the node meshes for raycasting.
      */
     setNodeMeshes(meshes) {
@@ -167,10 +194,24 @@ export class InputController {
     }
 
     /**
+     * Set the edge lines for raycasting.
+     */
+    setEdgeLines(lines) {
+        this.edgeLines = lines;
+    }
+
+    /**
      * Register callback for node click events.
      */
     setNodeClickCallback(callback) {
         this.onNodeClick = callback;
+    }
+
+    /**
+     * Register callback for edge click events.
+     */
+    setEdgeClickCallback(callback) {
+        this.onEdgeClick = callback;
     }
 
     /**

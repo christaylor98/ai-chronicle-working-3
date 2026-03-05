@@ -40,6 +40,22 @@ export class API {
     }
 
     /**
+     * Fetch detailed edge information.
+     */
+    async fetchEdgeDetails(sourceId, targetId) {
+        try {
+            const response = await fetch(`${this.baseUrl}/api/edge/${sourceId}/${targetId}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Failed to fetch edge details:', error);
+            throw error;
+        }
+    }
+
+    /**
      * Check server health.
      */
     async healthCheck() {

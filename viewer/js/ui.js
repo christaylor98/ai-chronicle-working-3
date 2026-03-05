@@ -86,14 +86,64 @@ export class UI {
                 html += this.createDetailRow('Evidence', `${fullNodeData.evidence.length} source(s)`);
             }
         } else {
+            // Context node details
             if (fullNodeData && fullNodeData.source_file) {
                 html += this.createDetailRow('Source File', fullNodeData.source_file);
+            }
+            if (fullNodeData && fullNodeData.content_hash) {
+                html += this.createDetailRow('Content Hash', fullNodeData.content_hash);
+            }
+            if (fullNodeData && fullNodeData.metadata && Object.keys(fullNodeData.metadata).length > 0) {
+                html += this.createDetailRow('Metadata', JSON.stringify(fullNodeData.metadata));
             }
         }
         
         // Position
         const pos = `(${nodeData.x.toFixed(2)}, ${nodeData.y.toFixed(2)}, ${nodeData.z.toFixed(2)})`;
         html += this.createDetailRow('3D Position', pos);
+        
+        this.detailsContent.innerHTML = html;
+    }
+
+    /**
+     * Show edge/relationship details in side panel.
+     */
+    showEdgeDetails(edgeData, fullEdgeData = null) {
+        this.detailsPanel.classList.add('visible');
+        
+        // Title
+        this.detailsTitle.textContent = 'Relationship';
+        
+        // Build details HTML
+        let html = '';
+        
+        // Edge type
+        html += this.createDetailRow('Type', edgeData.edgeType || 'related_to');
+        
+        // Weight/strength
+        if (edgeData.weight !== undefined) {
+            html += this.createDetailRow('Weight', edgeData.weight.toFixed(3));
+        }
+        
+        // Source node
+        html += this.createDetailRow('Source Node', this.truncate(edgeData.sourceId, 30));
+        
+        // Target node
+        html += this.createDetailRow('Target Node', this.truncate(edgeData.targetId, 30));
+        
+        // Metadata if available
+        if (fullEdgeData && fullEdgeData.metadata) {
+            const meta = fullEdgeData.metadata;
+            if (meta.similarity_method) {
+                html += this.createDetailRow('Similarity Method', meta.similarity_method);
+            }
+            if (meta.k !== undefined) {
+                html += this.createDetailRow('K (top-k)', meta.k);
+            }
+            if (meta.measurement_type) {
+                html += this.createDetailRow('Measurement Type', meta.measurement_type);
+            }
+        }
         
         this.detailsContent.innerHTML = html;
     }

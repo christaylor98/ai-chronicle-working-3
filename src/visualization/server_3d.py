@@ -7,11 +7,16 @@ from flask import Flask, jsonify, send_from_directory, request
 from pathlib import Path
 import json
 import sys
+import mimetypes
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.visualization.snapshot_adapter_3d import ProjectionSnapshot3DAdapter
+
+# Ensure JavaScript files are served with correct MIME type for ES6 modules
+mimetypes.add_type('application/javascript', '.js')
+mimetypes.add_type('application/javascript', '.mjs')
 
 
 class Viewer3DServer:
@@ -87,6 +92,21 @@ class Viewer3DServer:
                     return jsonify(node)
             
             return jsonify({"error": "Node not found"}), 404
+        
+        @self.app.route("/api/edge/<source_id>/<target_id>")
+        def get_edge_details(source_id, target_id):
+            """Get detailed information about a specific edge."""
+            # Load original projection data
+            with open(self.projection_path, 'r') as f:
+                projection = json.load(f)
+            
+            # Find edge (check both directions)
+            for edge in projection.get("edges", []):
+                if (edge["source"] == source_id and edge["target"] == target_id) or \
+                   (edge["source"] == target_id and edge["target"] == source_id):
+                    return jsonify(edge)
+            
+            return jsonify({"error": "Edge not found"}), 404
     
     def run(self):
         """Start the Flask development server."""

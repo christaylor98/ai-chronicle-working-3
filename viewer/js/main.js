@@ -59,8 +59,14 @@ class ProjectionViewer3D {
             this.inputController.setNodeMeshes(
                 this.sceneBuilder.getAllNodeMeshes()
             );
+            this.inputController.setEdgeLines(
+                this.sceneBuilder.edgeLines
+            );
             this.inputController.setNodeClickCallback((nodeData) => {
                 this.onNodeClick(nodeData);
+            });
+            this.inputController.setEdgeClickCallback((edgeData) => {
+                this.onEdgeClick(edgeData);
             });
             
             // Update UI with metadata
@@ -120,6 +126,29 @@ class ProjectionViewer3D {
         } catch (error) {
             console.warn('Failed to fetch node details:', error);
             this.ui.showNodeDetails(nodeData, null);
+        }
+    }
+
+    /**
+     * Handle edge click events.
+     */
+    async onEdgeClick(edgeData) {
+        // Unhighlight previous node selection
+        if (this.selectedNodeId) {
+            this.sceneBuilder.highlightNode(this.selectedNodeId, false);
+            this.selectedNodeId = null;
+        }
+        
+        // Fetch full edge details from API
+        try {
+            const fullEdgeData = await this.api.fetchEdgeDetails(
+                edgeData.sourceId,
+                edgeData.targetId
+            );
+            this.ui.showEdgeDetails(edgeData, fullEdgeData);
+        } catch (error) {
+            console.warn('Failed to fetch edge details:', error);
+            this.ui.showEdgeDetails(edgeData, null);
         }
     }
 
@@ -214,6 +243,9 @@ class ProjectionViewer3D {
             this.labelManager.setNodeMeshes(this.sceneBuilder.nodeMeshes);
             this.inputController.setNodeMeshes(
                 this.sceneBuilder.getAllNodeMeshes()
+            );
+            this.inputController.setEdgeLines(
+                this.sceneBuilder.edgeLines
             );
             this.ui.updateInfoPanel(this.snapshot.metadata);
             
