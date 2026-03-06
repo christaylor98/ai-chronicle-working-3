@@ -1,0 +1,186 @@
+#!/usr/bin/env python3
+"""
+Test projection topic filtering with HDBSCAN-generated labels.
+
+This script loads the HDBSCAN-labeled graph and tests whether
+topic filtering correctly separates domains in projections.
+"""
+
+import json
+from src.core import KnowledgeGraph, AtomicNode, ContextNode, Edge, WeightedEdge, EdgeType
+from src.core.projection import ProjectionEngine, ProjectionParameters
+from src.core.node import Evidence
+from datetime import datetime
+
+def test_projection_filtering():
+    """Test projection topic filtering with HDBSCAN labels."""
+    
+    print("=" * 70)
+    print("PROJECTION TOPIC FILTERING TEST (HDBSCAN Labels)")
+    print("=" * 70)
+    print()
+    
+    # Load the HDBSCAN-labeled graph
+    with open('diverse_topics_graph_hdbscan.json', 'r') as f:
+        graph_data = json.load(f)
+    
+    # Reconstruct the graph
+    kg = KnowledgeGraph()
+    
+    # Add nodes
+    for node_data in graph_data['nodes_added']:
+        if node_data['node_type'] == 'atomic':
+            evidence = [Evidence(**e) for e in node_data['evidence']]
+            node = AtomicNode(
+                node_id=node_data['node_id'],
+                statement=node_data['statement'],
+                canonical_terms=node_data.get('canonical_terms', []),
+                topic_labels=node_data.get('topic_labels', []),
+                evidence=evidence,
+                stability_hash=node_data['stability_hash'],
+                created_at=datetime.fromisoformat(node_data['created_at'])
+            )
+            kg.add_atomic_node(node)
+        elif node_data['node_type'] == 'context':
+            node = ContextNode(
+                node_id=node_data['node_id'],
+                source_file=node_data['source_file'],
+                content_hash=node_data['content_hash'],
+                metadata=node_data['metadata'],
+                created_at=datetime.fromisoformat(node_data['created_at'])
+            )
+            kg.add_context_node(node)
+    
+    # Add edges
+    for edge_data in graph_data['edges_added']:
+        evidence = [Evidence(**e) for e in edge_data['evidence']]
+        edge = Edge(
+            source=edge_data['source'],
+            target=edge_data['target'],
+            edge_type=EdgeType(edge_data['type']),
+            evidence=evidence
+        )
+        kg.add_edge(edge)
+    
+    # Add weighted edges
+    for wedge_data in graph_data['weights_added']:
+        wedge = WeightedEdge(
+            source=wedge_data['source'],
+            target=wedge_data['target'],
+            edge_type=EdgeType(wedge_data['type']),
+            weight=wedge_data['weight'],
+            metadata=wedge_data.get('metadata', {})
+        )
+        kg.add_weighted_edge(wedge)
+    
+    # Find a focus node with specific topic labels
+    focus_node = None
+    focus_labels = None
+    
+    for node in kg.atomic_nodes.values():
+        if 'egypt' in node.statement.lower() or 'pyramid' in node.statement.lower():
+            focus_node = node.node_id
+            focus_labels = node.topic_labels
+            print(f"Focus node: {node.statement[:60]}...")
+            print(f"Topic labels: {node.topic_labels}")
+            print()
+            break
+    
+    if not focus_node:
+        print("No Egypt node found")
+        return
+    
+    # Create projection engine
+    engine = ProjectionEngine(kg)
+    
+    # Test 1: Projection WITHOUT topic filter
+    print("Test 1: Projection WITHOUT topic filter")
+    print("-" * 70)
+    params1 = ProjectionParameters(
+        focus_node=focus_node,
+        coherence_threshold=0.2,
+        top_k_per_node=5,
+        max_depth=1,
+        max_nodes=100,
+        topic_filter=False
+    )
+    proj1 = engine.project(params1)
+    
+    print(f"Nodes: {len(proj1.nodes)}")
+    print(f"Edges: {len(proj1.edges)}")
+    print()
+    
+    # Show sample neighbors
+    print("Sample neighbors (no filter):")
+    for i, node_data in enumerate(proj1.nodes[1:8]):
+        node = kg.atomic_nodes[node_data['node_id']]
+        print(f"  {i+1}. {node.statement[:55]}...")
+        print(f"     Labels: {node.topic_labels}")
+    print()
+    
+    # Test 2: Projection WITH topic filter
+    print("Test 2: Projection WITH topic filter")
+    print("-" * 70)
+    params2 = ProjectionParameters(
+        focus_node=focus_node,
+        coherence_threshold=0.2,
+        top_k_per_node=5,
+        max_depth=1,
+        max_nodes=100,
+        topic_filter=True
+    )
+    proj2 = engine.project(params2)
+    
+    print(f"Nodes: {len(proj2.nodes)}")
+    print(f"Edges: {len(proj2.edges)}")
+    print()
+    
+    # Show sample neighbors
+    print("Sample neighbors (with topic filter):")
+    for i, node_data in enumerate(proj2.nodes[1:8]):
+        node = kg.atomic_nodes[node_data['node_id']]
+        print(f"  {i+1}. {node.statement[:55]}...")
+        print(f"     Labels: {node.topic_labels}")
+    print()
+    
+    # Analysis
+    print("=" * 70)
+    print("ANALYSIS")
+    print("=" * 70)
+    
+    # Count nodes by primary label
+    unfiltered_labels = {}
+    filtered_labels = {}
+    
+    for node_data in proj1.nodes[1:]:  # Skip focus node
+        node = kg.atomic_nodes[node_data['node_id']]
+        primary = node.topic_labels[0] if node.topic_labels else 'none'
+        unfiltered_labels[primary] = unfiltered_labels.get(primary, 0) + 1
+    
+    for node_data in proj2.nodes[1:]:  # Skip focus node
+        node = kg.atomic_nodes[node_data['node_id']]
+        primary = node.topic_labels[0] if node.topic_labels else 'none'
+        filtered_labels[primary] = filtered_labels.get(primary, 0) + 1
+    
+    print(f"\nUnfiltered projection label distribution:")
+    for label, count in sorted(unfiltered_labels.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {label}: {count}")
+    
+    print(f"\nFiltered projection label distribution:")
+    for label, count in sorted(filtered_labels.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {label}: {count}")
+    
+    print()
+    print("✓ Topic filtering test completed!")
+    print()
+    
+    # Interpretation
+    if len(proj2.nodes) < len(proj1.nodes):
+        print(f"✓ Topic filter reduced projection from {len(proj1.nodes)} to {len(proj2.nodes)} nodes")
+        print("  This indicates the filter is working to restrict to related topics.")
+    else:
+        print(f"⚠ Topic filter did not reduce projection size ({len(proj1.nodes)} → {len(proj2.nodes)})")
+        print("  This may indicate all neighbors share topic labels with focus node.")
+
+if __name__ == "__main__":
+    test_projection_filtering()

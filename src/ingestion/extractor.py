@@ -3,6 +3,7 @@ Text parsing and atomic unit extraction from raw content.
 """
 
 import re
+import json
 from typing import List, Tuple
 from dataclasses import dataclass
 

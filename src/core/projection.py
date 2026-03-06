@@ -30,6 +30,7 @@ class ProjectionParameters(BaseModel):
     top_k_per_node: int = Field(default=5, ge=1, description="Maximum similarity edges per node (adaptive policy)")
     max_depth: int = Field(default=3, ge=1, description="Maximum hops from focus node")
     max_nodes: int = Field(default=100, ge=1, description="Maximum nodes to include")
+    topic_filter: bool = Field(default=False, description="If True, restrict to nodes sharing topic labels with neighbors")
 
 
 class ProjectionMetadata(BaseModel):
@@ -147,7 +148,11 @@ class ProjectionEngine:
                 continue
             
             # Expand to neighbors via edges
-            neighbors = self._get_neighbors(current_node, params.coherence_threshold)
+            neighbors = self._get_neighbors(
+                current_node, 
+                params.coherence_threshold,
+                params.topic_filter
+            )
             
             for neighbor, weight in neighbors:
                 if neighbor not in visited:
@@ -175,24 +180,36 @@ class ProjectionEngine:
     def _get_neighbors(
         self, 
         node_id: str, 
-        coherence_threshold: float
+        coherence_threshold: float,
+        topic_filter: bool = False
     ) -> List[Tuple[str, float]]:
         """
         Get neighbors of a node with weights.
         
+        Per ATOMIC_NODE_TOPIC_LABELLING_SPEC.v1.0:
         - For weighted edges (related_to): filter by threshold
         - For directed edges: always include (weight = 1.0)
+        - If topic_filter=True: only include neighbors sharing at least one topic label
+        - Topic filtering applied AFTER similarity threshold filtering
         """
         neighbors = []
+        
+        # Get source node's topic labels if filtering by topic
+        source_topics = set()
+        if topic_filter and node_id in self.graph.atomic_nodes:
+            source_node = self.graph.atomic_nodes[node_id]
+            source_topics = set(source_node.topic_labels)
         
         # Weighted edges (related_to) - apply threshold
         for wedge in self.graph.weighted_edges:
             if wedge.source == node_id and wedge.weight >= coherence_threshold:
-                neighbors.append((wedge.target, wedge.weight))
+                if self._passes_topic_filter(wedge.target, source_topics, topic_filter):
+                    neighbors.append((wedge.target, wedge.weight))
             elif wedge.target == node_id and wedge.weight >= coherence_threshold:
-                neighbors.append((wedge.source, wedge.weight))
+                if self._passes_topic_filter(wedge.source, source_topics, topic_filter):
+                    neighbors.append((wedge.source, wedge.weight))
         
-        # Directed edges - always include (no threshold)
+        # Directed edges - always include (no threshold, no topic filter)
         for edge in self.graph.edges:
             if edge.source == node_id:
                 neighbors.append((edge.target, 1.0))
@@ -200,6 +217,33 @@ class ProjectionEngine:
                 neighbors.append((edge.source, 1.0))
         
         return neighbors
+    
+    def _passes_topic_filter(
+        self, 
+        node_id: str, 
+        source_topics: Set[str], 
+        topic_filter: bool
+    ) -> bool:
+        """
+        Check if a node passes the topic filter.
+        
+        Returns True if:
+        - topic_filter is False (filtering disabled)
+        - source_topics is empty (no labels on source node)
+        - node shares at least one topic label with source
+        """
+        if not topic_filter or not source_topics:
+            return True
+        
+        # Check if target node is atomic and has topic labels
+        if node_id not in self.graph.atomic_nodes:
+            return True  # Non-atomic nodes always pass
+        
+        target_node = self.graph.atomic_nodes[node_id]
+        target_topics = set(target_node.topic_labels)
+        
+        # Check for intersection
+        return bool(source_topics & target_topics)
     
     def _extract_edges(
         self, 

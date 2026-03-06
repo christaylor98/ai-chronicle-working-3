@@ -1,0 +1,13 @@
+(run
+  (timestamp "2026-03-05T23:02:12.226838Z")
+  (provider "copilot_cli")
+  (model "gpt-5-mini")
+  (success true)
+  (attempts 1)
+  (metrics
+    (input_chars 520)
+    (output_chars 216)
+    (latency_ms 40599)
+    (provider_metadata "{\"exit_code\": 0, \"runtime_ms\": 40599}")
+  )
+)

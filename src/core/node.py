@@ -42,6 +42,7 @@ class AtomicNode(BaseModel):
     node_id: str = Field(..., description="Unique identifier (generated)")
     statement: str = Field(..., min_length=10, description="Self-contained semantic unit")
     canonical_terms: List[str] = Field(default_factory=list, description="Key terms for indexing")
+    topic_labels: List[str] = Field(default_factory=list, description="Topic domain labels (e.g., history, science, biology)")
     evidence: List[Evidence] = Field(default_factory=list, min_length=1, description="Provenance chain")
     stability_hash: str = Field(..., description="Content-based hash for deduplication")
     created_at: datetime = Field(default_factory=datetime.utcnow)
@@ -76,6 +77,7 @@ class AtomicNode(BaseModel):
         statement: str,
         evidence: List[Evidence],
         canonical_terms: Optional[List[str]] = None,
+        topic_labels: Optional[List[str]] = None,
     ) -> AtomicNode:
         """Factory method to create atomic node with auto-generated ID and hash."""
         stability_hash = cls.compute_stability_hash(statement)
@@ -85,6 +87,7 @@ class AtomicNode(BaseModel):
             node_id=node_id,
             statement=statement,
             canonical_terms=canonical_terms or [],
+            topic_labels=topic_labels or [],
             evidence=evidence,
             stability_hash=stability_hash,
         )
@@ -95,6 +98,7 @@ class AtomicNode(BaseModel):
             "node_id": self.node_id,
             "statement": self.statement,
             "canonical_terms": self.canonical_terms,
+            "topic_labels": self.topic_labels,
             "evidence": [e.model_dump() for e in self.evidence],
             "stability_hash": self.stability_hash,
             "created_at": self.created_at.isoformat(),

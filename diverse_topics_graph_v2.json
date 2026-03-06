@@ -10,6 +10,10 @@
         "River",
         "ancient"
       ],
+      "topic_labels": [
+        "history",
+        "geography"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -21,7 +25,7 @@
         }
       ],
       "stability_hash": "472692e0bd709f39",
-      "created_at": "2026-03-05T20:54:36.029289",
+      "created_at": "2026-03-05T21:38:45.151130",
       "node_type": "atomic"
     },
     {
@@ -32,6 +36,9 @@
         "pyramids",
         "monumental",
         "pharaohs"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -44,7 +51,7 @@
         }
       ],
       "stability_hash": "1af98d0bef669280",
-      "created_at": "2026-03-05T20:54:36.107695",
+      "created_at": "2026-03-05T21:38:45.341334",
       "node_type": "atomic"
     },
     {
@@ -57,6 +64,9 @@
         "written",
         "language"
       ],
+      "topic_labels": [
+        "history"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -68,7 +78,7 @@
         }
       ],
       "stability_hash": "42b1bd056f44bba0",
-      "created_at": "2026-03-05T20:54:36.146246",
+      "created_at": "2026-03-05T21:38:45.434852",
       "node_type": "atomic"
     },
     {
@@ -79,6 +89,9 @@
         "Moon",
         "mission",
         "successfully"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -91,7 +104,7 @@
         }
       ],
       "stability_hash": "9abb16a017b4feca",
-      "created_at": "2026-03-05T20:54:36.184363",
+      "created_at": "2026-03-05T21:38:45.607838",
       "node_type": "atomic"
     },
     {
@@ -102,6 +115,9 @@
         "Armstrong",
         "armstrong",
         "surface"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -114,7 +130,7 @@
         }
       ],
       "stability_hash": "a3c43451f4bea227",
-      "created_at": "2026-03-05T20:54:36.217689",
+      "created_at": "2026-03-05T21:38:45.703451",
       "node_type": "atomic"
     },
     {
@@ -124,6 +140,9 @@
         "Saturn",
         "powerful",
         "vehicle"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -136,7 +155,7 @@
         }
       ],
       "stability_hash": "29b5032663747eb5",
-      "created_at": "2026-03-05T20:54:36.247663",
+      "created_at": "2026-03-05T21:38:45.796442",
       "node_type": "atomic"
     },
     {
@@ -149,6 +168,10 @@
         "describes",
         "behavior"
       ],
+      "topic_labels": [
+        "physics",
+        "chemistry"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -160,7 +183,7 @@
         }
       ],
       "stability_hash": "cd0e09eb102662ee",
-      "created_at": "2026-03-05T20:54:36.276083",
+      "created_at": "2026-03-05T21:38:45.888996",
       "node_type": "atomic"
     },
     {
@@ -173,6 +196,9 @@
         "principle",
         "certain"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -184,7 +210,7 @@
         }
       ],
       "stability_hash": "f2142db400da0a03",
-      "created_at": "2026-03-05T20:54:36.307644",
+      "created_at": "2026-03-05T21:38:45.996244",
       "node_type": "atomic"
     },
     {
@@ -197,6 +223,10 @@
         "fundamental",
         "concept"
       ],
+      "topic_labels": [
+        "physics",
+        "science"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -208,7 +238,7 @@
         }
       ],
       "stability_hash": "4925267c8fb14db2",
-      "created_at": "2026-03-05T20:54:36.332734",
+      "created_at": "2026-03-05T21:38:46.090160",
       "node_type": "atomic"
     },
     {
@@ -221,6 +251,9 @@
         "Night",
         "Saint"
       ],
+      "topic_labels": [
+        "astronomy"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -232,7 +265,7 @@
         }
       ],
       "stability_hash": "4cd44f4b5439c6c3",
-      "created_at": "2026-03-05T20:54:36.363270",
+      "created_at": "2026-03-05T21:38:46.206547",
       "node_type": "atomic"
     },
     {
@@ -245,6 +278,10 @@
         "emerged",
         "reaction"
       ],
+      "topic_labels": [
+        "history",
+        "chemistry"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -256,7 +293,7 @@
         }
       ],
       "stability_hash": "df163e6ef05cdc2f",
-      "created_at": "2026-03-05T20:54:36.391284",
+      "created_at": "2026-03-05T21:38:46.308739",
       "node_type": "atomic"
     },
     {
@@ -269,6 +306,9 @@
         "brushwork",
         "paintings"
       ],
+      "topic_labels": [
+        "art"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -280,7 +320,7 @@
         }
       ],
       "stability_hash": "ba9385ad7b0ce368",
-      "created_at": "2026-03-05T20:54:36.418129",
+      "created_at": "2026-03-05T21:38:46.394258",
       "node_type": "atomic"
     },
     {
@@ -291,6 +331,9 @@
         "genetic",
         "instructions",
         "organisms"
+      ],
+      "topic_labels": [
+        "biology"
       ],
       "evidence": [
         {
@@ -303,7 +346,7 @@
         }
       ],
       "stability_hash": "838c5a33d2d2a7ce",
-      "created_at": "2026-03-05T20:54:36.447933",
+      "created_at": "2026-03-05T21:38:46.485817",
       "node_type": "atomic"
     },
     {
@@ -314,6 +357,9 @@
         "Crick",
         "structure",
         "discovered"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -326,7 +372,7 @@
         }
       ],
       "stability_hash": "694feafb12154ae0",
-      "created_at": "2026-03-05T20:54:36.476197",
+      "created_at": "2026-03-05T21:38:46.571792",
       "node_type": "atomic"
     },
     {
@@ -337,6 +383,9 @@
         "segments",
         "specific",
         "proteins"
+      ],
+      "topic_labels": [
+        "biology"
       ],
       "evidence": [
         {
@@ -349,7 +398,7 @@
         }
       ],
       "stability_hash": "d2162e4ab6aed987",
-      "created_at": "2026-03-05T20:54:36.506030",
+      "created_at": "2026-03-05T21:38:46.664126",
       "node_type": "atomic"
     },
     {
@@ -362,6 +411,9 @@
         "revolution",
         "storming"
       ],
+      "topic_labels": [
+        "biology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -373,7 +425,7 @@
         }
       ],
       "stability_hash": "093c41bf683097e1",
-      "created_at": "2026-03-05T20:54:36.533519",
+      "created_at": "2026-03-05T21:38:46.750575",
       "node_type": "atomic"
     },
     {
@@ -386,6 +438,10 @@
         "napoleon",
         "bonaparte"
       ],
+      "topic_labels": [
+        "history",
+        "biology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -397,7 +453,7 @@
         }
       ],
       "stability_hash": "0aba4f85ac2c2004",
-      "created_at": "2026-03-05T20:54:36.562905",
+      "created_at": "2026-03-05T21:38:46.850760",
       "node_type": "atomic"
     },
     {
@@ -407,6 +463,9 @@
         "Reign",
         "Terror",
         "guillotine"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -419,7 +478,7 @@
         }
       ],
       "stability_hash": "2afe5f5db8d3d8ed",
-      "created_at": "2026-03-05T20:54:36.592289",
+      "created_at": "2026-03-05T21:38:46.944389",
       "node_type": "atomic"
     },
     {
@@ -432,6 +491,9 @@
         "algorithms",
         "identify"
       ],
+      "topic_labels": [
+        "technology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -443,7 +505,7 @@
         }
       ],
       "stability_hash": "10c36b159bd12086",
-      "created_at": "2026-03-05T20:54:36.619827",
+      "created_at": "2026-03-05T21:38:47.039326",
       "node_type": "atomic"
     },
     {
@@ -456,6 +518,9 @@
         "biological",
         "structures"
       ],
+      "topic_labels": [
+        "philosophy"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -467,7 +532,7 @@
         }
       ],
       "stability_hash": "78c5b335fd65ec43",
-      "created_at": "2026-03-05T20:54:36.648908",
+      "created_at": "2026-03-05T21:38:47.140374",
       "node_type": "atomic"
     },
     {
@@ -480,6 +545,9 @@
         "progressively",
         "extract"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -491,7 +559,7 @@
         }
       ],
       "stability_hash": "af45f434641c41af",
-      "created_at": "2026-03-05T20:54:36.674022",
+      "created_at": "2026-03-05T21:38:47.225815",
       "node_type": "atomic"
     },
     {
@@ -504,6 +572,9 @@
         "produces",
         "approximately"
       ],
+      "topic_labels": [
+        "ecology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -515,7 +586,7 @@
         }
       ],
       "stability_hash": "07a60a583eae6a86",
-      "created_at": "2026-03-05T20:54:36.703371",
+      "created_at": "2026-03-05T21:38:47.319673",
       "node_type": "atomic"
     },
     {
@@ -528,6 +599,11 @@
         "biodiversity",
         "tropical"
       ],
+      "topic_labels": [
+        "ecology",
+        "biology",
+        "technology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -539,7 +615,7 @@
         }
       ],
       "stability_hash": "55019e0f54c92632",
-      "created_at": "2026-03-05T20:54:36.730228",
+      "created_at": "2026-03-05T21:38:47.411275",
       "node_type": "atomic"
     },
     {
@@ -552,6 +628,9 @@
         "peoples",
         "sustainably"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -563,7 +642,7 @@
         }
       ],
       "stability_hash": "0e80ab47a9e35a0c",
-      "created_at": "2026-03-05T20:54:36.755572",
+      "created_at": "2026-03-05T21:38:47.496361",
       "node_type": "atomic"
     },
     {
@@ -576,6 +655,11 @@
         "gravity",
         "nothing"
       ],
+      "topic_labels": [
+        "physics",
+        "astronomy",
+        "geography"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -587,7 +671,7 @@
         }
       ],
       "stability_hash": "216253bd36779f5d",
-      "created_at": "2026-03-05T20:54:36.785093",
+      "created_at": "2026-03-05T21:38:47.590492",
       "node_type": "atomic"
     },
     {
@@ -597,6 +681,9 @@
         "Event",
         "horizons",
         "boundary"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -609,7 +696,7 @@
         }
       ],
       "stability_hash": "d56656ecb6cc3bab",
-      "created_at": "2026-03-05T20:54:36.814456",
+      "created_at": "2026-03-05T21:38:47.694474",
       "node_type": "atomic"
     },
     {
@@ -622,6 +709,9 @@
         "suggests",
         "gradually"
       ],
+      "topic_labels": [
+        "history"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -633,7 +723,7 @@
         }
       ],
       "stability_hash": "a611d90d2f9cce72",
-      "created_at": "2026-03-05T20:54:36.843675",
+      "created_at": "2026-03-05T21:38:47.788388",
       "node_type": "atomic"
     },
     {
@@ -644,6 +734,9 @@
         "Italy",
         "renaissance",
         "century"
+      ],
+      "topic_labels": [
+        "history"
       ],
       "evidence": [
         {
@@ -656,7 +749,7 @@
         }
       ],
       "stability_hash": "8f94e2c804bc8799",
-      "created_at": "2026-03-05T20:54:36.874166",
+      "created_at": "2026-03-05T21:38:47.881979",
       "node_type": "atomic"
     },
     {
@@ -669,6 +762,9 @@
         "leonardo",
         "epitomized"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -680,7 +776,7 @@
         }
       ],
       "stability_hash": "d95262c571e2a0fe",
-      "created_at": "2026-03-05T20:54:36.906425",
+      "created_at": "2026-03-05T21:38:47.976708",
       "node_type": "atomic"
     },
     {
@@ -691,6 +787,10 @@
         "printing",
         "revolutionized",
         "knowledge"
+      ],
+      "topic_labels": [
+        "history",
+        "biology"
       ],
       "evidence": [
         {
@@ -703,7 +803,7 @@
         }
       ],
       "stability_hash": "ad32a875a79554b2",
-      "created_at": "2026-03-05T20:54:36.935925",
+      "created_at": "2026-03-05T21:38:48.070159",
       "node_type": "atomic"
     },
     {
@@ -714,6 +814,11 @@
         "photosynthesis",
         "converts",
         "chemical"
+      ],
+      "topic_labels": [
+        "biology",
+        "physics",
+        "chemistry"
       ],
       "evidence": [
         {
@@ -726,7 +831,7 @@
         }
       ],
       "stability_hash": "3606c58f79a01a72",
-      "created_at": "2026-03-05T20:54:36.965761",
+      "created_at": "2026-03-05T21:38:48.164987",
       "node_type": "atomic"
     },
     {
@@ -739,6 +844,9 @@
         "primarily",
         "wavelengths"
       ],
+      "topic_labels": [
+        "physics"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -750,7 +858,7 @@
         }
       ],
       "stability_hash": "88c8b7026ba39331",
-      "created_at": "2026-03-05T20:54:36.996203",
+      "created_at": "2026-03-05T21:38:48.268632",
       "node_type": "atomic"
     },
     {
@@ -763,6 +871,9 @@
         "New",
         "Orleans"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -774,7 +885,7 @@
         }
       ],
       "stability_hash": "9215768b541ffbf9",
-      "created_at": "2026-03-05T20:54:37.026283",
+      "created_at": "2026-03-05T21:38:48.361667",
       "node_type": "atomic"
     },
     {
@@ -785,6 +896,9 @@
         "improvisation",
         "element",
         "performance"
+      ],
+      "topic_labels": [
+        "chemistry"
       ],
       "evidence": [
         {
@@ -797,7 +911,7 @@
         }
       ],
       "stability_hash": "d273c25314568ad9",
-      "created_at": "2026-03-05T20:54:37.056041",
+      "created_at": "2026-03-05T21:38:48.455280",
       "node_type": "atomic"
     },
     {
@@ -808,6 +922,9 @@
         "Armstrong",
         "armstrong",
         "pioneered"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -820,7 +937,7 @@
         }
       ],
       "stability_hash": "bc67a185eea27b2d",
-      "created_at": "2026-03-05T20:54:37.085836",
+      "created_at": "2026-03-05T21:38:48.548129",
       "node_type": "atomic"
     },
     {
@@ -833,6 +950,9 @@
         "revolution",
         "transformed"
       ],
+      "topic_labels": [
+        "biology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -844,7 +964,7 @@
         }
       ],
       "stability_hash": "ffb0580430ae83de",
-      "created_at": "2026-03-05T20:54:37.115726",
+      "created_at": "2026-03-05T21:38:48.641561",
       "node_type": "atomic"
     },
     {
@@ -857,6 +977,9 @@
         "factories",
         "locomotives"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -868,7 +991,7 @@
         }
       ],
       "stability_hash": "a1eec9b442c4344f",
-      "created_at": "2026-03-05T20:54:37.141920",
+      "created_at": "2026-03-05T21:38:48.731805",
       "node_type": "atomic"
     },
     {
@@ -881,6 +1004,9 @@
         "workers",
         "industrial"
       ],
+      "topic_labels": [
+        "history"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -892,7 +1018,7 @@
         }
       ],
       "stability_hash": "208d41317669af65",
-      "created_at": "2026-03-05T20:54:37.167194",
+      "created_at": "2026-03-05T21:38:48.816174",
       "node_type": "atomic"
     },
     {
@@ -905,6 +1031,9 @@
         "medicine",
         "fighting"
       ],
+      "topic_labels": [
+        "biology"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -916,7 +1045,7 @@
         }
       ],
       "stability_hash": "a199c805eecdcc60",
-      "created_at": "2026-03-05T20:54:37.195920",
+      "created_at": "2026-03-05T21:38:48.909073",
       "node_type": "atomic"
     },
     {
@@ -929,6 +1058,9 @@
         "penicillin",
         "discovered"
       ],
+      "topic_labels": [
+        "general"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -940,7 +1072,7 @@
         }
       ],
       "stability_hash": "8c52f8194ce7e44e",
-      "created_at": "2026-03-05T20:54:37.226234",
+      "created_at": "2026-03-05T21:38:49.003541",
       "node_type": "atomic"
     },
     {
@@ -951,6 +1083,9 @@
         "antibiotic",
         "resistance",
         "growing"
+      ],
+      "topic_labels": [
+        "medicine"
       ],
       "evidence": [
         {
@@ -963,7 +1098,7 @@
         }
       ],
       "stability_hash": "9bb4af2855f33b2d",
-      "created_at": "2026-03-05T20:54:37.256422",
+      "created_at": "2026-03-05T21:38:49.098816",
       "node_type": "atomic"
     },
     {
@@ -976,6 +1111,9 @@
         "Trajan",
         "reached"
       ],
+      "topic_labels": [
+        "history"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -987,7 +1125,7 @@
         }
       ],
       "stability_hash": "0297ebf591d23972",
-      "created_at": "2026-03-05T20:54:37.286837",
+      "created_at": "2026-03-05T21:38:49.193421",
       "node_type": "atomic"
     },
     {
@@ -1000,6 +1138,9 @@
         "included",
         "aqueducts"
       ],
+      "topic_labels": [
+        "history"
+      ],
       "evidence": [
         {
           "source": "context_4a203d5fca38da17",
@@ -1011,7 +1152,7 @@
         }
       ],
       "stability_hash": "b8d1d1aad9f2c9b9",
-      "created_at": "2026-03-05T20:54:37.316690",
+      "created_at": "2026-03-05T21:38:49.285852",
       "node_type": "atomic"
     },
     {
@@ -1022,6 +1163,9 @@
         "Romance",
         "romance",
         "languages"
+      ],
+      "topic_labels": [
+        "general"
       ],
       "evidence": [
         {
@@ -1034,7 +1178,7 @@
         }
       ],
       "stability_hash": "8633427b4b492df7",
-      "created_at": "2026-03-05T20:54:37.346631",
+      "created_at": "2026-03-05T21:38:49.386029",
       "node_type": "atomic"
     },
     {
@@ -1042,7 +1186,7 @@
       "source_file": "examples/diverse_topics.txt",
       "content_hash": "4a203d5fca38da17",
       "metadata": {},
-      "created_at": "2026-03-05T20:54:36.028516",
+      "created_at": "2026-03-05T21:38:45.112046",
       "node_type": "context"
     }
   ],
@@ -1713,7 +1857,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_1af98d0bef669280",
       "type": "related_to",
-      "weight": 0.6534684300422668,
+      "weight": 0.6200593709945679,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1724,7 +1868,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_42b1bd056f44bba0",
       "type": "related_to",
-      "weight": 0.7137183547019958,
+      "weight": 0.6600969433784485,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1735,7 +1879,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_9abb16a017b4feca",
       "type": "related_to",
-      "weight": 0.5239083766937256,
+      "weight": 0.4937974810600281,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1744,9 +1888,9 @@
     },
     {
       "source": "atomic_472692e0bd709f39",
-      "target": "atomic_2afe5f5db8d3d8ed",
+      "target": "atomic_0aba4f85ac2c2004",
       "type": "related_to",
-      "weight": 0.5611509680747986,
+      "weight": 0.4811110198497772,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1757,7 +1901,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.6193361878395081,
+      "weight": 0.6176408529281616,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1768,7 +1912,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_8f94e2c804bc8799",
       "type": "related_to",
-      "weight": 0.6135985255241394,
+      "weight": 0.5154306292533875,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1779,7 +1923,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.5179328322410583,
+      "weight": 0.49501335620880127,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1790,7 +1934,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_9215768b541ffbf9",
       "type": "related_to",
-      "weight": 0.5016507506370544,
+      "weight": 0.41955089569091797,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1801,7 +1945,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.533742368221283,
+      "weight": 0.48373135924339294,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1812,7 +1956,7 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.627243161201477,
+      "weight": 0.5730113387107849,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1823,7 +1967,18 @@
       "source": "atomic_472692e0bd709f39",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.6839283108711243,
+      "weight": 0.6197949051856995,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
+      "target": "atomic_8633427b4b492df7",
+      "type": "related_to",
+      "weight": 0.5130018591880798,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1834,7 +1989,7 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_42b1bd056f44bba0",
       "type": "related_to",
-      "weight": 0.6840864419937134,
+      "weight": 0.6465209722518921,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1843,9 +1998,9 @@
     },
     {
       "source": "atomic_1af98d0bef669280",
-      "target": "atomic_9abb16a017b4feca",
+      "target": "atomic_093c41bf683097e1",
       "type": "related_to",
-      "weight": 0.5584738850593567,
+      "weight": 0.4611324071884155,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1854,20 +2009,9 @@
     },
     {
       "source": "atomic_1af98d0bef669280",
-      "target": "atomic_a3c43451f4bea227",
+      "target": "atomic_0aba4f85ac2c2004",
       "type": "related_to",
-      "weight": 0.5122746825218201,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_1af98d0bef669280",
-      "target": "atomic_29b5032663747eb5",
-      "type": "related_to",
-      "weight": 0.5256183743476868,
+      "weight": 0.4744302034378052,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1878,7 +2022,7 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_2afe5f5db8d3d8ed",
       "type": "related_to",
-      "weight": 0.6265676021575928,
+      "weight": 0.49383845925331116,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1889,18 +2033,7 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.5236749053001404,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_1af98d0bef669280",
-      "target": "atomic_8f94e2c804bc8799",
-      "type": "related_to",
-      "weight": 0.5514895915985107,
+      "weight": 0.45500996708869934,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1911,7 +2044,18 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.521356999874115,
+      "weight": 0.4558488726615906,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_1af98d0bef669280",
+      "target": "atomic_ffb0580430ae83de",
+      "type": "related_to",
+      "weight": 0.4336971342563629,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1922,7 +2066,7 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5803638100624084,
+      "weight": 0.49708032608032227,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1933,29 +2077,7 @@
       "source": "atomic_1af98d0bef669280",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.6291510462760925,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_42b1bd056f44bba0",
-      "target": "atomic_df163e6ef05cdc2f",
-      "type": "related_to",
-      "weight": 0.5659832954406738,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_42b1bd056f44bba0",
-      "target": "atomic_ba9385ad7b0ce368",
-      "type": "related_to",
-      "weight": 0.5436396598815918,
+      "weight": 0.5342386960983276,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1966,7 +2088,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_2afe5f5db8d3d8ed",
       "type": "related_to",
-      "weight": 0.5728579759597778,
+      "weight": 0.4682559669017792,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1977,18 +2099,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.5180609226226807,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_42b1bd056f44bba0",
-      "target": "atomic_216253bd36779f5d",
-      "type": "related_to",
-      "weight": 0.5104649066925049,
+      "weight": 0.455838680267334,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -1999,7 +2110,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_8f94e2c804bc8799",
       "type": "related_to",
-      "weight": 0.605172336101532,
+      "weight": 0.478421151638031,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2010,7 +2121,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.6203166246414185,
+      "weight": 0.4926474392414093,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2021,40 +2132,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.5857310891151428,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_42b1bd056f44bba0",
-      "target": "atomic_9215768b541ffbf9",
-      "type": "related_to",
-      "weight": 0.48412850499153137,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_42b1bd056f44bba0",
-      "target": "atomic_d273c25314568ad9",
-      "type": "related_to",
-      "weight": 0.5050164461135864,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_42b1bd056f44bba0",
-      "target": "atomic_8c52f8194ce7e44e",
-      "type": "related_to",
-      "weight": 0.5335144996643066,
+      "weight": 0.5365983247756958,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2065,7 +2143,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5711381435394287,
+      "weight": 0.47353240847587585,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2076,7 +2154,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.6284589171409607,
+      "weight": 0.5162074565887451,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2087,7 +2165,7 @@
       "source": "atomic_42b1bd056f44bba0",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.6277435421943665,
+      "weight": 0.565362274646759,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2098,7 +2176,7 @@
       "source": "atomic_9abb16a017b4feca",
       "target": "atomic_a3c43451f4bea227",
       "type": "related_to",
-      "weight": 0.7256085872650146,
+      "weight": 0.7216224074363708,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2109,7 +2187,7 @@
       "source": "atomic_9abb16a017b4feca",
       "target": "atomic_29b5032663747eb5",
       "type": "related_to",
-      "weight": 0.6346517205238342,
+      "weight": 0.571455717086792,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2118,9 +2196,9 @@
     },
     {
       "source": "atomic_9abb16a017b4feca",
-      "target": "atomic_0aba4f85ac2c2004",
+      "target": "atomic_4cd44f4b5439c6c3",
       "type": "related_to",
-      "weight": 0.5341017842292786,
+      "weight": 0.39376193284988403,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2129,9 +2207,20 @@
     },
     {
       "source": "atomic_9abb16a017b4feca",
-      "target": "atomic_07a60a583eae6a86",
+      "target": "atomic_694feafb12154ae0",
       "type": "related_to",
-      "weight": 0.5244266390800476,
+      "weight": 0.5072550773620605,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_093c41bf683097e1",
+      "type": "related_to",
+      "weight": 0.4763791561126709,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2142,18 +2231,7 @@
       "source": "atomic_9abb16a017b4feca",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.5069597363471985,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_9abb16a017b4feca",
-      "target": "atomic_216253bd36779f5d",
-      "type": "related_to",
-      "weight": 0.5372975468635559,
+      "weight": 0.4731065630912781,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2164,7 +2242,7 @@
       "source": "atomic_9abb16a017b4feca",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.5490452647209167,
+      "weight": 0.4862678647041321,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2173,9 +2251,9 @@
     },
     {
       "source": "atomic_9abb16a017b4feca",
-      "target": "atomic_a611d90d2f9cce72",
+      "target": "atomic_9215768b541ffbf9",
       "type": "related_to",
-      "weight": 0.4977051317691803,
+      "weight": 0.3862769305706024,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2186,7 +2264,29 @@
       "source": "atomic_9abb16a017b4feca",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.5222039818763733,
+      "weight": 0.4579678773880005,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_ffb0580430ae83de",
+      "type": "related_to",
+      "weight": 0.46617284417152405,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_9abb16a017b4feca",
+      "target": "atomic_8c52f8194ce7e44e",
+      "type": "related_to",
+      "weight": 0.48611438274383545,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2197,7 +2297,7 @@
       "source": "atomic_9abb16a017b4feca",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.566611111164093,
+      "weight": 0.4636353850364685,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2208,7 +2308,7 @@
       "source": "atomic_a3c43451f4bea227",
       "target": "atomic_29b5032663747eb5",
       "type": "related_to",
-      "weight": 0.5673651099205017,
+      "weight": 0.5269612669944763,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2219,7 +2319,18 @@
       "source": "atomic_a3c43451f4bea227",
       "target": "atomic_694feafb12154ae0",
       "type": "related_to",
-      "weight": 0.523106038570404,
+      "weight": 0.4612259566783905,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_a3c43451f4bea227",
+      "target": "atomic_093c41bf683097e1",
+      "type": "related_to",
+      "weight": 0.44810763001441956,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2230,7 +2341,7 @@
       "source": "atomic_a3c43451f4bea227",
       "target": "atomic_0aba4f85ac2c2004",
       "type": "related_to",
-      "weight": 0.5717697143554688,
+      "weight": 0.4229235351085663,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2239,53 +2350,9 @@
     },
     {
       "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_216253bd36779f5d",
+      "target": "atomic_07a60a583eae6a86",
       "type": "related_to",
-      "weight": 0.5101686120033264,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_d56656ecb6cc3bab",
-      "type": "related_to",
-      "weight": 0.5432658791542053,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_a611d90d2f9cce72",
-      "type": "related_to",
-      "weight": 0.4927896559238434,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_8f94e2c804bc8799",
-      "type": "related_to",
-      "weight": 0.5309082269668579,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_d95262c571e2a0fe",
-      "type": "related_to",
-      "weight": 0.5482462048530579,
+      "weight": 0.4241982102394104,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2296,7 +2363,29 @@
       "source": "atomic_a3c43451f4bea227",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.6410689949989319,
+      "weight": 0.5557453036308289,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_a3c43451f4bea227",
+      "target": "atomic_a199c805eecdcc60",
+      "type": "related_to",
+      "weight": 0.4287475049495697,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_a3c43451f4bea227",
+      "target": "atomic_8c52f8194ce7e44e",
+      "type": "related_to",
+      "weight": 0.47745391726493835,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2307,7 +2396,7 @@
       "source": "atomic_a3c43451f4bea227",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.5872178673744202,
+      "weight": 0.4653604030609131,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2316,9 +2405,20 @@
     },
     {
       "source": "atomic_29b5032663747eb5",
-      "target": "atomic_0aba4f85ac2c2004",
+      "target": "atomic_694feafb12154ae0",
       "type": "related_to",
-      "weight": 0.5237038135528564,
+      "weight": 0.44929856061935425,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_29b5032663747eb5",
+      "target": "atomic_093c41bf683097e1",
+      "type": "related_to",
+      "weight": 0.44525834918022156,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2329,7 +2429,7 @@
       "source": "atomic_29b5032663747eb5",
       "target": "atomic_07a60a583eae6a86",
       "type": "related_to",
-      "weight": 0.49369242787361145,
+      "weight": 0.44808319211006165,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2340,7 +2440,7 @@
       "source": "atomic_29b5032663747eb5",
       "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.5333975553512573,
+      "weight": 0.45804664492607117,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2351,7 +2451,7 @@
       "source": "atomic_29b5032663747eb5",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5313236713409424,
+      "weight": 0.4766061007976532,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2362,7 +2462,7 @@
       "source": "atomic_29b5032663747eb5",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5777333974838257,
+      "weight": 0.5065058469772339,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2373,7 +2473,7 @@
       "source": "atomic_29b5032663747eb5",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5446103811264038,
+      "weight": 0.5022316575050354,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2384,7 +2484,7 @@
       "source": "atomic_29b5032663747eb5",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.5411709547042847,
+      "weight": 0.5006892085075378,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2395,7 +2495,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_f2142db400da0a03",
       "type": "related_to",
-      "weight": 0.7331345677375793,
+      "weight": 0.6732367873191833,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2406,7 +2506,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_4925267c8fb14db2",
       "type": "related_to",
-      "weight": 0.7520458698272705,
+      "weight": 0.7127202153205872,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2417,18 +2517,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_838c5a33d2d2a7ce",
       "type": "related_to",
-      "weight": 0.5659398436546326,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_cd0e09eb102662ee",
-      "target": "atomic_694feafb12154ae0",
-      "type": "related_to",
-      "weight": 0.57785964012146,
+      "weight": 0.541186511516571,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2439,18 +2528,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_d2162e4ab6aed987",
       "type": "related_to",
-      "weight": 0.5442338585853577,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_cd0e09eb102662ee",
-      "target": "atomic_10c36b159bd12086",
-      "type": "related_to",
-      "weight": 0.5238094329833984,
+      "weight": 0.5307536125183105,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2461,7 +2539,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_78c5b335fd65ec43",
       "type": "related_to",
-      "weight": 0.5396949052810669,
+      "weight": 0.49118030071258545,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2472,7 +2550,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_07a60a583eae6a86",
       "type": "related_to",
-      "weight": 0.516591489315033,
+      "weight": 0.44855886697769165,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2483,7 +2561,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.5720540881156921,
+      "weight": 0.5329241156578064,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2494,7 +2572,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.5926244258880615,
+      "weight": 0.5044341087341309,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2505,18 +2583,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.5843755006790161,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_cd0e09eb102662ee",
-      "target": "atomic_d95262c571e2a0fe",
-      "type": "related_to",
-      "weight": 0.5450003147125244,
+      "weight": 0.5486528277397156,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2527,7 +2594,7 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.6021641492843628,
+      "weight": 0.5572470426559448,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2538,7 +2605,18 @@
       "source": "atomic_cd0e09eb102662ee",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.6021019220352173,
+      "weight": 0.5209610462188721,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_cd0e09eb102662ee",
+      "target": "atomic_d273c25314568ad9",
+      "type": "related_to",
+      "weight": 0.46821728348731995,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2549,7 +2627,18 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_4925267c8fb14db2",
       "type": "related_to",
-      "weight": 0.7169337272644043,
+      "weight": 0.7149852514266968,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_f2142db400da0a03",
+      "target": "atomic_838c5a33d2d2a7ce",
+      "type": "related_to",
+      "weight": 0.5195315480232239,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2560,7 +2649,7 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_694feafb12154ae0",
       "type": "related_to",
-      "weight": 0.607801616191864,
+      "weight": 0.503006637096405,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2571,7 +2660,18 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_d2162e4ab6aed987",
       "type": "related_to",
-      "weight": 0.5336988568305969,
+      "weight": 0.5007793307304382,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_f2142db400da0a03",
+      "target": "atomic_78c5b335fd65ec43",
+      "type": "related_to",
+      "weight": 0.4716876149177551,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2582,7 +2682,7 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.5531367659568787,
+      "weight": 0.5111038684844971,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2593,7 +2693,7 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.5683345198631287,
+      "weight": 0.5164584517478943,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2604,29 +2704,7 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.5513018369674683,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_f2142db400da0a03",
-      "target": "atomic_d95262c571e2a0fe",
-      "type": "related_to",
-      "weight": 0.5402477383613586,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_f2142db400da0a03",
-      "target": "atomic_3606c58f79a01a72",
-      "type": "related_to",
-      "weight": 0.5239669680595398,
+      "weight": 0.5148242712020874,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2637,7 +2715,29 @@
       "source": "atomic_f2142db400da0a03",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5238199234008789,
+      "weight": 0.49887558817863464,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_f2142db400da0a03",
+      "target": "atomic_d273c25314568ad9",
+      "type": "related_to",
+      "weight": 0.4128696322441101,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_4925267c8fb14db2",
+      "target": "atomic_838c5a33d2d2a7ce",
+      "type": "related_to",
+      "weight": 0.5233878493309021,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2648,7 +2748,7 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_694feafb12154ae0",
       "type": "related_to",
-      "weight": 0.5916861891746521,
+      "weight": 0.5179233551025391,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2659,7 +2759,7 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_d2162e4ab6aed987",
       "type": "related_to",
-      "weight": 0.5375604629516602,
+      "weight": 0.5082844495773315,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2670,7 +2770,7 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_78c5b335fd65ec43",
       "type": "related_to",
-      "weight": 0.5329538583755493,
+      "weight": 0.4958987534046173,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2681,7 +2781,7 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.5566892027854919,
+      "weight": 0.5111951231956482,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2692,7 +2792,7 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.580706000328064,
+      "weight": 0.5411387085914612,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2703,7 +2803,18 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.5399110317230225,
+      "weight": 0.5108532309532166,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_4925267c8fb14db2",
+      "target": "atomic_d95262c571e2a0fe",
+      "type": "related_to",
+      "weight": 0.5184153318405151,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2714,7 +2825,7 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.5580067038536072,
+      "weight": 0.507548987865448,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2725,7 +2836,29 @@
       "source": "atomic_4925267c8fb14db2",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5468547940254211,
+      "weight": 0.5068270564079285,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_4925267c8fb14db2",
+      "target": "atomic_d273c25314568ad9",
+      "type": "related_to",
+      "weight": 0.4578957259654999,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_4925267c8fb14db2",
+      "target": "atomic_bc67a185eea27b2d",
+      "type": "related_to",
+      "weight": 0.43333324790000916,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2736,7 +2869,7 @@
       "source": "atomic_4cd44f4b5439c6c3",
       "target": "atomic_df163e6ef05cdc2f",
       "type": "related_to",
-      "weight": 0.5318917036056519,
+      "weight": 0.4820324778556824,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2747,7 +2880,7 @@
       "source": "atomic_4cd44f4b5439c6c3",
       "target": "atomic_ba9385ad7b0ce368",
       "type": "related_to",
-      "weight": 0.7335394620895386,
+      "weight": 0.661254346370697,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2758,18 +2891,7 @@
       "source": "atomic_4cd44f4b5439c6c3",
       "target": "atomic_093c41bf683097e1",
       "type": "related_to",
-      "weight": 0.5029461979866028,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_4cd44f4b5439c6c3",
-      "target": "atomic_0aba4f85ac2c2004",
-      "type": "related_to",
-      "weight": 0.5137718915939331,
+      "weight": 0.39299100637435913,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2780,7 +2902,7 @@
       "source": "atomic_4cd44f4b5439c6c3",
       "target": "atomic_2afe5f5db8d3d8ed",
       "type": "related_to",
-      "weight": 0.5111583471298218,
+      "weight": 0.4390840232372284,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2791,7 +2913,7 @@
       "source": "atomic_4cd44f4b5439c6c3",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.49202653765678406,
+      "weight": 0.40086084604263306,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2800,9 +2922,9 @@
     },
     {
       "source": "atomic_4cd44f4b5439c6c3",
-      "target": "atomic_8f94e2c804bc8799",
+      "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.4893288314342499,
+      "weight": 0.39969485998153687,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2811,9 +2933,9 @@
     },
     {
       "source": "atomic_4cd44f4b5439c6c3",
-      "target": "atomic_d95262c571e2a0fe",
+      "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5612630844116211,
+      "weight": 0.4407695233821869,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2822,9 +2944,9 @@
     },
     {
       "source": "atomic_4cd44f4b5439c6c3",
-      "target": "atomic_9215768b541ffbf9",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5035256147384644,
+      "weight": 0.39884960651397705,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2833,9 +2955,9 @@
     },
     {
       "source": "atomic_4cd44f4b5439c6c3",
-      "target": "atomic_bc67a185eea27b2d",
+      "target": "atomic_8c52f8194ce7e44e",
       "type": "related_to",
-      "weight": 0.5059159994125366,
+      "weight": 0.44625818729400635,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2846,7 +2968,7 @@
       "source": "atomic_df163e6ef05cdc2f",
       "target": "atomic_ba9385ad7b0ce368",
       "type": "related_to",
-      "weight": 0.6390172243118286,
+      "weight": 0.5362445712089539,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2855,9 +2977,9 @@
     },
     {
       "source": "atomic_df163e6ef05cdc2f",
-      "target": "atomic_694feafb12154ae0",
+      "target": "atomic_093c41bf683097e1",
       "type": "related_to",
-      "weight": 0.5321825742721558,
+      "weight": 0.5029825568199158,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2868,7 +2990,7 @@
       "source": "atomic_df163e6ef05cdc2f",
       "target": "atomic_0aba4f85ac2c2004",
       "type": "related_to",
-      "weight": 0.5852798819541931,
+      "weight": 0.5644773244857788,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2877,20 +2999,9 @@
     },
     {
       "source": "atomic_df163e6ef05cdc2f",
-      "target": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_2afe5f5db8d3d8ed",
       "type": "related_to",
-      "weight": 0.51407390832901,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_df163e6ef05cdc2f",
-      "target": "atomic_8f94e2c804bc8799",
-      "type": "related_to",
-      "weight": 0.5940095782279968,
+      "weight": 0.4842306077480316,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2901,7 +3012,7 @@
       "source": "atomic_df163e6ef05cdc2f",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.6048460006713867,
+      "weight": 0.5034610629081726,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2912,7 +3023,18 @@
       "source": "atomic_df163e6ef05cdc2f",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.6234490275382996,
+      "weight": 0.5432180762290955,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_df163e6ef05cdc2f",
+      "target": "atomic_9215768b541ffbf9",
+      "type": "related_to",
+      "weight": 0.4228586256504059,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2923,7 +3045,7 @@
       "source": "atomic_df163e6ef05cdc2f",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5470490455627441,
+      "weight": 0.5036918520927429,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2932,9 +3054,9 @@
     },
     {
       "source": "atomic_df163e6ef05cdc2f",
-      "target": "atomic_8c52f8194ce7e44e",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5544852018356323,
+      "weight": 0.46764788031578064,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2945,7 +3067,7 @@
       "source": "atomic_df163e6ef05cdc2f",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.5941171646118164,
+      "weight": 0.4924367666244507,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2956,29 +3078,7 @@
       "source": "atomic_ba9385ad7b0ce368",
       "target": "atomic_0aba4f85ac2c2004",
       "type": "related_to",
-      "weight": 0.5369306802749634,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_ba9385ad7b0ce368",
-      "target": "atomic_2afe5f5db8d3d8ed",
-      "type": "related_to",
-      "weight": 0.5490931272506714,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_ba9385ad7b0ce368",
-      "target": "atomic_8f94e2c804bc8799",
-      "type": "related_to",
-      "weight": 0.5461409687995911,
+      "weight": 0.4514702558517456,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2989,7 +3089,7 @@
       "source": "atomic_ba9385ad7b0ce368",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.6265089511871338,
+      "weight": 0.5124687552452087,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -2998,31 +3098,9 @@
     },
     {
       "source": "atomic_ba9385ad7b0ce368",
-      "target": "atomic_88c8b7026ba39331",
+      "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.5484552979469299,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_ba9385ad7b0ce368",
-      "target": "atomic_9215768b541ffbf9",
-      "type": "related_to",
-      "weight": 0.5089224576950073,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_ba9385ad7b0ce368",
-      "target": "atomic_d273c25314568ad9",
-      "type": "related_to",
-      "weight": 0.5543535947799683,
+      "weight": 0.4836724102497101,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3033,7 +3111,51 @@
       "source": "atomic_ba9385ad7b0ce368",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.5379257202148438,
+      "weight": 0.4312312602996826,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ba9385ad7b0ce368",
+      "target": "atomic_a1eec9b442c4344f",
+      "type": "related_to",
+      "weight": 0.46782466769218445,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ba9385ad7b0ce368",
+      "target": "atomic_a199c805eecdcc60",
+      "type": "related_to",
+      "weight": 0.4522397220134735,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ba9385ad7b0ce368",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "type": "related_to",
+      "weight": 0.42839235067367554,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ba9385ad7b0ce368",
+      "target": "atomic_8633427b4b492df7",
+      "type": "related_to",
+      "weight": 0.4794003665447235,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3044,7 +3166,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_694feafb12154ae0",
       "type": "related_to",
-      "weight": 0.6275637149810791,
+      "weight": 0.6126062870025635,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3055,7 +3177,18 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_d2162e4ab6aed987",
       "type": "related_to",
-      "weight": 0.7835147976875305,
+      "weight": 0.7536292672157288,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_10c36b159bd12086",
+      "type": "related_to",
+      "weight": 0.47623395919799805,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3066,7 +3199,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_78c5b335fd65ec43",
       "type": "related_to",
-      "weight": 0.5858749151229858,
+      "weight": 0.5461260676383972,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3077,7 +3210,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_07a60a583eae6a86",
       "type": "related_to",
-      "weight": 0.5506418347358704,
+      "weight": 0.5074805617332458,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3088,7 +3221,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_55019e0f54c92632",
       "type": "related_to",
-      "weight": 0.5242058634757996,
+      "weight": 0.47642651200294495,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3099,7 +3232,29 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.5292359590530396,
+      "weight": 0.5168005228042603,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_216253bd36779f5d",
+      "type": "related_to",
+      "weight": 0.4727597236633301,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_d95262c571e2a0fe",
+      "type": "related_to",
+      "weight": 0.5014301538467407,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3110,7 +3265,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.6173461079597473,
+      "weight": 0.6077847480773926,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3121,7 +3276,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5982038378715515,
+      "weight": 0.555844783782959,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3132,7 +3287,18 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5642974972724915,
+      "weight": 0.5687973499298096,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_8c52f8194ce7e44e",
+      "type": "related_to",
+      "weight": 0.5192323327064514,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3143,7 +3309,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.5265209078788757,
+      "weight": 0.504798412322998,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3154,7 +3320,7 @@
       "source": "atomic_838c5a33d2d2a7ce",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.550177276134491,
+      "weight": 0.5298623442649841,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3165,7 +3331,7 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_d2162e4ab6aed987",
       "type": "related_to",
-      "weight": 0.6297029256820679,
+      "weight": 0.5599387884140015,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3176,7 +3342,7 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_78c5b335fd65ec43",
       "type": "related_to",
-      "weight": 0.5959368348121643,
+      "weight": 0.5061996579170227,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3187,29 +3353,7 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.523026704788208,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_694feafb12154ae0",
-      "target": "atomic_d95262c571e2a0fe",
-      "type": "related_to",
-      "weight": 0.573663592338562,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_694feafb12154ae0",
-      "target": "atomic_ad32a875a79554b2",
-      "type": "related_to",
-      "weight": 0.5898457169532776,
+      "weight": 0.4812741279602051,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3220,7 +3364,7 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.5524330139160156,
+      "weight": 0.5016053915023804,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3231,7 +3375,18 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5633755326271057,
+      "weight": 0.4901198446750641,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_694feafb12154ae0",
+      "target": "atomic_bc67a185eea27b2d",
+      "type": "related_to",
+      "weight": 0.448996901512146,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3242,7 +3397,7 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5574350357055664,
+      "weight": 0.5379698872566223,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3253,7 +3408,29 @@
       "source": "atomic_694feafb12154ae0",
       "target": "atomic_8c52f8194ce7e44e",
       "type": "related_to",
-      "weight": 0.6246445178985596,
+      "weight": 0.6085712909698486,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_694feafb12154ae0",
+      "target": "atomic_9bb4af2855f33b2d",
+      "type": "related_to",
+      "weight": 0.45219749212265015,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_694feafb12154ae0",
+      "target": "atomic_8633427b4b492df7",
+      "type": "related_to",
+      "weight": 0.5051404237747192,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3264,7 +3441,7 @@
       "source": "atomic_d2162e4ab6aed987",
       "target": "atomic_10c36b159bd12086",
       "type": "related_to",
-      "weight": 0.603064775466919,
+      "weight": 0.5007807016372681,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3275,7 +3452,7 @@
       "source": "atomic_d2162e4ab6aed987",
       "target": "atomic_78c5b335fd65ec43",
       "type": "related_to",
-      "weight": 0.6194977760314941,
+      "weight": 0.541227400302887,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3286,7 +3463,7 @@
       "source": "atomic_d2162e4ab6aed987",
       "target": "atomic_af45f434641c41af",
       "type": "related_to",
-      "weight": 0.5098640322685242,
+      "weight": 0.48034802079200745,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3295,9 +3472,9 @@
     },
     {
       "source": "atomic_d2162e4ab6aed987",
-      "target": "atomic_07a60a583eae6a86",
+      "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.5222059488296509,
+      "weight": 0.4979281723499298,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3306,9 +3483,9 @@
     },
     {
       "source": "atomic_d2162e4ab6aed987",
-      "target": "atomic_55019e0f54c92632",
+      "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.49748295545578003,
+      "weight": 0.4255210757255554,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3319,7 +3496,7 @@
       "source": "atomic_d2162e4ab6aed987",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.6158193349838257,
+      "weight": 0.5839564204216003,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3330,7 +3507,7 @@
       "source": "atomic_d2162e4ab6aed987",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.572860062122345,
+      "weight": 0.5447366833686829,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3339,9 +3516,20 @@
     },
     {
       "source": "atomic_d2162e4ab6aed987",
-      "target": "atomic_a1eec9b442c4344f",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5483701825141907,
+      "weight": 0.536965548992157,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d2162e4ab6aed987",
+      "target": "atomic_8c52f8194ce7e44e",
+      "type": "related_to",
+      "weight": 0.48274874687194824,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3352,7 +3540,18 @@
       "source": "atomic_d2162e4ab6aed987",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.5349277257919312,
+      "weight": 0.47717058658599854,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_d2162e4ab6aed987",
+      "target": "atomic_8633427b4b492df7",
+      "type": "related_to",
+      "weight": 0.5168111324310303,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3363,7 +3562,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_0aba4f85ac2c2004",
       "type": "related_to",
-      "weight": 0.7417021989822388,
+      "weight": 0.7379961013793945,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3374,7 +3573,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_2afe5f5db8d3d8ed",
       "type": "related_to",
-      "weight": 0.6442002058029175,
+      "weight": 0.6083574891090393,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3385,7 +3584,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_8f94e2c804bc8799",
       "type": "related_to",
-      "weight": 0.6481062769889832,
+      "weight": 0.5518730878829956,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3396,7 +3595,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.5889580845832825,
+      "weight": 0.5291885137557983,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3407,18 +3606,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_9215768b541ffbf9",
       "type": "related_to",
-      "weight": 0.557786762714386,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_093c41bf683097e1",
-      "target": "atomic_bc67a185eea27b2d",
-      "type": "related_to",
-      "weight": 0.5234155058860779,
+      "weight": 0.43249988555908203,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3429,18 +3617,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5519751310348511,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_093c41bf683097e1",
-      "target": "atomic_a1eec9b442c4344f",
-      "type": "related_to",
-      "weight": 0.5440588593482971,
+      "weight": 0.5540672540664673,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3451,18 +3628,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5491456985473633,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_093c41bf683097e1",
-      "target": "atomic_0297ebf591d23972",
-      "type": "related_to",
-      "weight": 0.5347228050231934,
+      "weight": 0.48551326990127563,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3473,7 +3639,7 @@
       "source": "atomic_093c41bf683097e1",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.5516591668128967,
+      "weight": 0.4845768213272095,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3484,18 +3650,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_2afe5f5db8d3d8ed",
       "type": "related_to",
-      "weight": 0.5662240982055664,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_0aba4f85ac2c2004",
-      "target": "atomic_8f94e2c804bc8799",
-      "type": "related_to",
-      "weight": 0.6392794251441956,
+      "weight": 0.5854402780532837,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3506,7 +3661,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.5719584822654724,
+      "weight": 0.48879003524780273,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3517,7 +3672,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.5849705338478088,
+      "weight": 0.583163857460022,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3528,7 +3683,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.5541021823883057,
+      "weight": 0.4384714961051941,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3539,7 +3694,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5597988963127136,
+      "weight": 0.5769305229187012,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3548,9 +3703,9 @@
     },
     {
       "source": "atomic_0aba4f85ac2c2004",
-      "target": "atomic_a1eec9b442c4344f",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5738580822944641,
+      "weight": 0.5251536965370178,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3561,7 +3716,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.6634684205055237,
+      "weight": 0.5586233139038086,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3572,7 +3727,7 @@
       "source": "atomic_0aba4f85ac2c2004",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.6005933284759521,
+      "weight": 0.5132465362548828,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3583,7 +3738,7 @@
       "source": "atomic_2afe5f5db8d3d8ed",
       "target": "atomic_8f94e2c804bc8799",
       "type": "related_to",
-      "weight": 0.5888283252716064,
+      "weight": 0.47697630524635315,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3594,7 +3749,7 @@
       "source": "atomic_2afe5f5db8d3d8ed",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.5629074573516846,
+      "weight": 0.46265026926994324,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3603,9 +3758,9 @@
     },
     {
       "source": "atomic_2afe5f5db8d3d8ed",
-      "target": "atomic_a199c805eecdcc60",
+      "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.5473711490631104,
+      "weight": 0.48739805817604065,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3614,9 +3769,9 @@
     },
     {
       "source": "atomic_2afe5f5db8d3d8ed",
-      "target": "atomic_8c52f8194ce7e44e",
+      "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5531200766563416,
+      "weight": 0.49316832423210144,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3627,18 +3782,7 @@
       "source": "atomic_2afe5f5db8d3d8ed",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5685279369354248,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_2afe5f5db8d3d8ed",
-      "target": "atomic_b8d1d1aad9f2c9b9",
-      "type": "related_to",
-      "weight": 0.5685842633247375,
+      "weight": 0.4831472933292389,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3649,7 +3793,7 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_78c5b335fd65ec43",
       "type": "related_to",
-      "weight": 0.6887794733047485,
+      "weight": 0.6186591982841492,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3660,7 +3804,7 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_af45f434641c41af",
       "type": "related_to",
-      "weight": 0.7349634766578674,
+      "weight": 0.6610260605812073,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3671,7 +3815,7 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_55019e0f54c92632",
       "type": "related_to",
-      "weight": 0.5260265469551086,
+      "weight": 0.46570226550102234,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3680,20 +3824,9 @@
     },
     {
       "source": "atomic_10c36b159bd12086",
-      "target": "atomic_ad32a875a79554b2",
+      "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.5116342902183533,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_10c36b159bd12086",
-      "target": "atomic_d273c25314568ad9",
-      "type": "related_to",
-      "weight": 0.5041507482528687,
+      "weight": 0.4851472079753876,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3704,7 +3837,7 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5514287948608398,
+      "weight": 0.4808815121650696,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3715,7 +3848,7 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.570563018321991,
+      "weight": 0.47770488262176514,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3726,7 +3859,18 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.5263197422027588,
+      "weight": 0.45400673151016235,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_10c36b159bd12086",
+      "target": "atomic_a199c805eecdcc60",
+      "type": "related_to",
+      "weight": 0.4481978416442871,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3737,18 +3881,7 @@
       "source": "atomic_10c36b159bd12086",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.49565473198890686,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_10c36b159bd12086",
-      "target": "atomic_b8d1d1aad9f2c9b9",
-      "type": "related_to",
-      "weight": 0.5078223347663879,
+      "weight": 0.4442385733127594,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3759,7 +3892,29 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_af45f434641c41af",
       "type": "related_to",
-      "weight": 0.7376746535301208,
+      "weight": 0.697003960609436,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
+      "target": "atomic_55019e0f54c92632",
+      "type": "related_to",
+      "weight": 0.43507474660873413,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
+      "target": "atomic_216253bd36779f5d",
+      "type": "related_to",
+      "weight": 0.4575687050819397,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3770,7 +3925,7 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.5352498888969421,
+      "weight": 0.48426565527915955,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3781,18 +3936,7 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.4839249849319458,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_78c5b335fd65ec43",
-      "target": "atomic_d95262c571e2a0fe",
-      "type": "related_to",
-      "weight": 0.5553390979766846,
+      "weight": 0.42764773964881897,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3803,7 +3947,7 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.548882782459259,
+      "weight": 0.506909191608429,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3814,7 +3958,7 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5361760854721069,
+      "weight": 0.4785611927509308,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3825,7 +3969,7 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_d273c25314568ad9",
       "type": "related_to",
-      "weight": 0.5337554216384888,
+      "weight": 0.448789119720459,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3836,7 +3980,18 @@
       "source": "atomic_78c5b335fd65ec43",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5400754809379578,
+      "weight": 0.4794047772884369,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
+      "target": "atomic_a199c805eecdcc60",
+      "type": "related_to",
+      "weight": 0.4877365529537201,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3847,7 +4002,7 @@
       "source": "atomic_af45f434641c41af",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.512339174747467,
+      "weight": 0.4709588289260864,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3856,9 +4011,9 @@
     },
     {
       "source": "atomic_af45f434641c41af",
-      "target": "atomic_ad32a875a79554b2",
+      "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.49655938148498535,
+      "weight": 0.4572490453720093,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3867,9 +4022,20 @@
     },
     {
       "source": "atomic_af45f434641c41af",
-      "target": "atomic_d273c25314568ad9",
+      "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.5156137943267822,
+      "weight": 0.4747348725795746,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_af45f434641c41af",
+      "target": "atomic_88c8b7026ba39331",
+      "type": "related_to",
+      "weight": 0.4714455008506775,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3880,7 +4046,7 @@
       "source": "atomic_af45f434641c41af",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5311204791069031,
+      "weight": 0.48114675283432007,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3891,7 +4057,7 @@
       "source": "atomic_af45f434641c41af",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5313255786895752,
+      "weight": 0.4584023654460907,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3902,18 +4068,7 @@
       "source": "atomic_af45f434641c41af",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.5298471450805664,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_af45f434641c41af",
-      "target": "atomic_b8d1d1aad9f2c9b9",
-      "type": "related_to",
-      "weight": 0.5121813416481018,
+      "weight": 0.45863306522369385,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3924,7 +4079,7 @@
       "source": "atomic_07a60a583eae6a86",
       "target": "atomic_55019e0f54c92632",
       "type": "related_to",
-      "weight": 0.6665023565292358,
+      "weight": 0.6168509125709534,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3935,7 +4090,7 @@
       "source": "atomic_07a60a583eae6a86",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.674270510673523,
+      "weight": 0.633634090423584,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3944,9 +4099,9 @@
     },
     {
       "source": "atomic_07a60a583eae6a86",
-      "target": "atomic_ad32a875a79554b2",
+      "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.5071030855178833,
+      "weight": 0.4389193654060364,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3957,7 +4112,7 @@
       "source": "atomic_07a60a583eae6a86",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.6828998923301697,
+      "weight": 0.5826367735862732,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3968,7 +4123,7 @@
       "source": "atomic_07a60a583eae6a86",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.6376636028289795,
+      "weight": 0.5652373433113098,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3979,7 +4134,7 @@
       "source": "atomic_07a60a583eae6a86",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5433140993118286,
+      "weight": 0.46966642141342163,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -3988,9 +4143,20 @@
     },
     {
       "source": "atomic_07a60a583eae6a86",
-      "target": "atomic_9bb4af2855f33b2d",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5050517916679382,
+      "weight": 0.4541584253311157,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_07a60a583eae6a86",
+      "target": "atomic_8633427b4b492df7",
+      "type": "related_to",
+      "weight": 0.44771715998649597,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4001,7 +4167,7 @@
       "source": "atomic_55019e0f54c92632",
       "target": "atomic_0e80ab47a9e35a0c",
       "type": "related_to",
-      "weight": 0.623960018157959,
+      "weight": 0.6302490234375,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4010,9 +4176,9 @@
     },
     {
       "source": "atomic_55019e0f54c92632",
-      "target": "atomic_a611d90d2f9cce72",
+      "target": "atomic_216253bd36779f5d",
       "type": "related_to",
-      "weight": 0.4813566207885742,
+      "weight": 0.43185216188430786,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4023,7 +4189,7 @@
       "source": "atomic_55019e0f54c92632",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.5823956727981567,
+      "weight": 0.5097898840904236,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4034,7 +4200,7 @@
       "source": "atomic_55019e0f54c92632",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5636489391326904,
+      "weight": 0.48522961139678955,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4043,9 +4209,9 @@
     },
     {
       "source": "atomic_55019e0f54c92632",
-      "target": "atomic_a199c805eecdcc60",
+      "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.5023426413536072,
+      "weight": 0.44949787855148315,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4056,7 +4222,40 @@
       "source": "atomic_55019e0f54c92632",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.5654354095458984,
+      "weight": 0.48243194818496704,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_d95262c571e2a0fe",
+      "type": "related_to",
+      "weight": 0.47571828961372375,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_3606c58f79a01a72",
+      "type": "related_to",
+      "weight": 0.4878111779689789,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_88c8b7026ba39331",
+      "type": "related_to",
+      "weight": 0.4751834273338318,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4067,7 +4266,7 @@
       "source": "atomic_0e80ab47a9e35a0c",
       "target": "atomic_9215768b541ffbf9",
       "type": "related_to",
-      "weight": 0.4804600477218628,
+      "weight": 0.38638240098953247,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4078,7 +4277,18 @@
       "source": "atomic_0e80ab47a9e35a0c",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.5292863845825195,
+      "weight": 0.4570983350276947,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_0e80ab47a9e35a0c",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "type": "related_to",
+      "weight": 0.4609591066837311,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4089,7 +4299,7 @@
       "source": "atomic_0e80ab47a9e35a0c",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.5307146310806274,
+      "weight": 0.5107573866844177,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4100,7 +4310,7 @@
       "source": "atomic_216253bd36779f5d",
       "target": "atomic_d56656ecb6cc3bab",
       "type": "related_to",
-      "weight": 0.7569405436515808,
+      "weight": 0.7134851813316345,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4111,18 +4321,7 @@
       "source": "atomic_216253bd36779f5d",
       "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.72566819190979,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_216253bd36779f5d",
-      "target": "atomic_88c8b7026ba39331",
-      "type": "related_to",
-      "weight": 0.5160167217254639,
+      "weight": 0.6593683958053589,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4133,7 +4332,7 @@
       "source": "atomic_d56656ecb6cc3bab",
       "target": "atomic_a611d90d2f9cce72",
       "type": "related_to",
-      "weight": 0.7230302095413208,
+      "weight": 0.7050987482070923,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4144,18 +4343,7 @@
       "source": "atomic_d56656ecb6cc3bab",
       "target": "atomic_d273c25314568ad9",
       "type": "related_to",
-      "weight": 0.5108035802841187,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_d56656ecb6cc3bab",
-      "target": "atomic_b8d1d1aad9f2c9b9",
-      "type": "related_to",
-      "weight": 0.5224997401237488,
+      "weight": 0.41657519340515137,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4166,7 +4354,7 @@
       "source": "atomic_a611d90d2f9cce72",
       "target": "atomic_3606c58f79a01a72",
       "type": "related_to",
-      "weight": 0.49270424246788025,
+      "weight": 0.46763086318969727,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4177,7 +4365,7 @@
       "source": "atomic_a611d90d2f9cce72",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.5112418532371521,
+      "weight": 0.4307049512863159,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4188,7 +4376,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_d95262c571e2a0fe",
       "type": "related_to",
-      "weight": 0.6831793189048767,
+      "weight": 0.5436170697212219,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4199,7 +4387,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.632966935634613,
+      "weight": 0.5756542682647705,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4210,7 +4398,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_9215768b541ffbf9",
       "type": "related_to",
-      "weight": 0.5005919337272644,
+      "weight": 0.4417338967323303,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4221,7 +4409,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5811299681663513,
+      "weight": 0.5048285722732544,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4230,9 +4418,9 @@
     },
     {
       "source": "atomic_8f94e2c804bc8799",
-      "target": "atomic_208d41317669af65",
+      "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5391548871994019,
+      "weight": 0.48625946044921875,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4243,7 +4431,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.6193400025367737,
+      "weight": 0.5291472673416138,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4254,7 +4442,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.6537491083145142,
+      "weight": 0.5064208507537842,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4265,7 +4453,7 @@
       "source": "atomic_8f94e2c804bc8799",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.6461250185966492,
+      "weight": 0.5841273069381714,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4276,7 +4464,7 @@
       "source": "atomic_d95262c571e2a0fe",
       "target": "atomic_ad32a875a79554b2",
       "type": "related_to",
-      "weight": 0.6101089119911194,
+      "weight": 0.5604909658432007,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4287,7 +4475,7 @@
       "source": "atomic_d95262c571e2a0fe",
       "target": "atomic_d273c25314568ad9",
       "type": "related_to",
-      "weight": 0.524549126625061,
+      "weight": 0.42199450731277466,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4298,7 +4486,7 @@
       "source": "atomic_d95262c571e2a0fe",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.5026726126670837,
+      "weight": 0.45270541310310364,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4309,29 +4497,7 @@
       "source": "atomic_d95262c571e2a0fe",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.5918300151824951,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_d95262c571e2a0fe",
-      "target": "atomic_8c52f8194ce7e44e",
-      "type": "related_to",
-      "weight": 0.5334503650665283,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_d95262c571e2a0fe",
-      "target": "atomic_b8d1d1aad9f2c9b9",
-      "type": "related_to",
-      "weight": 0.630657970905304,
+      "weight": 0.5311107635498047,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4342,7 +4508,7 @@
       "source": "atomic_d95262c571e2a0fe",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.5628796815872192,
+      "weight": 0.5379703640937805,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4353,7 +4519,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_ffb0580430ae83de",
       "type": "related_to",
-      "weight": 0.6989414691925049,
+      "weight": 0.663753867149353,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4364,7 +4530,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.566953182220459,
+      "weight": 0.5259345769882202,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4375,7 +4541,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.580630898475647,
+      "weight": 0.5062921643257141,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4386,7 +4552,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.6233243942260742,
+      "weight": 0.6070643067359924,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4397,7 +4563,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_8c52f8194ce7e44e",
       "type": "related_to",
-      "weight": 0.5855044722557068,
+      "weight": 0.4897220730781555,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4408,7 +4574,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.5044744610786438,
+      "weight": 0.47428053617477417,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4419,7 +4585,18 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5565539002418518,
+      "weight": 0.5480406880378723,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ad32a875a79554b2",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "type": "related_to",
+      "weight": 0.5418930053710938,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4430,7 +4607,7 @@
       "source": "atomic_ad32a875a79554b2",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.558630645275116,
+      "weight": 0.5733973979949951,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4441,7 +4618,29 @@
       "source": "atomic_3606c58f79a01a72",
       "target": "atomic_88c8b7026ba39331",
       "type": "related_to",
-      "weight": 0.773475170135498,
+      "weight": 0.7027606964111328,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_3606c58f79a01a72",
+      "target": "atomic_d273c25314568ad9",
+      "type": "related_to",
+      "weight": 0.41814759373664856,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_3606c58f79a01a72",
+      "target": "atomic_ffb0580430ae83de",
+      "type": "related_to",
+      "weight": 0.5179687142372131,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4452,7 +4651,7 @@
       "source": "atomic_3606c58f79a01a72",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.5694370865821838,
+      "weight": 0.5510110855102539,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4461,20 +4660,9 @@
     },
     {
       "source": "atomic_3606c58f79a01a72",
-      "target": "atomic_9bb4af2855f33b2d",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.5505033731460571,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_88c8b7026ba39331",
-      "target": "atomic_9bb4af2855f33b2d",
-      "type": "related_to",
-      "weight": 0.5147314071655273,
+      "weight": 0.5291270017623901,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4485,7 +4673,7 @@
       "source": "atomic_9215768b541ffbf9",
       "target": "atomic_d273c25314568ad9",
       "type": "related_to",
-      "weight": 0.6790492534637451,
+      "weight": 0.6004725694656372,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4496,7 +4684,18 @@
       "source": "atomic_9215768b541ffbf9",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.6942002773284912,
+      "weight": 0.6171843409538269,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_9215768b541ffbf9",
+      "target": "atomic_208d41317669af65",
+      "type": "related_to",
+      "weight": 0.41869163513183594,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4507,7 +4706,7 @@
       "source": "atomic_9215768b541ffbf9",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.5709660649299622,
+      "weight": 0.4326856732368469,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4518,7 +4717,7 @@
       "source": "atomic_d273c25314568ad9",
       "target": "atomic_bc67a185eea27b2d",
       "type": "related_to",
-      "weight": 0.6937984824180603,
+      "weight": 0.6284163594245911,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4527,9 +4726,9 @@
     },
     {
       "source": "atomic_d273c25314568ad9",
-      "target": "atomic_8633427b4b492df7",
+      "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.5181570053100586,
+      "weight": 0.418695330619812,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4538,9 +4737,20 @@
     },
     {
       "source": "atomic_bc67a185eea27b2d",
-      "target": "atomic_8633427b4b492df7",
+      "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.49377554655075073,
+      "weight": 0.4512612223625183,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_bc67a185eea27b2d",
+      "target": "atomic_8c52f8194ce7e44e",
+      "type": "related_to",
+      "weight": 0.44150015711784363,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4551,7 +4761,7 @@
       "source": "atomic_ffb0580430ae83de",
       "target": "atomic_a1eec9b442c4344f",
       "type": "related_to",
-      "weight": 0.7086881995201111,
+      "weight": 0.7054928541183472,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4562,7 +4772,7 @@
       "source": "atomic_ffb0580430ae83de",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.7045823931694031,
+      "weight": 0.6248112320899963,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4573,7 +4783,40 @@
       "source": "atomic_ffb0580430ae83de",
       "target": "atomic_a199c805eecdcc60",
       "type": "related_to",
-      "weight": 0.6008861064910889,
+      "weight": 0.5968446135520935,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ffb0580430ae83de",
+      "target": "atomic_8c52f8194ce7e44e",
+      "type": "related_to",
+      "weight": 0.4600810706615448,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ffb0580430ae83de",
+      "target": "atomic_9bb4af2855f33b2d",
+      "type": "related_to",
+      "weight": 0.4448443651199341,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ffb0580430ae83de",
+      "target": "atomic_0297ebf591d23972",
+      "type": "related_to",
+      "weight": 0.48915016651153564,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4584,7 +4827,7 @@
       "source": "atomic_ffb0580430ae83de",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.5945170521736145,
+      "weight": 0.5851179361343384,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4595,7 +4838,18 @@
       "source": "atomic_a1eec9b442c4344f",
       "target": "atomic_208d41317669af65",
       "type": "related_to",
-      "weight": 0.619843065738678,
+      "weight": 0.5370176434516907,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_a1eec9b442c4344f",
+      "target": "atomic_a199c805eecdcc60",
+      "type": "related_to",
+      "weight": 0.4811710715293884,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4606,7 +4860,18 @@
       "source": "atomic_a1eec9b442c4344f",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.6439644694328308,
+      "weight": 0.5523508787155151,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_208d41317669af65",
+      "target": "atomic_9bb4af2855f33b2d",
+      "type": "related_to",
+      "weight": 0.49427467584609985,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4617,7 +4882,7 @@
       "source": "atomic_208d41317669af65",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5285610556602478,
+      "weight": 0.47168710827827454,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4628,7 +4893,7 @@
       "source": "atomic_208d41317669af65",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.5664170384407043,
+      "weight": 0.475857138633728,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4639,7 +4904,7 @@
       "source": "atomic_a199c805eecdcc60",
       "target": "atomic_8c52f8194ce7e44e",
       "type": "related_to",
-      "weight": 0.6836283206939697,
+      "weight": 0.6491881012916565,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4650,7 +4915,7 @@
       "source": "atomic_a199c805eecdcc60",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.7449501752853394,
+      "weight": 0.7272868752479553,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4661,7 +4926,7 @@
       "source": "atomic_a199c805eecdcc60",
       "target": "atomic_0297ebf591d23972",
       "type": "related_to",
-      "weight": 0.5446605682373047,
+      "weight": 0.48723557591438293,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4672,7 +4937,7 @@
       "source": "atomic_a199c805eecdcc60",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.5480855107307434,
+      "weight": 0.5122812390327454,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4683,18 +4948,7 @@
       "source": "atomic_8c52f8194ce7e44e",
       "target": "atomic_9bb4af2855f33b2d",
       "type": "related_to",
-      "weight": 0.6216610670089722,
-      "metadata": {
-        "similarity_method": "embedding_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_8c52f8194ce7e44e",
-      "target": "atomic_b8d1d1aad9f2c9b9",
-      "type": "related_to",
-      "weight": 0.540668785572052,
+      "weight": 0.5215458869934082,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4705,7 +4959,7 @@
       "source": "atomic_8c52f8194ce7e44e",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.530185341835022,
+      "weight": 0.4723343253135681,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4716,7 +4970,7 @@
       "source": "atomic_0297ebf591d23972",
       "target": "atomic_b8d1d1aad9f2c9b9",
       "type": "related_to",
-      "weight": 0.7069560885429382,
+      "weight": 0.650408148765564,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4727,7 +4981,7 @@
       "source": "atomic_0297ebf591d23972",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.5778085589408875,
+      "weight": 0.5631343722343445,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4738,7 +4992,7 @@
       "source": "atomic_b8d1d1aad9f2c9b9",
       "target": "atomic_8633427b4b492df7",
       "type": "related_to",
-      "weight": 0.6158713698387146,
+      "weight": 0.5344265103340149,
       "metadata": {
         "similarity_method": "embedding_cosine",
         "k": 10,
@@ -4768,7 +5022,7 @@
       "record_id": "prov_000000",
       "context_node_id": "context_4a203d5fca38da17",
       "source_file": "examples/diverse_topics.txt",
-      "ingestion_timestamp": "2026-03-05T20:54:36.028531",
+      "ingestion_timestamp": "2026-03-05T21:38:45.112061",
       "metadata": {}
     }
   ]

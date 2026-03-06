@@ -227,9 +227,12 @@ class ProjectionSnapshot3DAdapter:
         
         return weighted_degree
     
-    def convert_to_snapshot(self) -> Snapshot3D:
+    def convert_to_snapshot(self, filter_context_nodes: bool = True) -> Snapshot3D:
         """
         Convert projection to 3D snapshot format.
+        
+        Args:
+            filter_context_nodes: If True, exclude context nodes and their relationships
         
         Returns deterministic 3D layout with visual encodings:
         - Position: 3D force-directed layout
@@ -239,6 +242,20 @@ class ProjectionSnapshot3DAdapter:
         """
         nodes = self.projection_data.get("nodes", [])
         edges = self.projection_data.get("edges", [])
+        
+        # Filter out context nodes if requested
+        if filter_context_nodes:
+            # Get list of context node IDs
+            context_node_ids = {n["node_id"] for n in nodes if n.get("node_type") == "context"}
+            
+            # Filter nodes - keep only atomic nodes
+            nodes = [n for n in nodes if n.get("node_type") == "atomic"]
+            
+            # Filter edges - remove any edge involving a context node
+            edges = [
+                e for e in edges 
+                if e["source"] not in context_node_ids and e["target"] not in context_node_ids
+            ]
         
         # Compute degree map and weighted degree (importance)
         degree_map = self._compute_degree_map(edges)
@@ -326,7 +343,8 @@ class ProjectionSnapshot3DAdapter:
             "max_degree": max(degree_map.values()) if degree_map else 0,
             "max_importance": max(importance_scores) if importance_scores else 0,
             "min_importance": min(importance_scores) if importance_scores else 0,
-            "source_file": str(self.projection_path)
+            "source_file": str(self.projection_path),
+            "filtered_context_nodes": filter_context_nodes
         }
         
         return Snapshot3D(
@@ -335,9 +353,15 @@ class ProjectionSnapshot3DAdapter:
             metadata=metadata
         )
     
-    def export_snapshot(self, output_path: str) -> Path:
-        """Export snapshot to JSON file."""
-        snapshot = self.convert_to_snapshot()
+    def export_snapshot(self, output_path: str, filter_context_nodes: bool = True) -> Path:
+        """
+        Export snapshot to JSON file.
+        
+        Args:
+            output_path: Path to write snapshot JSON
+            filter_context_nodes: If True, exclude context nodes and their relationships
+        """
+        snapshot = self.convert_to_snapshot(filter_context_nodes=filter_context_nodes)
         
         output = {
             "nodes": snapshot.nodes,
@@ -354,30 +378,48 @@ class ProjectionSnapshot3DAdapter:
         return output_file
 
 
-def convert_projection_to_3d_snapshot(projection_path: str, output_path: str) -> Path:
+def convert_projection_to_3d_snapshot(
+    projection_path: str, 
+    output_path: str,
+    filter_context_nodes: bool = True
+) -> Path:
     """
     Convenience function to convert projection to 3D snapshot.
     
     Args:
         projection_path: Path to projection JSON file
         output_path: Path to write 3D snapshot JSON
+        filter_context_nodes: If True, exclude context nodes and their relationships (default: True)
     
     Returns:
         Path to created snapshot file
     """
     adapter = ProjectionSnapshot3DAdapter(projection_path)
-    return adapter.export_snapshot(output_path)
+    return adapter.export_snapshot(output_path, filter_context_nodes=filter_context_nodes)
 
 
 if __name__ == "__main__":
     import sys
     
     if len(sys.argv) < 3:
-        print("Usage: python snapshot_adapter_3d.py <projection.json> <output_snapshot.json>")
+        print("Usage: python snapshot_adapter_3d.py <projection.json> <output_snapshot.json> [--include-context]")
+        print("\nOptions:")
+        print("  --include-context    Include context nodes in visualization (default: filtered out)")
         sys.exit(1)
     
     projection_file = sys.argv[1]
     output_file = sys.argv[2]
     
-    result = convert_projection_to_3d_snapshot(projection_file, output_file)
-    print(f"✓ Created 3D snapshot: {result}")
+    # Check for --include-context flag
+    filter_context = "--include-context" not in sys.argv
+    
+    result = convert_projection_to_3d_snapshot(
+        projection_file, 
+        output_file,
+        filter_context_nodes=filter_context
+    )
+    
+    if filter_context:
+        print(f"✓ Created 3D snapshot (context nodes filtered): {result}")
+    else:
+        print(f"✓ Created 3D snapshot (with context nodes): {result}")

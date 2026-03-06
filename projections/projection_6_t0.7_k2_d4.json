@@ -967,6 +967,17 @@
   "edges": [
     {
       "source": "atomic_0297ebf591d23972",
+      "target": "atomic_b8d1d1aad9f2c9b9",
+      "edge_type": "related_to",
+      "weight": 0.7069560885429382,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_0297ebf591d23972",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -997,44 +1008,11 @@
     },
     {
       "source": "atomic_093c41bf683097e1",
-      "target": "atomic_2afe5f5db8d3d8ed",
+      "target": "atomic_0aba4f85ac2c2004",
       "edge_type": "related_to",
-      "weight": 0.7357022603955159,
+      "weight": 0.7417021989822388,
       "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_093c41bf683097e1",
-      "target": "atomic_8f94e2c804bc8799",
-      "edge_type": "related_to",
-      "weight": 0.7842676218074807,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_093c41bf683097e1",
-      "target": "atomic_ad32a875a79554b2",
-      "edge_type": "related_to",
-      "weight": 0.7721655269759087,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_093c41bf683097e1",
-      "target": "atomic_d95262c571e2a0fe",
-      "edge_type": "related_to",
-      "weight": 0.7381448361039201,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
+        "similarity_method": "embedding_cosine",
         "k": 10,
         "measurement_type": "topk_similarity"
       }
@@ -1071,17 +1049,6 @@
     },
     {
       "source": "atomic_0e80ab47a9e35a0c",
-      "target": "atomic_ad32a875a79554b2",
-      "edge_type": "related_to",
-      "weight": 0.7083333333333334,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_0e80ab47a9e35a0c",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1097,6 +1064,17 @@
     },
     {
       "source": "atomic_10c36b159bd12086",
+      "target": "atomic_af45f434641c41af",
+      "edge_type": "related_to",
+      "weight": 0.7349634766578674,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_10c36b159bd12086",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1109,28 +1087,6 @@
           "confidence": 1.0
         }
       ]
-    },
-    {
-      "source": "atomic_1af98d0bef669280",
-      "target": "atomic_093c41bf683097e1",
-      "edge_type": "related_to",
-      "weight": 0.7204792759220493,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_1af98d0bef669280",
-      "target": "atomic_2afe5f5db8d3d8ed",
-      "edge_type": "related_to",
-      "weight": 0.7004459314343183,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
     },
     {
       "source": "atomic_1af98d0bef669280",
@@ -1164,6 +1120,28 @@
     },
     {
       "source": "atomic_216253bd36779f5d",
+      "target": "atomic_a611d90d2f9cce72",
+      "edge_type": "related_to",
+      "weight": 0.72566819190979,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_216253bd36779f5d",
+      "target": "atomic_d56656ecb6cc3bab",
+      "edge_type": "related_to",
+      "weight": 0.7569405436515808,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_216253bd36779f5d",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1194,28 +1172,6 @@
     },
     {
       "source": "atomic_2afe5f5db8d3d8ed",
-      "target": "atomic_ad32a875a79554b2",
-      "edge_type": "related_to",
-      "weight": 0.7165063509461097,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_2afe5f5db8d3d8ed",
-      "target": "atomic_d56656ecb6cc3bab",
-      "edge_type": "related_to",
-      "weight": 0.7083333333333333,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_2afe5f5db8d3d8ed",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1228,6 +1184,17 @@
           "confidence": 1.0
         }
       ]
+    },
+    {
+      "source": "atomic_3606c58f79a01a72",
+      "target": "atomic_88c8b7026ba39331",
+      "edge_type": "related_to",
+      "weight": 0.773475170135498,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
     },
     {
       "source": "atomic_3606c58f79a01a72",
@@ -1261,6 +1228,17 @@
     },
     {
       "source": "atomic_472692e0bd709f39",
+      "target": "atomic_42b1bd056f44bba0",
+      "edge_type": "related_to",
+      "weight": 0.7137183547019958,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_472692e0bd709f39",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1288,6 +1266,17 @@
           "confidence": 1.0
         }
       ]
+    },
+    {
+      "source": "atomic_4cd44f4b5439c6c3",
+      "target": "atomic_ba9385ad7b0ce368",
+      "edge_type": "related_to",
+      "weight": 0.7335394620895386,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
     },
     {
       "source": "atomic_4cd44f4b5439c6c3",
@@ -1321,17 +1310,6 @@
     },
     {
       "source": "atomic_694feafb12154ae0",
-      "target": "atomic_8c52f8194ce7e44e",
-      "edge_type": "related_to",
-      "weight": 0.7041241452319316,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_694feafb12154ae0",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1347,6 +1325,17 @@
     },
     {
       "source": "atomic_78c5b335fd65ec43",
+      "target": "atomic_af45f434641c41af",
+      "edge_type": "related_to",
+      "weight": 0.7376746535301208,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_78c5b335fd65ec43",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1359,6 +1348,17 @@
           "confidence": 1.0
         }
       ]
+    },
+    {
+      "source": "atomic_838c5a33d2d2a7ce",
+      "target": "atomic_d2162e4ab6aed987",
+      "edge_type": "related_to",
+      "weight": 0.7835147976875305,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
     },
     {
       "source": "atomic_838c5a33d2d2a7ce",
@@ -1422,28 +1422,6 @@
     },
     {
       "source": "atomic_8f94e2c804bc8799",
-      "target": "atomic_ad32a875a79554b2",
-      "edge_type": "related_to",
-      "weight": 0.7175970699446224,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_8f94e2c804bc8799",
-      "target": "atomic_d95262c571e2a0fe",
-      "edge_type": "related_to",
-      "weight": 0.7175970699446224,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_8f94e2c804bc8799",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1474,22 +1452,11 @@
     },
     {
       "source": "atomic_9abb16a017b4feca",
-      "target": "atomic_093c41bf683097e1",
+      "target": "atomic_a3c43451f4bea227",
       "edge_type": "related_to",
-      "weight": 0.7204792759220493,
+      "weight": 0.7256085872650146,
       "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
-    },
-    {
-      "source": "atomic_9abb16a017b4feca",
-      "target": "atomic_8f94e2c804bc8799",
-      "edge_type": "related_to",
-      "weight": 0.7014557410063451,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
+        "similarity_method": "embedding_cosine",
         "k": 10,
         "measurement_type": "topk_similarity"
       }
@@ -1526,6 +1493,17 @@
     },
     {
       "source": "atomic_a199c805eecdcc60",
+      "target": "atomic_9bb4af2855f33b2d",
+      "edge_type": "related_to",
+      "weight": 0.7449501752853394,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_a199c805eecdcc60",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1553,17 +1531,6 @@
           "confidence": 1.0
         }
       ]
-    },
-    {
-      "source": "atomic_a3c43451f4bea227",
-      "target": "atomic_093c41bf683097e1",
-      "edge_type": "related_to",
-      "weight": 0.7204792759220493,
-      "metadata": {
-        "similarity_method": "basic_bow_cosine",
-        "k": 10,
-        "measurement_type": "topk_similarity"
-      }
     },
     {
       "source": "atomic_a3c43451f4bea227",
@@ -1672,6 +1639,28 @@
     },
     {
       "source": "atomic_cd0e09eb102662ee",
+      "target": "atomic_4925267c8fb14db2",
+      "edge_type": "related_to",
+      "weight": 0.7520458698272705,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_cd0e09eb102662ee",
+      "target": "atomic_f2142db400da0a03",
+      "edge_type": "related_to",
+      "weight": 0.7331345677375793,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_cd0e09eb102662ee",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1714,6 +1703,17 @@
           "confidence": 1.0
         }
       ]
+    },
+    {
+      "source": "atomic_d56656ecb6cc3bab",
+      "target": "atomic_a611d90d2f9cce72",
+      "edge_type": "related_to",
+      "weight": 0.7230302095413208,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
     },
     {
       "source": "atomic_d56656ecb6cc3bab",
@@ -1762,6 +1762,17 @@
     },
     {
       "source": "atomic_f2142db400da0a03",
+      "target": "atomic_4925267c8fb14db2",
+      "edge_type": "related_to",
+      "weight": 0.7169337272644043,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_f2142db400da0a03",
       "target": "context_4a203d5fca38da17",
       "edge_type": "appears_in",
       "evidence": [
@@ -1774,6 +1785,28 @@
           "confidence": 1.0
         }
       ]
+    },
+    {
+      "source": "atomic_ffb0580430ae83de",
+      "target": "atomic_208d41317669af65",
+      "edge_type": "related_to",
+      "weight": 0.7045823931694031,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
+    },
+    {
+      "source": "atomic_ffb0580430ae83de",
+      "target": "atomic_a1eec9b442c4344f",
+      "edge_type": "related_to",
+      "weight": 0.7086881995201111,
+      "metadata": {
+        "similarity_method": "embedding_cosine",
+        "k": 10,
+        "measurement_type": "topk_similarity"
+      }
     },
     {
       "source": "atomic_ffb0580430ae83de",
@@ -1793,8 +1826,8 @@
   ],
   "metadata": {
     "node_count": 45,
-    "edge_count": 59,
-    "average_degree": 2.62,
-    "density": 0.0596
+    "edge_count": 62,
+    "average_degree": 2.76,
+    "density": 0.0626
   }
 }

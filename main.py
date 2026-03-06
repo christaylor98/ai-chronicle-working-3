@@ -23,6 +23,7 @@ from src.core import (
     generate_perspective_suite,
 )
 from src.visualization import visualize_projection
+from src.adapters import ChatGPTJsonAdapter
 
 
 def cmd_ingest(args):
@@ -72,6 +73,94 @@ def cmd_ingest(args):
     except Exception as e:
         print(f"Error during ingestion: {e}", file=sys.stderr)
         sys.exit(1)
+
+
+def cmd_ingest_chatgpt(args):
+    """Execute ChatGPT conversation ingestion command."""
+    input_path = Path(args.input)
+    
+    # Initialize engine
+    print("Initializing ingestion engine...")
+    engine = IngestionEngine(
+        similarity_k=args.similarity_k,
+        strict_validation=not args.permissive,
+    )
+    
+    # Initialize adapter
+    adapter = ChatGPTJsonAdapter()
+    
+    # Determine if input is file or directory
+    if input_path.is_file():
+        print(f"\nIngesting ChatGPT conversation file: {input_path}")
+        print("=" * 60)
+        try:
+            truth_delta = adapter.ingest_file(str(input_path), engine)
+        except Exception as e:
+            print(f"Error during ingestion: {e}", file=sys.stderr)
+            sys.exit(1)
+        
+        # Export results
+        output_path = args.output or f"{input_path.stem}_graph.json"
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(truth_delta, f, indent=2, ensure_ascii=False)
+        
+        print(f"\n✓ Output written to: {output_path}")
+    
+    elif input_path.is_dir():
+        print(f"\nIngesting ChatGPT conversations from directory: {input_path}")
+        print("=" * 60)
+        print()
+        try:
+            deltas = adapter.ingest_directory(str(input_path), engine)
+        except Exception as e:
+            print(f"Error during ingestion: {e}", file=sys.stderr)
+            sys.exit(1)
+        
+        # Merge all deltas if requested
+        if args.merge:
+            merged_delta = {
+                'nodes_added': [],
+                'edges_added': [],
+                'weights_added': []
+            }
+            for delta in deltas:
+                merged_delta['nodes_added'].extend(delta['nodes_added'])
+                merged_delta['edges_added'].extend(delta['edges_added'])
+                merged_delta['weights_added'].extend(delta['weights_added'])
+            
+            output_path = args.output or "chatgpt_conversations_graph.json"
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(merged_delta, f, indent=2, ensure_ascii=False)
+            
+            print(f"\n✓ Merged output written to: {output_path}")
+        else:
+            # Save individual files with original filenames
+            output_dir = Path(args.output or "graphs")
+            output_dir.mkdir(exist_ok=True)
+            
+            json_files = sorted(input_path.glob('*.json'))
+            for json_file, delta in zip(json_files, deltas):
+                output_path = output_dir / f"{json_file.stem}_graph.json"
+                with open(output_path, "w", encoding="utf-8") as f:
+                    json.dump(delta, f, indent=2, ensure_ascii=False)
+            
+            print(f"\n✓ Individual graphs written to: {output_dir}/")
+    
+    else:
+        print(f"Error: {input_path} is neither a file nor a directory", file=sys.stderr)
+        sys.exit(1)
+    
+    # Print final statistics
+    stats = engine.get_statistics()
+    print(f"\nFinal Statistics:")
+    print(f"  Atomic nodes: {stats['atomic_nodes']}")
+    print(f"  Context nodes: {stats['context_nodes']}")
+    print(f"  Edges: {stats['edges']}")
+    print(f"  Weighted edges: {stats['weighted_edges']}")
+    print(f"  Candidates (issues): {stats['candidates']}")
+    
+    if stats['candidates'] > 0:
+        print(f"\n⚠ Note: {stats['candidates']} statements flagged for review")
 
 
 def cmd_validate(args):
@@ -396,6 +485,36 @@ def main():
         help="Disable strict atomicity validation"
     )
     
+    # Ingest ChatGPT command
+    ingest_chatgpt_parser = subparsers.add_parser(
+        "ingest-chatgpt",
+        help="Ingest ChatGPT conversation export JSON files"
+    )
+    ingest_chatgpt_parser.add_argument(
+        "input",
+        help="ChatGPT JSON export file or directory containing JSON files"
+    )
+    ingest_chatgpt_parser.add_argument(
+        "-o", "--output",
+        help="Output JSON file (or directory when ingesting multiple files)"
+    )
+    ingest_chatgpt_parser.add_argument(
+        "-k", "--similarity-k",
+        type=int,
+        default=10,
+        help="Top-K similar neighbors per node (default: 10)"
+    )
+    ingest_chatgpt_parser.add_argument(
+        "-p", "--permissive",
+        action="store_true",
+        help="Disable strict atomicity validation"
+    )
+    ingest_chatgpt_parser.add_argument(
+        "-m", "--merge",
+        action="store_true",
+        help="Merge all conversations into single graph (when ingesting directory)"
+    )
+    
     # Validate command
     validate_parser = subparsers.add_parser("validate", help="Validate graph structure")
     validate_parser.add_argument("graph", help="Graph JSON file to validate")
@@ -467,6 +586,8 @@ def main():
     # Dispatch command
     if args.command == "ingest":
         cmd_ingest(args)
+    elif args.command == "ingest-chatgpt":
+        cmd_ingest_chatgpt(args)
     elif args.command == "validate":
         cmd_validate(args)
     elif args.command == "stats":

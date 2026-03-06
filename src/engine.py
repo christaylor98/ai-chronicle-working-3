@@ -6,9 +6,10 @@ Ingestion flow:
 2. Extract candidate atomic units
 3. Validate atomicity
 4. Create atomic nodes with evidence
-5. Infer typed relationships
-6. Validate connectivity
-7. Output truth delta
+5. Assign topic labels via batched LLM call (single API call per ingestion)
+6. Infer typed relationships
+7. Validate connectivity
+8. Output truth delta
 """
 
 from typing import Optional, Dict, List
@@ -20,15 +21,13 @@ from src.core import (
     Candidate,
     Evidence,
     KnowledgeGraph,
-    Edge,
-    EdgeType,
 )
 from src.ingestion import (
     TextParser,
     AtomicityValidator,
     RelationshipBuilder,
 )
-from src.utils import SimilarityEngine, ProvenanceTracker
+from src.utils import SimilarityEngine, ProvenanceTracker, assign_topic_labels_batch
 
 
 class IngestionEngine:
@@ -150,7 +149,7 @@ class IngestionEngine:
                 # Skip - too similar to existing node
                 continue
             
-            # Create atomic node
+            # Create atomic node (topic labels assigned in batch later)
             canonical_terms = self.parser.extract_key_terms(unit.text)
             evidence = Evidence(
                 source=context_node.node_id,
@@ -160,11 +159,21 @@ class IngestionEngine:
             atomic_node = AtomicNode.create(
                 statement=unit.text,
                 evidence=[evidence],
-                canonical_terms=canonical_terms
+                canonical_terms=canonical_terms,
+                topic_labels=[]  # Assigned in batch via clustering
             )
             
             atomic_nodes.append(atomic_node)
             self.graph.add_atomic_node(atomic_node)
+        
+        # Assign topic labels via single batched LLM call (pre-edge)
+        # Per BATCH_LLM_TOPIC_LABELLING_SPEC.v1.0:
+        # - One ai_factory API call for all nodes
+        # - Returns specific labels (e.g., 'ancient-egypt' not 'history')
+        # - Graceful fallback to ['general'] on failure
+        # - Zero per-node API overhead
+        if atomic_nodes:
+            self._assign_topic_labels_batch(atomic_nodes)
         
         # Build relationships between nodes
         self._build_relationships(atomic_nodes, context_node.node_id)
@@ -244,6 +253,35 @@ class IngestionEngine:
             # Note: Would need to create author node first in full implementation
             # For now, we document the relationship in metadata
             pass
+    
+    def _assign_topic_labels_batch(self, atomic_nodes: List[AtomicNode]) -> None:
+        """
+        Assign topic labels to atomic nodes via single batched LLM call.
+        
+        Per BATCH_LLM_TOPIC_LABELLING_SPEC.v1.0:
+        - Makes ONE ai_factory run() call for all nodes
+        - Runs after all nodes are created
+        - Runs before edge emission
+        - Returns 2-3 specific labels per node
+        - Labels are lowercase hyphenated strings
+        - Graceful fallback to ['general'] on failure
+        
+        Args:
+            atomic_nodes: List of atomic nodes to label (modified in-place)
+        """
+        if not atomic_nodes:
+            return
+        
+        # Extract statements for labeling
+        statements = [node.statement for node in atomic_nodes]
+        
+        # Make single batched LLM call
+        # Fallback to ['general'] is handled inside assign_topic_labels_batch
+        labels_list = assign_topic_labels_batch(statements)
+        
+        # Assign labels to nodes
+        for node, labels in zip(atomic_nodes, labels_list):
+            node.topic_labels = labels
     
     def _read_file(self, file_path: str) -> str:
         """Read file content with encoding handling."""
