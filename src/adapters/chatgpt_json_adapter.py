@@ -148,13 +148,14 @@ class ChatGPTJsonAdapter:
         
         return chunks
     
-    def ingest_file(self, file_path: str, engine: IngestionEngine) -> Dict[str, Any]:
+    def ingest_file(self, file_path: str, engine: IngestionEngine, output_path: Optional[str] = None) -> Dict[str, Any]:
         """
         Ingest a single ChatGPT JSON file into the knowledge graph.
         
         Args:
             file_path: Path to the ChatGPT JSON export file
             engine: Initialized IngestionEngine instance
+            output_path: Optional output path for checkpoint/resume functionality
             
         Returns:
             Merged TruthDelta from all ingested chunks
@@ -172,12 +173,53 @@ class ChatGPTJsonAdapter:
         
         print(f"  Found {len(chunks)} assistant messages\n")
         
-        # Merge all truth deltas
-        merged_delta = {
-            'nodes_added': [],
-            'edges_added': [],
-            'weights_added': []
-        }
+        # Checkpoint file path
+        checkpoint_path = None
+        completed_batches = set()
+        
+        if output_path:
+            checkpoint_path = output_path + '.checkpoint.json'
+            
+            # Try to load existing checkpoint
+            if os.path.exists(checkpoint_path):
+                print(f"📂 Found checkpoint file: {checkpoint_path}")
+                try:
+                    with open(checkpoint_path, 'r', encoding='utf-8') as f:
+                        checkpoint = json.load(f)
+                    
+                    completed_batches = set(checkpoint.get('completed_batches', []))
+                    
+                    print(f"✓ Loaded checkpoint: {len(completed_batches)} batches already completed")
+                    print(f"  Resuming from batch {len(completed_batches) + 1}...\n")
+                    
+                    # Start with accumulated data from checkpoint
+                    merged_delta = {
+                        'nodes_added': checkpoint.get('nodes_added', []),
+                        'edges_added': checkpoint.get('edges_added', []),
+                        'weights_added': checkpoint.get('weights_added', [])
+                    }
+                except Exception as e:
+                    print(f"⚠ Warning: Could not load checkpoint: {e}")
+                    print(f"  Starting fresh...\n")
+                    merged_delta = {
+                        'nodes_added': [],
+                        'edges_added': [],
+                        'weights_added': []
+                    }
+            else:
+                print(f"Starting fresh ingestion (no checkpoint found)\n")
+                merged_delta = {
+                    'nodes_added': [],
+                    'edges_added': [],
+                    'weights_added': []
+                }
+        else:
+            # No checkpoint support when output_path not provided
+            merged_delta = {
+                'nodes_added': [],
+                'edges_added': [],
+                'weights_added': []
+            }
         
         # Dynamic batching: accumulate messages until we have ~50 nodes
         TARGET_NODES_PER_BATCH = 50
@@ -240,6 +282,13 @@ class ChatGPTJsonAdapter:
         # Phase 3: Process each batch
         print("Phase 3: Processing batches with topic labeling...")
         for batch_idx, (batch_messages, expected_nodes) in enumerate(batches):
+            # Skip already-completed batches (resume logic)
+            if batch_idx in completed_batches:
+                print(f"\n{'='*60}")
+                print(f"BATCH {batch_idx + 1}/{len(batches)}: SKIPPING (already completed)")
+                print(f"{'='*60}")
+                continue
+            
             print(f"\n{'='*60}")
             print(f"BATCH {batch_idx + 1}/{len(batches)}: {len(batch_messages)} messages → ~{expected_nodes} nodes")
             print(f"{'='*60}")
@@ -286,6 +335,30 @@ class ChatGPTJsonAdapter:
                 print(f"\n  ✓ Batch complete: +{len(truth_delta['nodes_added'])} nodes, +{len(truth_delta['edges_added'])} edges")
                 print(f"  ✓ Running total: {len(merged_delta['nodes_added'])} nodes, {len(merged_delta['edges_added'])} edges")
                 
+                # Mark batch as completed
+                completed_batches.add(batch_idx)
+                
+                # Write checkpoint and output file after every batch
+                if output_path and checkpoint_path:
+                    # Write checkpoint
+                    checkpoint_data = {
+                        'completed_batches': sorted(list(completed_batches)),
+                        'nodes_added': merged_delta['nodes_added'],
+                        'edges_added': merged_delta['edges_added'],
+                        'weights_added': merged_delta['weights_added'],
+                        'total_nodes': len(merged_delta['nodes_added']),
+                        'total_edges': len(merged_delta['edges_added'])
+                    }
+                    
+                    with open(checkpoint_path, 'w', encoding='utf-8') as f:
+                        json.dump(checkpoint_data, f, indent=2, ensure_ascii=False)
+                    
+                    # Write incremental output file (valid after every batch)
+                    with open(output_path, 'w', encoding='utf-8') as f:
+                        json.dump(merged_delta, f, indent=2, ensure_ascii=False)
+                    
+                    print(f"  💾 Checkpoint saved: batch {batch_idx + 1}/{len(batches)} complete")
+                
             finally:
                 os.unlink(tmp_path)
         
@@ -293,11 +366,16 @@ class ChatGPTJsonAdapter:
         print(f"✓ INGESTION COMPLETE")
         print(f"{'='*60}")
         print(f"  Total messages processed: {len(chunks)}")
-        print(f"  Batches executed: {num_batches}")
+        print(f"  Batches executed: {len(batches)}")
         print(f"  Nodes added: {len(merged_delta['nodes_added'])}")
         print(f"  Edges added: {len(merged_delta['edges_added'])}")
         print(f"  Weights added: {len(merged_delta['weights_added'])}")
         print(f"{'='*60}\n")
+        
+        # Delete checkpoint file on clean completion
+        if output_path and checkpoint_path and os.path.exists(checkpoint_path):
+            os.unlink(checkpoint_path)
+            print(f"🗑️  Checkpoint file deleted (clean completion)\n")
         
         return merged_delta
     

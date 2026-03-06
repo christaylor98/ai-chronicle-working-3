@@ -134,7 +134,12 @@ Statements:
 {numbered_statements}"""
     
     # Step 3: Make single batched API call for this chunk
-    config = Config(provider=provider, model=model, ledger_enabled=False)
+    config = Config(
+        provider="ollama",
+        model="qwen2.5:14b",
+        ledger_enabled=False,
+        base_url="http://localhost:11434"
+    )
     result = run(prompt=prompt, config=config)
     response = result.output
     
@@ -169,7 +174,12 @@ Rules:
 Statement: {statement}"""
     
     try:
-        config = Config(provider=provider, model=model, ledger_enabled=False)
+        config = Config(
+            provider="ollama",
+            model="qwen2.5:14b",
+            ledger_enabled=False,
+            base_url="http://localhost:11434"
+        )
         result = run(prompt=prompt, config=config)
         response = result.output
         

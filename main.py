@@ -93,17 +93,18 @@ def cmd_ingest_chatgpt(args):
     if input_path.is_file():
         print(f"\nIngesting ChatGPT conversation file: {input_path}")
         print("=" * 60)
+        
+        # Determine output path
+        output_path = args.output or f"{input_path.stem}_graph.json"
+        
         try:
-            truth_delta = adapter.ingest_file(str(input_path), engine)
+            # Pass output_path to enable checkpoint/resume
+            truth_delta = adapter.ingest_file(str(input_path), engine, output_path=output_path)
         except Exception as e:
             print(f"Error during ingestion: {e}", file=sys.stderr)
             sys.exit(1)
         
-        # Export results
-        output_path = args.output or f"{input_path.stem}_graph.json"
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(truth_delta, f, indent=2, ensure_ascii=False)
-        
+        # Output file already written incrementally by adapter
         print(f"\n✓ Output written to: {output_path}")
     
     elif input_path.is_dir():
