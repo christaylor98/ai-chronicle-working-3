@@ -166,6 +166,8 @@ class IngestionEngine:
             atomic_nodes.append(atomic_node)
             self.graph.add_atomic_node(atomic_node)
         
+        print(f"  ✓ Created {len(atomic_nodes)} atomic nodes, {len(candidates)} candidates")
+        
         # Assign topic labels via single batched LLM call (pre-edge)
         # Per BATCH_LLM_TOPIC_LABELLING_SPEC.v1.0:
         # - One ai_factory API call for all nodes
@@ -173,10 +175,14 @@ class IngestionEngine:
         # - Graceful fallback to ['general'] on failure
         # - Zero per-node API overhead
         if atomic_nodes:
+            print(f"  Assigning topic labels (chunked batches of 50)...")
             self._assign_topic_labels_batch(atomic_nodes)
+            print(f"  ✓ Topic labels assigned")
         
         # Build relationships between nodes
+        print(f"  Computing semantic similarities and building edges...")
         self._build_relationships(atomic_nodes, context_node.node_id)
+        print(f"  ✓ Relationships built")
         
         # Validate connectivity and queue orphans as candidates
         orphaned = self.graph.validate_connectivity()

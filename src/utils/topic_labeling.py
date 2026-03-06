@@ -31,18 +31,21 @@ def assign_topic_labels_batch(
     chunk_size: int = 50
 ) -> List[List[str]]:
     """
-    Assign topic labels to all atomic nodes via single batched LLM call.
+    Assign topic labels to all atomic nodes via chunked batched LLM calls.
     
-    Per BATCH_LLM_TOPIC_LABELLING_SPEC.v1.0:
-    - Makes ONE ai_factory run() call for all nodes
+    Per BATCH_LABEL_CHUNKING_SPEC.v1.0:
+    - Splits statements into chunks of chunk_size (default: 50)
+    - Makes ONE ai_factory run() call per chunk
+    - Node numbering resets to 1 for each chunk
     - Returns 2-3 specific labels per node
     - Labels are lowercase hyphenated strings
-    - Falls back to ['general'] if batch call fails or line unparseable
+    - Failed chunks fall back to ['general'] without crashing
     
     Args:
         statements: List of N atomic statement texts
         model: LLM model to use (default: gpt-5-mini)
         provider: LLM provider (default: copilot_cli)
+        chunk_size: Maximum nodes per API call (default: 50)
     
     Returns:
         List of label lists, one per node (e.g., [['ancient-egypt', 'nile'], ...])
@@ -59,11 +62,61 @@ def assign_topic_labels_batch(
     if not statements:
         return []
     
-    # Handle single node case
+    # Handle single node case (no chunking needed)
     if len(statements) == 1:
         return _label_single_node(statements[0], model, provider)
     
-    # Step 1: Build numbered statement list
+    # Calculate number of chunks needed
+    num_chunks = math.ceil(len(statements) / chunk_size)
+    
+    if num_chunks == 1:
+        # Small batch - use original single-batch implementation
+        return _label_batch_chunk(statements, model, provider)
+    
+    # Large batch - split into chunks
+    print(f"Splitting {len(statements)} nodes into {num_chunks} chunks of {chunk_size}...")
+    
+    all_labels = []
+    
+    for chunk_idx in range(num_chunks):
+        start_idx = chunk_idx * chunk_size
+        end_idx = min(start_idx + chunk_size, len(statements))
+        chunk = statements[start_idx:end_idx]
+        
+        print(f"  Processing chunk {chunk_idx + 1}/{num_chunks} ({len(chunk)} nodes)...", end=" ")
+        
+        try:
+            chunk_labels = _label_batch_chunk(chunk, model, provider)
+            all_labels.extend(chunk_labels)
+            print("✓")
+        except Exception as e:
+            # Chunk failed - assign 'general' to all nodes in this chunk
+            print(f"✗ (fallback to 'general')")
+            print(f"    Warning: Chunk {chunk_idx + 1} failed ({e})")
+            all_labels.extend([['general'] for _ in chunk])
+    
+    return all_labels
+
+
+def _label_batch_chunk(
+    statements: List[str],
+    model: str,
+    provider: str
+) -> List[List[str]]:
+    """
+    Label a single chunk of statements with one AI call.
+    
+    Node numbering always starts at 1 for each chunk.
+    
+    Args:
+        statements: List of statements (1 to chunk_size)
+        model: LLM model to use
+        provider: LLM provider
+    
+    Returns:
+        List of label lists (one per statement)
+    """
+    # Step 1: Build numbered statement list (1-indexed, resets per chunk)
     numbered_statements = "\n".join(
         f"{i+1}. {stmt}" for i, stmt in enumerate(statements)
     )
@@ -80,20 +133,14 @@ Rules:
 Statements:
 {numbered_statements}"""
     
-    # Step 3: Make single batched API call
-    try:
-        config = Config(provider=provider, model=model, ledger_enabled=False)
-        result = run(prompt=prompt, config=config)
-        response = result.output
-        
-        # Parse response into per-node labels
-        labels_list = _parse_batch_response(response, len(statements))
-        return labels_list
+    # Step 3: Make single batched API call for this chunk
+    config = Config(provider=provider, model=model, ledger_enabled=False)
+    result = run(prompt=prompt, config=config)
+    response = result.output
     
-    except Exception as e:
-        # Graceful fallback: assign ['general'] to all nodes
-        print(f"Warning: Batch topic labeling failed ({e}), assigning 'general' labels")
-        return [['general'] for _ in statements]
+    # Parse response into per-node labels
+    labels_list = _parse_batch_response(response, len(statements))
+    return labels_list
 
 
 def _label_single_node(

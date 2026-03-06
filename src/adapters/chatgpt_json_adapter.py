@@ -159,7 +159,7 @@ class ChatGPTJsonAdapter:
         Returns:
             Merged TruthDelta from all ingested chunks
         """
-        print(f"Parsing ChatGPT conversation file: {file_path}")
+        print(f"\nParsing ChatGPT conversation file: {file_path}")
         chunks = self.parse_conversation(file_path)
         
         if not chunks:
@@ -170,7 +170,7 @@ class ChatGPTJsonAdapter:
                 'weights_added': []
             }
         
-        print(f"  Found {len(chunks)} assistant messages")
+        print(f"  Found {len(chunks)} assistant messages\n")
         
         # Merge all truth deltas
         merged_delta = {
@@ -179,25 +179,103 @@ class ChatGPTJsonAdapter:
             'weights_added': []
         }
         
-        # Process each chunk
-        for i, chunk in enumerate(chunks, 1):
-            # Create temporary file for this chunk
+        # Dynamic batching: accumulate messages until we have ~50 nodes
+        TARGET_NODES_PER_BATCH = 50
+        
+        print(f"Smart batching: accumulating messages until ~{TARGET_NODES_PER_BATCH} nodes per batch")
+        print(f"(Maximizes LLM efficiency regardless of message size variation)\n")
+        
+        # First pass: quick extraction to count nodes per message
+        print("Phase 1: Analyzing message sizes...")
+        from src.ingestion import TextParser, AtomicityValidator
+        parser = TextParser()
+        validator = AtomicityValidator(strict=True)
+        
+        message_node_counts = []
+        for i, chunk in enumerate(chunks):
+            # Quick extract and validate to count atomic nodes
+            extracted_units = parser.parse(chunk.text)
+            
+            # Count only valid atomic units
+            valid_count = 0
+            for unit in extracted_units:
+                is_valid, _ = validator.validate(unit.text)
+                if is_valid:
+                    valid_count += 1
+            
+            message_node_counts.append(valid_count)
+            
+            if (i + 1) % 50 == 0:
+                print(f"  Analyzed {i + 1}/{len(chunks)} messages...")
+        
+        print(f"✓ Analysis complete: {len(chunks)} messages → ~{sum(message_node_counts)} total nodes\n")
+        
+        # Phase 2: Create batches that reach ~50 nodes each
+        print("Phase 2: Creating optimal batches...")
+        batches = []
+        current_batch = []
+        current_node_count = 0
+        
+        for i, (chunk, node_count) in enumerate(zip(chunks, message_node_counts)):
+            # Add message to current batch
+            current_batch.append((i, chunk, node_count))
+            current_node_count += node_count
+            
+            # If we've reached target, finalize this batch
+            if current_node_count >= TARGET_NODES_PER_BATCH:
+                batches.append((current_batch, current_node_count))
+                current_batch = []
+                current_node_count = 0
+        
+        # Add any remaining messages as final batch
+        if current_batch:
+            batches.append((current_batch, current_node_count))
+        
+        print(f"✓ Created {len(batches)} optimal batches")
+        for batch_idx, (batch_msgs, node_count) in enumerate(batches):
+            msg_range = f"{batch_msgs[0][0]+1}-{batch_msgs[-1][0]+1}"
+            print(f"  Batch {batch_idx+1}: Messages {msg_range} → ~{node_count} nodes")
+        print()
+        
+        # Phase 3: Process each batch
+        print("Phase 3: Processing batches with topic labeling...")
+        for batch_idx, (batch_messages, expected_nodes) in enumerate(batches):
+            print(f"\n{'='*60}")
+            print(f"BATCH {batch_idx + 1}/{len(batches)}: {len(batch_messages)} messages → ~{expected_nodes} nodes")
+            print(f"{'='*60}")
+            
+            # Combine all messages in this batch
+            batch_text_parts = []
+            first_chunk = batch_messages[0][1]
+            
+            for msg_idx, chunk, node_count in batch_messages:
+                print(f"  [{msg_idx+1}/{len(chunks)}] {chunk.conversation_title or 'Untitled'[:30]} | {chunk.timestamp[:19]} | ~{node_count} nodes")
+                
+                batch_text_parts.append(f"\n--- Message {msg_idx+1} ---\n")
+                batch_text_parts.append(chunk.text)
+                batch_text_parts.append("\n")
+            
+            # Write batch to temp file
             with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as tmp_file:
-                tmp_file.write(chunk.text)
+                tmp_file.write(''.join(batch_text_parts))
                 tmp_path = tmp_file.name
             
             try:
-                # Prepare metadata with timestamp and conversation info
-                metadata = {
-                    'timestamp': chunk.timestamp,
-                    'conversation_id': chunk.conversation_id,
-                    'message_id': chunk.message_id,
-                    'source_type': 'chatgpt_conversation'
-                }
-                if chunk.conversation_title:
-                    metadata['conversation_title'] = chunk.conversation_title
+                print(f"\n  → Processing batch through full pipeline...")
                 
-                # Ingest through existing pipeline
+                # Prepare metadata from first message
+                metadata = {
+                    'timestamp': first_chunk.timestamp,
+                    'conversation_id': first_chunk.conversation_id,
+                    'message_id': first_chunk.message_id,
+                    'source_type': 'chatgpt_conversation_batch',
+                    'batch_size': len(batch_messages),
+                    'expected_nodes': expected_nodes
+                }
+                if first_chunk.conversation_title:
+                    metadata['conversation_title'] = first_chunk.conversation_title
+                
+                # Ingest batch (extraction + topic labeling + relationships)
                 truth_delta = engine.ingest_file(tmp_path, metadata=metadata)
                 
                 # Merge results
@@ -205,20 +283,21 @@ class ChatGPTJsonAdapter:
                 merged_delta['edges_added'].extend(truth_delta['edges_added'])
                 merged_delta['weights_added'].extend(truth_delta['weights_added'])
                 
-                if i % 10 == 0:
-                    print(f"    Processed {i}/{len(chunks)} messages...")
+                print(f"\n  ✓ Batch complete: +{len(truth_delta['nodes_added'])} nodes, +{len(truth_delta['edges_added'])} edges")
+                print(f"  ✓ Running total: {len(merged_delta['nodes_added'])} nodes, {len(merged_delta['edges_added'])} edges")
                 
             finally:
-                # Clean up temp file
-                try:
-                    os.unlink(tmp_path)
-                except OSError:
-                    pass
+                os.unlink(tmp_path)
         
-        print(f"  ✓ Ingested {len(chunks)} messages")
-        print(f"    Nodes added: {len(merged_delta['nodes_added'])}")
-        print(f"    Edges added: {len(merged_delta['edges_added'])}")
-        print(f"    Weights added: {len(merged_delta['weights_added'])}")
+        print(f"\n{'='*60}")
+        print(f"✓ INGESTION COMPLETE")
+        print(f"{'='*60}")
+        print(f"  Total messages processed: {len(chunks)}")
+        print(f"  Batches executed: {num_batches}")
+        print(f"  Nodes added: {len(merged_delta['nodes_added'])}")
+        print(f"  Edges added: {len(merged_delta['edges_added'])}")
+        print(f"  Weights added: {len(merged_delta['weights_added'])}")
+        print(f"{'='*60}\n")
         
         return merged_delta
     
